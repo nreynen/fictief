@@ -1,10 +1,22 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
-
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  helper :all
+  protect_from_forgery
+  
+  before_filter :maintain_menu
+  
+  def maintain_menu
+    @menu = [
+      {
+        :name => "BreadApp", :children => [
+          { :name => "Overview", :url => "someUrl" }
+        ]
+      }
+    ]
+    @menu << {
+        :name => "Admin", :children => [
+          { :name => "Spelers", :url => players_path },
+          { :name => "Speelavonden", :url => playnights_path(:season => @current_season) }
+        ]
+    } if session[:is_admin]
+  end
 end

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<!--    <link type="image/x-icon" href="/images/favicon.ico" rel="shortcut icon"></link>
+    <link rel="image_src" href="http://evaluator.helionresearch.com/images/logo_sp1.png" />
+    <meta property="og:image" content="http://evaluator.helionresearch.com/images/logo_sp1.png" />-->
+    <meta name="generator" content="Nico Reynen" />   
+    
+    <%= stylesheet_link_tag "/stylesheets/master_control_default" %>
+    
+    <%= javascript_include_tag "jquery-1.7.1.js" %>
+    <%= javascript_include_tag "application.js" %>
+    
+    <%= yield :heading %>
+  </head>
+  <body>
+    <div id="page_wrapper">
+      <%= render :partial => "layouts/nav.html" %>
+      <div id="page">
+        <div id="home_page_wrp_up"  class="greywrap wrappers">
+          <div class="shade middlemargin">
+            <% if flash[:bericht] %>
+            <p class="notice">
+              <%= flash[:bericht] %>
+            </p>
+            <%end %>
+            <% if flash[:notice] %>
+            <p class="notice">
+              <%= flash[:notice] %>
+            </p>
+            <%end %>
+            <% if flash[:error] %>
+            <p class="error">
+              <%= flash[:error] %>
+            </p>
+            <%end %>
+            <% if flash[:info] %>
+            <div class="help">
+              <%= flash[:info] %>
+            </div>
+            <%end %>
+          </div>
+          <div id="hoofdwrap" class="middlemargin">
+            <div class="shadow">
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="home_page_wrp_down" class="wrappers">
+          <%= yield :content or yield %>
+        <div>
+      </div>
+    </div>
+  </body>
+</html>

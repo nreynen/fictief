@@ -1,0 +1,38 @@
+<ul id="menu">
+  <li class="logo border-bottom-left" >
+    <a href="/"><%= image_tag("logo.png", :size => "45x45") %></a>
+  </li>
+  <% @menu.sort_by { |child| child[:name] }.each do |item| %>
+    <% parent = item[:name] %>
+    <% children = item[:children] %>
+    <li class="main_menu navigator">
+      <% modded_parent = parent.downcase.gsub(" ", "_") %>
+      <a id="<%= modded_parent %>" href="javascript:void(0);"><%= parent %></a>
+      <ul>
+        <% children.sort_by { |child| child[:name] }.each do |child| %>
+          <% if request.request_uri == (child[:url]) %>
+            <% highlight_class = "highlighted_menu" %>
+            <script type="text/javascript">
+              $("#<%= modded_parent %>").addClass("highlighted_menu");
+            </script>
+          <% end %>
+          <li>
+            <%= link_to_with_highlighting(child[:name], child[:url], {:target => child[:target]}, {:class => highlight_class}) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end unless @menu.nil? %>
+
+  <%= yield :appmenu %>
+  <li class="spacer">
+    &nbsp;
+  </li>
+  <li class="tray sideline">
+    <%#= render :partial => "notification_tray.html" %>
+    &nbsp;
+  </li>
+  <li class="ending border-bottom-right">
+    &nbsp;
+  </li>
+</ul>

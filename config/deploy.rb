@@ -1,15 +1,37 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+require 'capistrano'
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
+set :deploy_via, :remote_cache
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
-# set :scm, :subversion
+set :application, "fictief"
+set :deploy_to, "/var/www/#{application}"
 
-role :app, "your app-server here"
-role :web, "your web-server here"
-role :db,  "your db-server here", :primary => true
+role :app, "master.yato-extreme.com"
+role :web, "master.yato-extreme.com"
+role :db, "master.yato-extreme.com", :primary => true
+
+set :port, 5555
+set :branch, "master"
+
+set :default_stage, "development"
+set :stages, %w(production development)
+
+set :repository, "git@github.com:nreynen/fictief.git"
+#set :ssh_options, { :forward_agent => true }
+set :scm, "git"
+
+set :repository_cache, "git_cache"
+set :deploy_via, :remote_cache
+set :user, "nreynen"
+set :admin_runner, "nreynen"
+
+set :runner, "nreynen"
+
+
+
+namespace :deploy do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+end
+

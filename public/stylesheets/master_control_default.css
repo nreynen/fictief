@@ -1,0 +1,327 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  margin: 0px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 9pt;
+  color: #4400FF;
+  background-color: #FFDADA;
+  background-image: url('../images/back_logo.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+#menu {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  color: #E60C0C;
+  line-height: 45px;
+  display: inline-block;
+  z-index: 1000;
+  position: fixed;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+}
+#menu:hover {
+  opacity: 1.0;
+}
+#menu a {
+  color: #4400FF;
+  text-decoration: none;
+}
+#menu > li {
+  background-color: #666666;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  padding: 0px 10px;
+}
+#menu > li a:hover, #menu > li:hover > a {
+  color: #E60C0C;
+}
+#menu .logo {
+  background-color: #4400FF;
+  padding: 0px;
+  width: 70px;
+}
+#menu .logo img {
+  float: left;
+  margin: 0 15px;
+}
+#menu .ending {
+  padding: 0px;
+  width: 20px;
+}
+#menu .sideline {
+  border-left: dotted 1px #000000;
+}
+#menu .spacer {
+  padding: 0;
+  margin: 0;
+}
+#menu ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  display: inline;
+}
+#menu li ul {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 45px;
+  width: 150px;
+  line-height: 16px;
+  background-color: #666666;
+  display: none;
+  -webkit-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+}
+#menu li:hover ul {
+  display: block;
+}
+#menu li ul li {
+  display: block;
+  margin: 0 20px 5px;
+  padding: 5px 0px 0px;
+  border-top: dotted 1px #000000;
+  list-style-type: none;
+}
+#menu li ul li:first-child {
+  border-top: none;
+}
+#menu li ul li a {
+  display: block;
+  color: #4400FF;
+}
+#menu li ul li a:hover {
+  color: #E60C0C;
+}
+#menu li ul li:hover, #menu li ul li:hover a {
+  color: #E60C0C;
+}
+#menu li ul li input {
+  float: right;
+}
+#menu .tray {
+  text-align: right;
+}
+#menu a.checks_options.checked {
+  color: #FF4c4c;
+  font-weight: bold;
+}
+#notification_tray {
+  display: block;
+  width: auto;
+  height: 45px;
+  text-align: center;
+}
+#notification_tray a img {
+  width: 20px;
+  height: 20px;
+}
+#notification_tray a {
+  display: none;
+  text-decoration: none;
+  position: relative;
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+}
+#notification_tray a span {
+  background-color: #E60C0C;
+  color: #FFFFFF;
+  display: block;
+  font-size: 7pt;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  right: 0px;
+  bottom: 2px;
+  z-index: 1;
+  padding: 1px 2px;
+  min-width: 8px;
+}
+.border-bottom-left {
+  -webkit-border-radius: 0 0 0 15px;
+  -o-border-radius: 0 0 0 15px;
+  -moz-border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 15px;
+}
+.push_to_bottom {
+  position: absolute;
+  bottom: 70px;
+}
+.border-bottom-right {
+  -webkit-border-radius: 0 0 15px 0;
+  -o-border-radius: 0 0 15px 0;
+  -moz-border-radius: 0 0 15px 0;
+  border-radius: 0 0 15px 0;
+}
+.border-top-right {
+  -webkit-border-radius: 0 15px 0 0;
+  -o-border-radius: 0 15px 0 0;
+  -moz-border-radius: 0 15px 0 0;
+  border-radius: 0 15px 0 0;
+}
+.border-bottom-left-right {
+  -webkit-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+}
+#page {
+  padding-top: 50px;
+}
+h1 {
+  text-decoration: none;
+  font-size: 25px;
+  color: #4400FF;
+  border-bottom: 1px solid #4400FF;
+  border-left: 1px solid #4400FF;
+  -webkit-border-radius: 0 0 0 10px;
+  -o-border-radius: 0 0 0 10px;
+  -moz-border-radius: 0 0 0 10px;
+  border-radius: 0 0 0 10px;
+  padding-left: 10px;
+}
+a {
+  color: #4400FF;
+  text-decoration: none;
+}
+.showtable {
+  border-collapse: collapse;
+  margin: 5px auto 50px;
+  width: 95%;
+}
+.filltable {
+  border-collapse: collapse;
+  width: 102%;
+  margin: -5px -5px -6px;
+}
+.showtable td, .filltable td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.table_header .display_none_header_cell {
+  border: 0px;
+}
+.table_header {
+  text-align: center;
+}
+.filltable .table_header {
+  line-height: 20px;
+}
+.table_header td {
+  padding: 10px;
+  font-size: 15px;
+}
+.table_header .header_cell {
+  background-color: #4400FF;
+  color: #E60C0C;
+}
+.button_cell {
+  width: 70px;
+  text-align: center;
+}
+a.highlighted_menu, #menu li a.highlighted_menu {
+  color: #4400FF;
+}
+.even {
+  background-color: #FF9999;
+}
+.even:hover, .odd:hover {
+  background-color: #9A9A9A;
+}
+tr:hover {
+  background-color: #9A9A9A;
+}
+.table_header tr:hover {
+
+}
+input {
+  width: 99%;
+}
+input[type="submit"] {
+  width: auto;
+}
+.notice, .error, .success {
+  margin-left: 100px;
+  font-size: 15px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.notice p, .error p, .success p {
+  line-height: 35px;
+}
+.notice img, .error img, .success img {
+  float: left;
+  margin: 10px 0;
+}
+.notice {
+  border: medium #8CBC0E solid;
+  background-color: #F3F7E5;
+}
+.error {
+  border: medium #FF4C4C solid;
+  background-color: #FFE5E5;
+  color: #FF4C4C;
+}
+.success {
+  border: medium #00CC00 solid;
+  background-color: #99FF99;
+  color: #000000;
+}
+.error_message {
+  border: medium #FF4C4C solid;
+  background-color: #FFE5E5;
+  color: #FF4C4C;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#home_page_wrp_down {
+  width: 750px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.feeds .date {
+  font-size: 25px;
+  color: #4400FF;
+  padding-left: 10px;
+  opacity: 0.2;
+}
+.feeds .feed_comment {
+  margin-left: 35px;
+  line-height: 30px;
+}
+.dotted_border {
+  border: 1px dotted #4400FF;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+  width: 75%;
+}
+.dotted_border div {
+  width: 50%;
+  float: left;
+}
