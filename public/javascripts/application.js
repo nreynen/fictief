@@ -14,7 +14,7 @@ function resize_menu() {
   var menu_items = ["ul#menu"];
   
   $(".spacer").width(0);
-  $(".spacer").width($(window).outerWidth() - $("#menu").width())
+  $(".spacer").width($(window).outerWidth() - $("#menu").width() - 1);
 }
 
 function show_loader() {

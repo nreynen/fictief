@@ -1,19 +1,31 @@
-<table>
-  <thead>
-    <th style="width: 2%;">Id</th>
-    <th style="width: 38%;">Identifier</th>
-    <th style="width: 50%;">Text</th>
-    <th style="width: 10%;" colspan="2">&nbsp;</th>
-  </thead>
-  <tbody>
-    <% @statics.each do |static| %>
-      <tr class="<%= cycle("odd", "even") %>">
-        <td><%= static.id %></td>
-        <td><%= static.identifier %></td>
-        <td><%= static.text %></td>
-        <td></td>
-        <td></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="searchwrapper">
+  <% if @statics.total_entries < 1 %>
+    <p>No statics found...</p>
+  <% else %>
+    <%= will_paginate @statics, :renderer => "RemoteLinkRenderer", :remote => { :update => "searchwrapper", :loading => visual_effect(:appear, "spinner"),:complete =>visual_effect(:fade,"spinner" ) }, :params => params %>
+    <table class="showtable">
+      <tbody class="table_header">
+        <td class="header_cell">Id</td>
+        <td class="header_cell">Identifier</td>
+        <td class="header_cell">Text</td>
+        <td class="display_none_header_cell"></td>
+        <td class="header_cell"><%= @count %></td>
+      </tbody>
+      <% @statics.each do |static| %>
+        <tbody class="<%= cycle("even","odd") %>">
+          <td>
+            <%= static.id %>
+          </td>
+          <td>
+            <%= static.identifier %>
+          </td>
+          <td>
+            <%= static.text %>
+          </td>
+          <td class="button_cell"><%= edit_link :url => edit_static_path(static) %></td>
+          <td class="button_cell"><%= destroy_link :url => static_path(static) %></td>
+        </tbody>
+      <% end %>
+    </table>
+  <% end %>
+</div>

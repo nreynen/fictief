@@ -43,25 +43,33 @@ module ApplicationHelper
   end
   
   def new_link(options)
-    begin
-      options[:url] ||= ""
-      options[:text] ||= put("link_new")
-      options[:style] ||= ""
-      options[:class] ||= ""
-      options[:attrs] ||= {}
-      
-      raise Exception, "No URL was given..." if options[:url].blank?
-      
-      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style]})
-    rescue Exception => e
-      link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
-    end
+    options[:text] ||= put("link_new")
+    generate_link options
   end
   
   def edit_link(options)
+    options[:text] ||= put("link_edit")
+    generate_link options
+  end
+  
+  def destroy_link(options)
+    options[:text] ||= put("link_destroy")
+    options[:attrs] ||= {}
+    options[:attrs].merge({:confirm => put("are_you_sure"), :method => :delete})
+    generate_link options
+  end
+  
+  def back_link(options)
+    options[:text] ||= put("link_back")
+    generate_link options
+  end
+  
+  private
+  
+  def generate_link(options)
     begin
       options[:url] ||= ""
-      options[:text] ||= put("link_edit")
+      options[:text] ||= ""
       options[:style] ||= ""
       options[:class] ||= ""
       options[:attrs] ||= {}
@@ -69,22 +77,6 @@ module ApplicationHelper
       raise Exception, "No URL was given..." if options[:url].blank?
       
       link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style]})
-    rescue Exception => e
-      link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
-    end
-  end
-  
-  def destroy_link(options)
-    begin
-      options[:url] ||= ""
-      options[:text] ||= put("link_destroy")
-      options[:style] ||= ""
-      options[:class] ||= ""
-      options[:attrs] ||= {}
-      
-      raise Exception, "No URL was given..." if options[:url].blank?
-      
-      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style], :confirm => put("are_you_sure"), :method => :delete})
     rescue Exception => e
       link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
     end

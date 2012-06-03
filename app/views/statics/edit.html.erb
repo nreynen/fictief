@@ -1,0 +1,15 @@
+<h1>Edit static</h1>
+<table class="showtable">
+  <% form_for @static, :url => static_path(@static) do |f| %>
+      <%if error_messages_for 'static' != nil%>
+        <%= error_messages_for 'static' , :class=>"error_message" %>
+      <%end%>
+      <tr>
+        <td><%= f.label "Text" %></td>
+        <td><%= f.text_area :text %></td>
+      </tr>
+    <tr>
+      <td colspan="2"><%= f.submit "Update" %>&nbsp;<%= back_link :url => statics_path %></td>
+    </tr>
+  <% end %>
+</table>
