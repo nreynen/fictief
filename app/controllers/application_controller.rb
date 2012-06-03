@@ -8,13 +8,14 @@ class ApplicationController < ActionController::Base
     @menu = [
       {
         :name => "BreadApp", :children => [
-          { :name => "Overview", :url => "someUrl" }
+          { :name => "Overview", :url => "someUrl" }, 
+          { :name => "Categories", :url => categories_path }, 
+          { :name => "Items", :url => items_path }
         ]
       }, 
       {
         :name => "CMS", :children => [
           { :name => "Statics", :url => statics_path }, 
-          { :name => "Categories", :url => categories_path }, 
           { :name => "Users", :url => users_path }
         ]
       }

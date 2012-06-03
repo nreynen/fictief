@@ -48,6 +48,10 @@ module ApplicationHelper
     text.length > chars ? "#{text[0..chars-3]}..." : text
   end
   
+  def price(price)
+    sprintf("%.2f &euro;", price.to_s)
+  end
+  
   def new_link(options)
     options[:text] ||= put("link_new")
     generate_link options

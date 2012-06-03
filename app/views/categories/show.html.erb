@@ -1,21 +1,27 @@
 <div>
-  <h1><%= @user.full_name %></h1>
+  <h1><%= @category.name %></h1>
   <table class="showtable">
     <tr>
-      <td style="vertical-align: top;">Orders</td>
+      <td style="vertical-align: top;">Items</td>
       <td>
         <table class="filltable">
           <thead class="table_header">
-            <th style="width: 50px;" class="header_cell">Order Id</th>
-            <th class="header_cell">Items</th>
-            <th class="header_cell">Quantity</th>
-            <th style="width: 50px;" class="header_cell">Price</th>
+            <th class="header_cell">Current Items</th>
+            <th class="header_cell">Price</th>
           </thead>
+          <tbody>
+            <% @category.items.each do |item| %>
+              <tr>
+                <td><%= item.name %></td>
+                <td><%= item.price %> &euro;</td>
+              </tr>
+            <% end %>
+          </tbody>
         </table>
       </td>
     </tr>
     <tr class="button_row">
-      <td colspan="2"><%= back_link :url => users_path %></td>
+      <td colspan="2"><%= back_link :url => categories_path %></td>
     </tr>
   </table>
 </div>

@@ -1,20 +1,12 @@
-<%if error_messages_for 'user' != nil%>
-  <%= error_messages_for 'user' , :class=>"error_message" %>
+<%if error_messages_for 'category' != nil%>
+  <%= error_messages_for 'category' , :class=>"error_message" %>
 <%end%>
 
 <tr>
-  <td><%= f.label "First Name:" %></td>
-  <td><%= f.text_field :first_name %></td>
+  <td><%= f.label "Name:" %></td>
+  <td><%= f.text_field :name %></td>
 </tr>
 <tr>
-  <td><%= f.label "Last Name:" %></td>
-  <td><%= f.text_field :last_name %></td>
-</tr>
-<tr>
-  <td><%= f.label "Login:" %></td>
-  <td><%= f.text_field :login %></td>
-</tr>
-<tr>
-  <td><%= f.label "Password:" %></td>
-  <td><%= f.text_field :password %></td>
+  <td><%= f.label "Description:" %></td>
+  <td><%= f.text_field :description %></td>
 </tr>

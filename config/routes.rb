@@ -5,4 +5,6 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :statics, :except => [:show, :new, :create]
   map.resources :users
+  map.resources :categories
+  map.resources :items
 end

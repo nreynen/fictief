@@ -1,0 +1,29 @@
+<h1>Items</h1>
+<div id="searchwrapper">
+  <%= will_paginate @items, :params => params %>
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Id</td>
+      <td class="header_cell">Name</td>
+      <td class="display_none_header_cell"></td>
+      <td class="display_none_header_cell"></td>
+      <td class="header_cell"><%= @items.total_entries %></td>
+    </tbody>
+    <tbody class="button_row">
+      <td colspan="2" class="header_cell"><%= new_link :url => new_item_path %></td>
+    </tbody>
+    <% @items.each do |item| %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <%= item.id %>
+        </td>
+        <td>
+          <%= item.name %>
+        </td>
+        <td class="button_cell"><%= edit_link :url => edit_item_path(item) %></td>
+        <td class="button_cell"><%= destroy_link :url => item_path(item) %></td>
+        <td class="button_cell"><%= show_link :url => item_path(item) %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

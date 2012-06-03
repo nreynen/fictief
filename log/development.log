@@ -9973,3 +9973,2115 @@ ActionController::RoutingError (No route matches "/images/back_logo.png" with {:
   /usr/local/bin/rdebug-ide:19
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-06-03 22:19:47) [GET]
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 47ms (View: 20, DB: 21) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:19:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:19:50) [GET]
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 56ms (View: 39, DB: 4) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:19:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2012-06-03 22:19:54) [GET]
+  [4;36;1mCategory Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (10.9ms)
+  [4;35;1mStatic Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 64ms (View: 45, DB: 7) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:19:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2012-06-03 22:20:16) [POST]
+  Parameters: {"category"=>{"name"=>"Witte broden", "description"=>"Zachte witte broden..."}, "commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno="}
+  [4;35;1mCategory Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.5ms)[0m   [0mINSERT INTO `categories` (`name`, `created_at`, `updated_at`, `description`) VALUES('Witte broden', '2012-06-03 22:20:16', '2012-06-03 22:20:16', 'Zachte witte broden...')[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 39ms (DB: 19) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:20:17) [GET]
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mStatic Columns (231.2ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mCategory Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (1.7ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.9ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 382ms (View: 131, DB: 238) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2012-06-03 22:20:21) [GET]
+  [4;35;1mCategory Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (9.9ms)
+  [4;36;1mStatic Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 50ms (View: 31, DB: 6) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2012-06-03 22:20:36) [POST]
+  Parameters: {"category"=>{"name"=>"Grijze broden", "description"=>""}, "commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno="}
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Create (0.5ms)[0m   [0;1mINSERT INTO `categories` (`name`, `created_at`, `updated_at`, `description`) VALUES('Grijze broden', '2012-06-03 22:20:36', '2012-06-03 22:20:36', '')[0m
+  [4;35;1mSQL (19.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 43ms (DB: 23) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:20:36) [GET]
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.7ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (1.8ms)
+Completed in 64ms (View: 44, DB: 7) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2012-06-03 22:20:38) [GET]
+  [4;36;1mCategory Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (9.6ms)
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.2ms)
+Completed in 52ms (View: 33, DB: 6) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2012-06-03 22:20:39) [POST]
+  Parameters: {"category"=>{"name"=>"", "description"=>""}, "commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno="}
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (15.7ms)
+  [4;36;1mStatic Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 63ms (View: 38, DB: 6) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:20:48) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.7ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (1.9ms)
+Completed in 65ms (View: 44, DB: 8) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2012-06-03 22:20:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering categories/edit
+Rendered categories/_form (10.7ms)
+  [4;36;1mStatic Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 66ms (View: 44, DB: 7) | 200 OK [http://localhost/categories/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:20:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2012-06-03 22:21:04) [PUT]
+  Parameters: {"category"=>{"name"=>"Grijze broden...", "description"=>""}, "commit"=>"Update", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "id"=>"2"}
+  [4;35;1mCategory Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Update (0.4ms)[0m   [0;1mUPDATE `categories` SET `updated_at` = '2012-06-03 22:21:04', `name` = 'Grijze broden...' WHERE `id` = 2[0m
+  [4;35;1mSQL (22.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 50ms (DB: 27) | 302 Found [http://localhost/categories/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:21:04) [GET]
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (3.0ms)
+Completed in 71ms (View: 51, DB: 7) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2012-06-03 22:21:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering categories/show
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.7ms)
+Completed in 48ms (View: 28, DB: 6) | 200 OK [http://localhost/categories/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:21:13) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (3.0ms)
+Completed in 66ms (View: 45, DB: 7) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2012-06-03 22:21:15) [DELETE]
+  Parameters: {"authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "id"=>"2"}
+  [4;36;1mCategory Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Destroy (0.4ms)[0m   [0mDELETE FROM `categories` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 25ms (DB: 6) | 302 Found [http://localhost/categories/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:21:15) [GET]
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mCategory Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 54ms (View: 35, DB: 6) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2012-06-03 22:21:17) [DELETE]
+  Parameters: {"authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "id"=>"1"}
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Destroy (0.3ms)[0m   [0;1mDELETE FROM `categories` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 21ms (DB: 4) | 302 Found [http://localhost/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:21:17) [GET]
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+Rendered layouts/_nav (2.3ms)
+Completed in 113ms (View: 19, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2012-06-03 22:21:58) [GET]
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (10.0ms)
+  [4;36;1mStatic Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (1.8ms)
+Completed in 52ms (View: 32, DB: 6) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:21:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2012-06-03 22:22:07) [POST]
+  Parameters: {"category"=>{"name"=>"Witte broden", "description"=>"Zachte witte broden..."}, "commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno="}
+  [4;36;1mCategory Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Create (0.4ms)[0m   [0;1mINSERT INTO `categories` (`name`, `created_at`, `updated_at`, `description`) VALUES('Witte broden', '2012-06-03 22:22:08', '2012-06-03 22:22:08', 'Zachte witte broden...')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 25ms (DB: 4) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:22:08) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (1.9ms)
+Completed in 55ms (View: 33, DB: 7) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:22:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-06-03 22:32:05) [GET]
+
+NameError (undefined local variable or method `items_path' for #<RootController:0x1056c4bb0>):
+  app/controllers/application_controller.rb:13:in `maintain_menu'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (96.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-06-03 22:32:20) [GET]
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (81.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (1.9ms)
+Completed in 111ms (View: 21, DB: 83) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:32:23) [GET]
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+Rendered layouts/_nav (2.9ms)
+Completed in 93ms (View: 55, DB: 3) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:32:32) [GET]
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.3ms)
+Completed in 56ms (View: 33, DB: 7) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:32:34) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+Rendered layouts/_nav (2.6ms)
+Completed in 36ms (View: 18, DB: 4) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2012-06-03 22:32:35) [GET]
+  [4;35;1mItem Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/application
+Rendering items/new
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (29.1ms)
+  [4;36;1mStatic Columns (20.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 121ms (View: 79, DB: 27) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2012-06-03 22:32:52) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "item"=>{"price"=>"1.20", "name"=>"Wit brood, gesneden", "category_id"=>"3"}}
+  [4;36;1mItem Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`, `category_id`) VALUES('Wit brood, gesneden', 1.2, '2012-06-03 22:32:52', '2012-06-03 22:32:52', 3)[0m
+  [4;35;1mSQL (22.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed in 50ms (DB: 26) | 302 Found [http://localhost/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:32:52) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.4ms)
+Completed in 56ms (View: 35, DB: 7) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2012-06-03 22:32:55) [GET]
+  [4;36;1mItem Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/application
+Rendering items/new
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (28.6ms)
+  [4;35;1mStatic Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 72ms (View: 48, DB: 8) | 200 OK [http://localhost/items/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:32:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2012-06-03 22:33:02) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "item"=>{"price"=>"1.20", "name"=>"Wit brood, ongesneden", "category_id"=>"3"}}
+  [4;35;1mItem Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`, `category_id`) VALUES('Wit brood, ongesneden', 1.2, '2012-06-03 22:33:02', '2012-06-03 22:33:02', 3)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed in 27ms (DB: 4) | 302 Found [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:02) [GET]
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 65ms (View: 45, DB: 6) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2012-06-03 22:33:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/edit
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategory Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (26.8ms)
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 163ms (View: 138, DB: 8) | 200 OK [http://localhost/items/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:08) [GET]
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mItem Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.3ms)
+Completed in 70ms (View: 47, DB: 9) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:33:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mItem Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+  [4;36;1mStatic Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (3.0ms)
+Completed in 92ms (View: 67, DB: 9) | 200 OK [http://localhost/items/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:14) [GET]
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 66ms (View: 45, DB: 8) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2012-06-03 22:33:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mItem Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering items/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (28.1ms)
+  [4;36;1mStatic Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.0ms)
+Completed in 74ms (View: 50, DB: 9) | 200 OK [http://localhost/items/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:17) [GET]
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mStatic Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mItem Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.2ms)
+Completed in 67ms (View: 45, DB: 7) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2012-06-03 22:33:19) [GET]
+  [4;35;1mItem Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/application
+Rendering items/new
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (31.5ms)
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.4ms)
+Completed in 75ms (View: 50, DB: 9) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2012-06-03 22:33:23) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "item"=>{"price"=>"hhh", "name"=>"ghghgh", "category_id"=>"3"}}
+  [4;36;1mItem Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`, `category_id`) VALUES('ghghgh', 0.0, '2012-06-03 22:33:23', '2012-06-03 22:33:23', 3)[0m
+  [4;35;1mSQL (13.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed in 38ms (DB: 16) | 302 Found [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:23) [GET]
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.2ms)
+Completed in 160ms (View: 140, DB: 7) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2012-06-03 22:33:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mItem Columns (16.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering items/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (142.2ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (170.9ms)
+  [4;36;1mStatic Columns (75.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.7ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (1.9ms)
+Completed in 308ms (View: 55, DB: 236) | 200 OK [http://localhost/items/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:29) [GET]
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mStatic Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mItem Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 78ms (View: 57, DB: 7) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#destroy (for 127.0.0.1 at 2012-06-03 22:33:32) [DELETE]
+  Parameters: {"authenticity_token"=>"uwpn3Pvbi2wxdkL/NUx8A0Q+vcNcMjJr52eIBnJWWno=", "id"=>"3"}
+  [4;35;1mItem Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Destroy (0.3ms)[0m   [0;1mDELETE FROM `items` WHERE `id` = 3[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed in 23ms (DB: 5) | 302 Found [http://localhost/items/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-06-03 22:33:33) [GET]
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mStatic Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 67ms (View: 46, DB: 7) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:33:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:34:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #10 of app/views/items/show.html.erb:
+7:     </tr>
+8:     <tr>
+9:       <td style="vertical-align: top;">Price</td>
+10:       <td><%= printf(@item.price, 2) %></td>
+11:     </tr>
+12:     <tr class="button_row">
+13:       <td colspan="2"><%= back_link :url => items_path %></td>
+
+    app/views/items/show.html.erb:10:in `printf'
+    app/views/items/show.html.erb:10
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+    /usr/local/bin/rdebug-ide:19:in `load'
+    /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (113.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:34:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.4ms)
+Completed in 150ms (View: 123, DB: 10) | 200 OK [http://localhost/items/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:34:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:34:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+  [4;36;1mStatic Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (3.0ms)
+Completed in 78ms (View: 51, DB: 9) | 200 OK [http://localhost/items/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:34:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:35:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+
+ActionView::TemplateError (private method `sprintf' called for "1.2":String) on line #10 of app/views/items/show.html.erb:
+7:     </tr>
+8:     <tr>
+9:       <td style="vertical-align: top;">Price</td>
+10:       <td><%= @item.price.to_s.sprintf(2) %></td>
+11:     </tr>
+12:     <tr class="button_row">
+13:       <td colspan="2"><%= back_link :url => items_path %></td>
+
+    app/views/items/show.html.erb:10
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+    /usr/local/bin/rdebug-ide:19:in `load'
+    /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (118.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:35:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+
+ActionView::TemplateError (private method `printf' called for "1.2":String) on line #10 of app/views/items/show.html.erb:
+7:     </tr>
+8:     <tr>
+9:       <td style="vertical-align: top;">Price</td>
+10:       <td><%= @item.price.to_s.printf(2) %></td>
+11:     </tr>
+12:     <tr class="button_row">
+13:       <td colspan="2"><%= back_link :url => items_path %></td>
+
+    app/views/items/show.html.erb:10
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+    /usr/local/bin/rdebug-ide:19:in `load'
+    /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:37:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (6.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+  [4;36;1mStatic Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.2ms)
+Completed in 67ms (View: 39, DB: 13) | 200 OK [http://localhost/items/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:37:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:38:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (28.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+
+ActionView::TemplateError (malformed format string - %,) on line #10 of app/views/items/show.html.erb:
+7:     </tr>
+8:     <tr>
+9:       <td style="vertical-align: top;">Price</td>
+10:       <td><%= price @item.price %></td>
+11:     </tr>
+12:     <tr class="button_row">
+13:       <td colspan="2"><%= back_link :url => items_path %></td>
+
+    app/helpers/application_helper.rb:52:in `sprintf'
+    app/helpers/application_helper.rb:52:in `price'
+    app/views/items/show.html.erb:10
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+    /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+    /usr/local/bin/rdebug-ide:19:in `load'
+    /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (110.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2012-06-03 22:39:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 56ms (View: 33, DB: 9) | 200 OK [http://localhost/items/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:39:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-06-03 22:39:23) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 60ms (View: 37, DB: 8) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:39:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2012-06-03 22:39:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCategory Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering categories/show
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 78ms (View: 53, DB: 9) | 200 OK [http://localhost/categories/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2012-06-03 22:39:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering categories/show
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+  [4;35;1mItem Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mStatic Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (2.3ms)
+Completed in 63ms (View: 39, DB: 8) | 200 OK [http://localhost/categories/3]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:39:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-06-03 22:40:14) [GET]
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (2.1ms)
+Completed in 28ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-06-03 22:40:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/back_logo.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
