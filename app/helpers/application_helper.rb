@@ -36,10 +36,16 @@ module ApplicationHelper
     image_tag "load.gif", :id => "loader", :style => "width: 150px; float: right; margin-right: -9px; margin-top: -5px; display: none;"
   end
   
+  # Dank u, Kai De Sutter
   def put(identifier)
     static = Static.find_by_identifier identifier
     static = Static.create({:identifier => identifier, :text => "*#{identifier}*"}) if static.nil?
     static.text
+  end
+  
+  # Dank u, Kai De Sutter
+  def shorten(text, chars=20)
+    text.length > chars ? "#{text[0..chars-3]}..." : text
   end
   
   def new_link(options)

@@ -2,7 +2,7 @@
   <% if @statics.total_entries < 1 %>
     <p>No statics found...</p>
   <% else %>
-    <%= will_paginate @statics, :renderer => "RemoteLinkRenderer", :remote => { :update => "searchwrapper", :loading => visual_effect(:appear, "spinner"),:complete =>visual_effect(:fade,"spinner" ) }, :params => params %>
+    <%= will_paginate @statics, :params => params %>
     <table class="showtable">
       <tbody class="table_header">
         <td class="header_cell">Id</td>
@@ -20,7 +20,7 @@
             <%= static.identifier %>
           </td>
           <td>
-            <%= static.text %>
+            <%= shorten static.text %>
           </td>
           <td class="button_cell"><%= edit_link :url => edit_static_path(static) %></td>
           <td class="button_cell"><%= destroy_link :url => static_path(static) %></td>

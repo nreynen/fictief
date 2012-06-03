@@ -54,6 +54,7 @@ gem "treetop"
 gem "zip"
 gem "hpricot"
 gem "koala"
+gem 'mislav-will_paginate', '~> 2.3'
 
 group :development do
   gem "rspec-rails", "1.3.3"

@@ -29,5 +29,6 @@ Rails::Initializer.run do |config|
     "Saturday" => "Zaterdag", 
     "Sunday" => "Zondag"
   }
-
 end
+
+require 'will_paginate'

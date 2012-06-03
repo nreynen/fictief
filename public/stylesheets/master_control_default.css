@@ -240,11 +240,8 @@ a.highlighted_menu, #menu li a.highlighted_menu {
 .even:hover, .odd:hover {
   background-color: #9A9A9A;
 }
-tr:hover {
+tbody:not(.table_header) tr:hover {
   background-color: #9A9A9A;
-}
-.table_header tr:hover {
-
 }
 input {
   width: 99%;
@@ -320,4 +317,25 @@ input[type="submit"] {
 .dotted_border div {
   width: 50%;
   float: left;
+}
+.pagination {
+  margin-bottom: 10px;
+}
+.pagination span, .pagination a {
+  padding: 3px;
+  margin-left: -3px;
+}
+.pagination span.current {
+  padding: 5px;
+  border: 2px solid #E777EB;
+}
+.pagination a, .pagination .prev_page, .pagination .next_page {
+  border-top: 1px solid #2B2B2B;
+  border-bottom: 1px solid #2B2B2B;
+}
+.pagination .prev_page {
+  border-left: 1px solid #2B2B2B;
+}
+.pagination .next_page {
+  border-right: 1px solid #2B2B2B;
 }

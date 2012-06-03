@@ -75,6 +75,7 @@ GEM
       nokogiri (>= 1.2.1)
     memcache-client (1.8.5)
     mime-types (1.16)
+    mislav-will_paginate (2.3.11)
     mojombo-chronic (0.3.0)
     multi_json (1.0.4)
     multipart-post (1.1.4)
@@ -168,6 +169,7 @@ DEPENDENCIES
   mechanize (= 1.0.0)
   memcache-client
   mime-types
+  mislav-will_paginate (~> 2.3)
   mojombo-chronic
   mysql (= 2.8.1)
   net-scp
