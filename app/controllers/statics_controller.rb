@@ -2,12 +2,10 @@ class StaticsController < ApplicationController
   
   def index
     @statics = Static.paginate :page => params[:page], :order => "id", :per_page => 25
-    @count = @statics.length
   end
   
   def edit
     @static = Static.find(params[:id])
-    bla = 2
   end
   
   def update

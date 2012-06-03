@@ -1,3 +1,4 @@
+<h1>Statics</h1>
 <div id="searchwrapper">
   <% if @statics.total_entries < 1 %>
     <p>No statics found...</p>
@@ -9,7 +10,7 @@
         <td class="header_cell">Identifier</td>
         <td class="header_cell">Text</td>
         <td class="display_none_header_cell"></td>
-        <td class="header_cell"><%= @count %></td>
+        <td class="header_cell"><%= @statics.total_entries %></td>
       </tbody>
       <% @statics.each do |static| %>
         <tbody class="<%= cycle("even","odd") %>">

@@ -203,8 +203,7 @@ a {
 }
 .filltable {
   border-collapse: collapse;
-  width: 102%;
-  margin: -5px -5px -6px;
+  width: 100%;
 }
 .showtable td, .filltable td {
   border: 1px solid black;

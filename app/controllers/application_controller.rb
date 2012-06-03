@@ -13,7 +13,9 @@ class ApplicationController < ActionController::Base
       }, 
       {
         :name => "CMS", :children => [
-          { :name => "Statics", :url => statics_path }
+          { :name => "Statics", :url => statics_path }, 
+          { :name => "Categories", :url => categories_path }, 
+          { :name => "Users", :url => users_path }
         ]
       }
     ]

@@ -1,0 +1,14 @@
+<div>
+  <h1>Edit user</h1>
+  <table class="showtable">
+    <% form_for @user, :url => user_path(@user) do |f| %>
+      <%= render(:partial => 'form', :locals => { :f => f, :user => @user }) %>
+      <tr>
+        <td colspan="2"><%= f.submit "Update" %></td>
+      </tr>
+    <% end %>
+    <tr class="button_row">
+      <td colspan="2"><%= show_link :url => user_path(@user) %> | <%= back_link :url => users_path %></td>
+    </tr>
+  </table>
+</div>

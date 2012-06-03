@@ -4,4 +4,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :root, :only => [:index], :collection => {:home => :get, :error => :get}
   
   map.resources :statics, :except => [:show, :new, :create]
+  map.resources :users
 end

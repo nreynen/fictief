@@ -53,6 +53,11 @@ module ApplicationHelper
     generate_link options
   end
   
+  def show_link(options)
+    options[:text] ||= put("link_show")
+    generate_link options
+  end
+  
   def edit_link(options)
     options[:text] ||= put("link_edit")
     generate_link options
@@ -61,7 +66,7 @@ module ApplicationHelper
   def destroy_link(options)
     options[:text] ||= put("link_destroy")
     options[:attrs] ||= {}
-    options[:attrs].merge({:confirm => put("are_you_sure"), :method => :delete})
+    options[:attrs].merge!({:confirm => put("are_you_sure"), :method => :delete})
     generate_link options
   end
   
@@ -82,7 +87,7 @@ module ApplicationHelper
       
       raise Exception, "No URL was given..." if options[:url].blank?
       
-      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style]})
+      link_to options[:text], options[:url], options[:attrs].merge!({:style => options[:style]})
     rescue Exception => e
       link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
     end
