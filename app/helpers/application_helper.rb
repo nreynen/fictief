@@ -21,35 +21,6 @@ module ApplicationHelper
     return_string
   end
   
-  def generate_newsfeed_items
-    return_html = "<div class='feeds'>"
-    the_feeds = generate_feed_hash(Newsfeed.last_twenty)
-    @feeler.each do |date|
-      return_html << "<div class='feed'>"
-      return_html << "<div class='date'>#{date}</div>"
-      the_feeds[date].each do |feed|
-        return_html << "<div class='feed_comment'>"
-        return_html << "#{feed}<br>"
-        return_html << "</div>"
-      end
-      return_html << "</div>"
-    end
-    return_html << "</div>"
-    return_html
-  end
-  
-  def generate_feed_hash(feeds)
-    return_hash = {}
-    @feeler = []
-    feeds.each do |feed|
-      the_date = dutchify_date feed.created_at.strftime("%d %B %Y (%A)")
-      @feeler << the_date unless @feeler.include? the_date
-      return_hash[the_date] ||= []
-      return_hash[the_date] << "#{feed.created_at.strftime('%H:%M:%S')} - #{feed.feed}"
-    end
-    return_hash
-  end
-  
   def dutchify_date(date_string)
     the_date = date_string
     DAYS.each_pair do |key, day|
@@ -63,5 +34,59 @@ module ApplicationHelper
   
   def loader
     image_tag "load.gif", :id => "loader", :style => "width: 150px; float: right; margin-right: -9px; margin-top: -5px; display: none;"
+  end
+  
+  def put(identifier)
+    static = Static.find_by_identifier identifier
+    static = Static.create({:identifier => identifier, :text => "*#{identifier}*"}) if static.nil?
+    static.text
+  end
+  
+  def new_link(options)
+    begin
+      options[:url] ||= ""
+      options[:text] ||= put("link_new")
+      options[:style] ||= ""
+      options[:class] ||= ""
+      options[:attrs] ||= {}
+      
+      raise Exception, "No URL was given..." if options[:url].blank?
+      
+      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style]})
+    rescue Exception => e
+      link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
+    end
+  end
+  
+  def edit_link(options)
+    begin
+      options[:url] ||= ""
+      options[:text] ||= put("link_edit")
+      options[:style] ||= ""
+      options[:class] ||= ""
+      options[:attrs] ||= {}
+      
+      raise Exception, "No URL was given..." if options[:url].blank?
+      
+      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style]})
+    rescue Exception => e
+      link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
+    end
+  end
+  
+  def destroy_link(options)
+    begin
+      options[:url] ||= ""
+      options[:text] ||= put("link_destroy")
+      options[:style] ||= ""
+      options[:class] ||= ""
+      options[:attrs] ||= {}
+      
+      raise Exception, "No URL was given..." if options[:url].blank?
+      
+      link_to options[:text], options[:url], options[:attrs].merge({:style => options[:style], :confirm => put("are_you_sure"), :method => :delete})
+    rescue Exception => e
+      link_to options[:text], error_root_path(:message => {:error => e.message}), options[:attrs].merge({:style => options[:style]})
+    end
   end
 end

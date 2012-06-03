@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <th style="width: 2%;">Id</th>
+    <th style="width: 38%;">Identifier</th>
+    <th style="width: 50%;">Text</th>
+    <th style="width: 10%;" colspan="2">&nbsp;</th>
+  </thead>
+  <tbody>
+    <% @statics.each do |static| %>
+      <tr class="<%= cycle("odd", "even") %>">
+        <td><%= static.id %></td>
+        <td><%= static.identifier %></td>
+        <td><%= static.text %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

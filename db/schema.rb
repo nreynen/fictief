@@ -9,6 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120603134514) do
+
+  create_table "statics", :force => true do |t|
+    t.string   "identifier", :null => false
+    t.string   "text",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

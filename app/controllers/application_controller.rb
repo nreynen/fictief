@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
         :name => "BreadApp", :children => [
           { :name => "Overview", :url => "someUrl" }
         ]
+      }, 
+      {
+        :name => "CMS", :children => [
+          { :name => "Statics", :url => statics_path }
+        ]
       }
     ]
     @menu << {
