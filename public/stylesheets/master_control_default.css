@@ -209,7 +209,11 @@ a {
   border: 1px solid black;
   padding: 5px;
 }
-.table_header .display_none_header_cell {
+.showtable table:not(.showtable):not(.filltable) td, .filltable table:not(.showtable):not(.filltable) td {
+  border: none;
+  padding: 0px;
+}
+.table_header .display_none_header_cell, tbody .display_none_cell {
   border: 0px;
 }
 .table_header {
@@ -241,6 +245,9 @@ a.highlighted_menu, #menu li a.highlighted_menu {
 }
 tbody:not(.table_header) tr:hover {
   background-color: #9A9A9A;
+}
+tbody:not(.table_header) tr table tr:hover {
+  background-color: #BABABA;
 }
 input {
   width: 99%;
@@ -337,4 +344,37 @@ input[type="submit"] {
 }
 .pagination .next_page {
   border-right: 1px solid #2B2B2B;
+}
+#tabination {
+  width: 100%;
+  height: 100%;
+}
+#tabination .tabs {
+  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  float: left;
+  border-right: 1px solid #A6A2EB; /* Lichtblauw */
+}
+#tabination .tabs .tab {
+  padding: 5px;
+  background-color: #A6A2EB; /* Lichtblauw */
+  border: 1px solid #4400FF; /* Blauw */
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+  margin-top: -1px;
+  width: 160px;
+}
+#tabination .tabs .tab.current {
+  width: 179px;
+}
+#tabination .tabs_contents {
+  float: left;
+}
+#tabination .tabs_contents .tab_content {
+  margin-left: 15px;
+  display: none;
+}
+#tabination .tabs_contents .tab_content.current {
+  display: block;
 }

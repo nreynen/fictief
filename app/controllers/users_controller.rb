@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   
   def index
     @users = User.paginate :page => params[:page], :order => "id", :per_page => 25
-    @count = @users.length
   end
   
   def show

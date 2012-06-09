@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   
   def index
     @categories = Category.paginate :page => params[:page], :order => "id", :per_page => 25
-    @count = @categories.length
   end
   
   def show

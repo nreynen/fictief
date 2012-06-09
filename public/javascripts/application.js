@@ -1,6 +1,7 @@
 $(document).ready(function() {
   load_menu_resizer();
 });
+
 function load_menu_resizer() {
   $(window).resize(function() {
     resize_menu();
@@ -8,6 +9,7 @@ function load_menu_resizer() {
   resize_menu();
 }
 
+/* Dank u, Kai De Sutter */
 function resize_menu() {
   $("ul#menu").show();
   var win_width = $(window).width();

@@ -1,0 +1,37 @@
+<h1>Orders</h1>
+<div id="searchwrapper">
+  <%= will_paginate @orders, :params => params %>
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Id</td>
+      <td class="header_cell">User</td>
+      <td class="header_cell">Paid?</td>
+      <td class="header_cell">Date</td>
+      <td class="display_none_header_cell"></td>
+      <td class="display_none_header_cell"></td>
+      <td class="header_cell"><%= @orders.total_entries %></td>
+    </tbody>
+    <tbody class="button_row">
+      <td colspan="4" class="header_cell"><%= new_link :url => new_order_path %></td>
+    </tbody>
+    <% @orders.each do |order| %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <%= order.id %>
+        </td>
+        <td>
+          <%= order.user.name %>
+        </td>
+        <td style="text-align: center;">
+          <%= niceify_bool order.paid %>
+        </td>
+        <td style="text-align: center;">
+          <%= order.created_at.strftime "%e %b %Y" %>
+        </td>
+        <td class="button_cell"><%= edit_link :url => edit_order_path(order) %></td>
+        <td class="button_cell"><%= destroy_link :url => order_path(order) %></td>
+        <td class="button_cell"><%= show_link :url => order_path(order) %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

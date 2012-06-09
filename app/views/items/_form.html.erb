@@ -12,5 +12,5 @@
 </tr>
 <tr>
   <td><%= f.label "Category:" %></td>
-  <td><%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, item.category_id) %></td>
+  <td><%= f.select :category_id, options_from_collection_for_select(Category.find(:all, :order => "name ASC"), :id, :name, item.category_id) %></td>
 </tr>

@@ -52,6 +52,10 @@ module ApplicationHelper
     sprintf("%.2f &euro;", price.to_s)
   end
   
+  def niceify_bool(bool)
+    image_tag "status/#{bool.to_s}.gif", :style => "width: 13px; height: 13px; opacity: 0.7;", :title => "#{bool.to_s.capitalize}"
+  end
+  
   def new_link(options)
     options[:text] ||= put("link_new")
     generate_link options
@@ -81,8 +85,11 @@ module ApplicationHelper
   
   private
   
-  def generate_link(options)
+  def generate_link(_options = {})
     begin
+      options = {
+        :url => _options[:url] || ""
+      }
       options[:url] ||= ""
       options[:text] ||= ""
       options[:style] ||= ""

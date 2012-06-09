@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   
   def index
     @items = Item.paginate :page => params[:page], :order => "id", :per_page => 25
-    @count = @items.length
   end
   
   def show

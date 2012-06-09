@@ -1,0 +1,49 @@
+<%if error_messages_for 'order' != nil%>
+  <%= error_messages_for 'order' , :class=>"error_message" %>
+<%end%>
+
+<% content_for :head do %>
+  <%= javascript_include_tag "BreadApp/order.js" %>
+<% end %>
+
+<tr>
+  <td><%= f.label "User:" %></td>
+  <td><%= f.select :user_id, options_from_collection_for_select(User.find(:all, :order => "first_name ASC"), :id, :name, order.user_id) %></td>
+</tr>
+<tr>
+  <td><%= f.label "Items:" %></td>
+  <td style="width: 700px; min-width: 700px; max-width: 700px;">
+    <div id="tabination">
+      <div class="tabs">
+        
+        <% quantities = order.order.split(";").inject({}) do |h, x| 
+          item = x.split(",")
+          h[item[0]] = item[1]
+          h
+        end unless order.order.nil? %>
+        
+        <% Category.find(:all, :order => "name ASC").each do |category| %>
+          <div tab_id="<%= category.id %>" class="tab" onclick="open_tab('<%= category.id %>')">
+            <span><%= category.name %></span>
+          </div>
+        <% end %>
+      </div>
+      <div class="tabs_contents">
+        <% Category.find(:all, :order => "name ASC").each do |category| %>
+          <div class="tab_content tab_content_<%= category.id %>">
+            <table style="width: 480px;">
+              <% category.items.each do |item| %>
+                <tr>
+                  <td><%= item.name %></td>
+                  <td><span>Quantity: </span><%= text_field_tag "items[#{item.id}][quantity]", (quantities["#{item.id}"] rescue ""), :style => "width: 20px;" %></td>
+                </tr>
+                <span></span>
+                
+              <% end %>
+            </table>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </td>
+</tr>

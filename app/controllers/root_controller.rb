@@ -7,4 +7,8 @@ class RootController < ApplicationController
   def error
     
   end
+  
+  def login
+    
+  end
 end
