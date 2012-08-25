@@ -1,10 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => "user_sessions", :action => "new"
+  map.root :controller => "root", :action => "info"
   
-  map.resources :root, :only => [:index], :collection => {:home => :get, :error => :get, :login => [:get, :post]}
+  map.resources :root, :only => [:index], :collection => {:info => :get, :home => :get, :error => :get, :login => [:get, :post]}
   
   map.resources :statics, :except => [:show, :new, :create]
   map.resources :users
+  map.resources :user_rights, :except => [:show, :edit, :update, :destroy], :collection => {:delete_rights => [:get, :post]}
   map.resources :categories
   map.resources :user_sessions, :except => [:edit]
   map.resources :items

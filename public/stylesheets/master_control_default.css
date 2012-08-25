@@ -48,6 +48,13 @@ body {
   float: left;
   margin: 0 15px;
 }
+#menu .logout:hover, #menu .main_menu:hover, #menu .tray:hover, #menu li li:hover {
+  background-color: #000000;
+}
+#menu li li:last-child:hover {
+  background-color: #000000;
+  border-radius: 0 0 20px 20px;
+}
 #menu .ending {
   padding: 0px;
   width: 20px;
@@ -84,8 +91,7 @@ body {
 }
 #menu li ul li {
   display: block;
-  margin: 0 20px 5px;
-  padding: 5px 0px 0px;
+  padding: 5px 20px 5px 20px;
   border-top: dotted 1px #000000;
   list-style-type: none;
 }

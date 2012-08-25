@@ -1,7 +1,6 @@
 class UserSessionsController < ApplicationController
-  #before_filter :ensure_admin_login, :only => [:destroy]
-  #before_filter :ensure_admin_logout, :only => [:new, :create]
-  #before_filter :ensure_logout
+  before_filter :ensure_logged_in, :only => [:destroy]
+  before_filter :ensure_logged_out, :only => [:new, :create]
   
   def index
     redirect_to(new_user_session_path)
@@ -28,7 +27,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     UserSession.destroy(@session)
-    session[:admin] = @user = nil
+    session[:user] = @user = nil
     flash[:notice] = "You are logged out."
     session[:expiry_time] = 60.minutes.from_now
     redirect_to(root_url)

@@ -29,6 +29,10 @@ Rails::Initializer.run do |config|
     "Saturday" => "Zaterdag", 
     "Sunday" => "Zondag"
   }
+  
+  RIGHTS = {
+    :admin => "Admin"
+  }
 end
 
 require 'will_paginate'

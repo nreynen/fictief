@@ -29,8 +29,10 @@
     &nbsp;
   </li>
   <li class="tray sideline">
-    <%#= render :partial => "notification_tray.html" %>
     &nbsp;
+  </li>
+  <li class="logout sideline">
+    <%= link_to image_tag("logout.png", :size => "29x29", :style => "float: left; margin: 8px auto;"), user_session_path(@session), :method => :delete %>
   </li>
   <li class="ending border-bottom-right">
     &nbsp;

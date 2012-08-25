@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery
   
-  before_filter :maintain_menu
   before_filter :maintain_session
+  before_filter :maintain_menu
   
   def maintain_menu
     @menu = [
@@ -25,10 +25,10 @@ class ApplicationController < ActionController::Base
     ]
     @menu << {
         :name => "Admin", :children => [
-          { :name => "Spelers", :url => players_path },
-          { :name => "Speelavonden", :url => playnights_path(:season => @current_season) }
+          { :name => "User Rights", :url => user_rights_path },
+          { :name => "Bla", :url => "someUrl" }
         ]
-    } if session[:is_admin]
+    } if (@user.has_rights_for(RIGHTS[:admin]) rescue false)
   end
   
   def js_map(attributes)
@@ -42,7 +42,8 @@ class ApplicationController < ActionController::Base
   
   def maintain_session
     if session[:user]
-      if @session = UserSession.find(session[:user])
+      @session = UserSession.find(session[:user]) rescue nil
+      if @session
         @user = @session.user
       else
         session[:user] = nil
@@ -55,6 +56,20 @@ class ApplicationController < ActionController::Base
     unless @user
       flash[:error] = @template.put("error_login")
       redirect_to(new_user_session_path)
+    end
+  end
+  
+  def ensure_is_admin
+    unless @user && @user.has_rights_for(RIGHTS[:admin])
+      flash[:error] = @template.put("rights_not_enough")
+      redirect_to(home_root_path)
+    end
+  end
+  
+  def ensure_logged_out
+    if @user
+      flash[:error] = "You must logout first"
+      redirect_to(home_root_url)
     end
   end
 end
