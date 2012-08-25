@@ -1,4 +1,5 @@
 require 'capistrano'
+require "bundler/capistrano"
 
 set :deploy_via, :remote_cache
 

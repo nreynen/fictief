@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_filter :ensure_logged_in
   
   def index
     @items = Item.paginate :page => params[:page], :order => "id", :per_page => 25

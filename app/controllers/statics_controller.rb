@@ -1,4 +1,5 @@
 class StaticsController < ApplicationController
+  before_filter :ensure_logged_in
   
   def index
     @statics = Static.paginate :page => params[:page], :order => "id", :per_page => 25

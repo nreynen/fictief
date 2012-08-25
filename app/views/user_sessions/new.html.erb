@@ -1,0 +1,25 @@
+<div id="login_screen">
+  <h1><%= put "login_title" %></h1>
+  
+  <%= put "login_welcome" %>
+  
+  <% form_for @session do |f| %>
+    <div class="login">
+      <div style="width: 530px;">
+        <div style="width: 100px;"><%= put("login_login") %></div><%= text_field_tag "[user][login]", "", :style => "width: 470px; margin-left: 30px;" %>
+      </div>
+      <div style="width: 530px;">
+        <div style="width: 100px;"><%= put("login_pwd") %></div><%= password_field_tag "[user][password]", "", :style => "width: 470px; margin-left: 30px;" %>
+      </div>
+    </div>
+    <%= link_to_function put("login_login"), "$('#new_user_session').submit();", :class => "looklike_button" %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $('#user_password').keyup(function(e) {
+    if(e.keyCode == 13) {
+      $('#new_user_session').submit();
+    }
+  });
+</script>

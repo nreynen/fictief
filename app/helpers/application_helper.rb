@@ -56,30 +56,40 @@ module ApplicationHelper
     image_tag "status/#{bool.to_s}.gif", :style => "width: 13px; height: 13px; opacity: 0.7;", :title => "#{bool.to_s.capitalize}"
   end
   
-  def new_link(options)
-    options[:text] ||= put("link_new")
+  def new_link(_options={})
+    options = {
+      :text => _options[:text] || put("link_new")
+    }.merge(_options)
     generate_link options
   end
   
-  def show_link(options)
-    options[:text] ||= put("link_show")
+  def show_link(_options={})
+    options = {
+      :text => _options[:text] || put("link_show")
+    }.merge(_options)
     generate_link options
   end
   
-  def edit_link(options)
-    options[:text] ||= put("link_edit")
+  def edit_link(_options={})
+    options = {
+      :text => _options[:text] || put("link_edit")
+    }.merge(_options)
     generate_link options
   end
   
-  def destroy_link(options)
-    options[:text] ||= put("link_destroy")
-    options[:attrs] ||= {}
+  def destroy_link(_options={})
+    options = {
+      :text => _options[:text] || put("link_destroy"), 
+      :attrs => _options[:attrs] || {}
+    }.merge(_options)
     options[:attrs].merge!({:confirm => put("are_you_sure"), :method => :delete})
     generate_link options
   end
   
-  def back_link(options)
-    options[:text] ||= put("link_back")
+  def back_link(_options={})
+    options = {
+      :text => _options[:text] || put("link_back")
+    }.merge(_options)
     generate_link options
   end
   
@@ -88,13 +98,12 @@ module ApplicationHelper
   def generate_link(_options = {})
     begin
       options = {
-        :url => _options[:url] || ""
+        :url => _options[:url] || "", 
+        :text => _options[:text] || "", 
+        :style => _options[:style] || "", 
+        :class => _options[:class] || "", 
+        :attrs => _options[:attrs] || {}
       }
-      options[:url] ||= ""
-      options[:text] ||= ""
-      options[:style] ||= ""
-      options[:class] ||= ""
-      options[:attrs] ||= {}
       
       raise Exception, "No URL was given..." if options[:url].blank?
       

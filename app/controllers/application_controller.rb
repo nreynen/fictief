@@ -3,9 +3,8 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery
   
-  #before_filter :ensure_logged_in
-  
   before_filter :maintain_menu
+  before_filter :maintain_session
   
   def maintain_menu
     @menu = [
@@ -32,12 +31,30 @@ class ApplicationController < ActionController::Base
     } if session[:is_admin]
   end
   
-  private
+  def js_map(attributes)
+    mapping = ["<script type='text/javascript'>"]
+    attributes.each do |x|
+      mapping << %Q{var #{x[0].to_s} = "#{@template.escape_javascript(x[1])}";}
+    end
+    mapping << "</script>"
+    mapping.join
+  end
+  
+  def maintain_session
+    if session[:user]
+      if @session = UserSession.find(session[:user])
+        @user = @session.user
+      else
+        session[:user] = nil
+        redirect_to(root_url)
+      end
+    end
+  end
   
   def ensure_logged_in
     unless @user
-      flash[:error] = "aaa"#put("error_login")
-      redirect_to(login_root_path)
+      flash[:error] = @template.put("error_login")
+      redirect_to(new_user_session_path)
     end
   end
 end

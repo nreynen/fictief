@@ -14,33 +14,16 @@
     <%= javascript_include_tag "general/tabination.js" %>
     
     <%= yield :head %>
+    
+    <%= @js_mapping if @js_mapping %>
   </head>
   <body>
     <div id="page_wrapper">
-      <%= render :partial => "layouts/nav.html" %>
+      <%= render(:partial => "layouts/nav.html") if @user %>
       <div id="page">
         <div id="home_page_wrp_up"  class="greywrap wrappers">
           <div class="shade middlemargin">
-            <% if flash[:bericht] %>
-            <p class="notice">
-              <%= flash[:bericht] %>
-            </p>
-            <%end %>
-            <% if flash[:notice] %>
-            <p class="notice">
-              <%= flash[:notice] %>
-            </p>
-            <%end %>
-            <% if flash[:error] %>
-            <p class="error">
-              <%= flash[:error] %>
-            </p>
-            <%end %>
-            <% if flash[:info] %>
-            <div class="help">
-              <%= flash[:info] %>
-            </div>
-            <%end %>
+            <%= generate_notice flash %>
           </div>
           <div id="hoofdwrap" class="middlemargin">
             <div class="shadow">

@@ -28,4 +28,4 @@ production:
   pool: 5
   username: signup
   password: silver
-  host: sql.yato-extreme.com
+  host: 127.0.0.1

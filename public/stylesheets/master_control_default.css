@@ -378,3 +378,26 @@ input[type="submit"] {
 #tabination .tabs_contents .tab_content.current {
   display: block;
 }
+div.login {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+#login_screen {
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+  
+}
+a.looklike_button {
+  background-color: #A6A2EB;
+  border: 1px solid #4400FF;
+  border-radius: 20px 20px 20px 20px;
+  padding: 5px 20px;
+  color: #000000;
+}
+a.looklike_button:hover {
+  background-color: #4400FF;
+  border: 1px solid #A6A2EB;
+  color: #E777EB;
+}

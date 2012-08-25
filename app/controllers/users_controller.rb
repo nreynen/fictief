@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :ensure_logged_in
   
   def index
     @users = User.paginate :page => params[:page], :order => "id", :per_page => 25
