@@ -31,7 +31,14 @@ Rails::Initializer.run do |config|
   }
   
   RIGHTS = {
-    :admin => "Admin"
+    :admin => "Admin",
+    :user => "User",
+    :bread_user => "Bread User",
+    :f_one_user => "F1 User",
+    :poker_user => "Poker User",
+    :bread_admin => "Bread Admin",
+    :f_one_admin => "F1 Admin",
+    :poker_admin => "Poker Admin"
   }
 end
 

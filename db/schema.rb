@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120825115017) do
+ActiveRecord::Schema.define(:version => 20120826091213) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -28,11 +28,12 @@ ActiveRecord::Schema.define(:version => 20120825115017) do
 
   create_table "orders", :force => true do |t|
     t.integer  "user_id"
-    t.boolean  "paid",                           :default => false
+    t.boolean  "paid",                             :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "history",    :limit => 16777215
+    t.text     "history",      :limit => 16777215
     t.string   "order"
+    t.integer  "saturday_int"
   end
 
   create_table "statics", :force => true do |t|

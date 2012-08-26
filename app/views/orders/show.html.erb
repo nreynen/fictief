@@ -5,6 +5,10 @@
       <td>User</td>
       <td><%= @order.user.name %></td>
     </tr>
+    <tr>
+      <td>Due Date</td>
+      <td><%= @order.saturday_int.strftime("%e %b %Y") %></td>
+    </tr>
         
     <% quantities = @order.order.split(";").inject({}) do |h, x| 
       item = x.split(",")

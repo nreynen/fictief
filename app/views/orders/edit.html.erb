@@ -8,7 +8,7 @@
     <% form_for @order, :url => order_path(@order) do |f| %>
       <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
       <tr>
-        <td colspan="2"><%= f.submit "Update" %><span style="float: right;" id="overview_hover">Hover for overview</span></td>
+        <td colspan="2"><%= f.submit "Update", :confirm => put("order_alert_update") %><span style="float: right;" id="overview_hover">Hover for overview</span></td>
       </tr>
     <% end %>
     <tr class="button_row">

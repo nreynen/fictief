@@ -17,6 +17,8 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     order_string = ""
+    y, m, d = params[:order][:saturday_int].split("-")
+    params[:order][:saturday_int] = Date.new(y.to_i, m.to_i, d.to_i)
     params[:items].each_pair do |item_id, x|
       order_string << "#{item_id},#{x[:quantity]};" unless x[:quantity].blank?
     end
@@ -36,6 +38,8 @@ class OrdersController < ApplicationController
   
   def update
     @order = Order.find(params[:id])
+    y, m, d = params[:order][:saturday_int].split("-")
+    params[:order][:saturday_int] = Date.new(y.to_i, m.to_i, d.to_i)
 
     if @order.update_attributes(params[:order])
       redirect_to(orders_path, :flash => { :success => "Order was successfully updated..." })

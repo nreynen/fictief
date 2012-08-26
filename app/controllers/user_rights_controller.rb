@@ -3,26 +3,14 @@ class UserRightsController < ApplicationController
   before_filter :ensure_is_admin
   
   def index
-    @rights = UserRight.paginate :page => params[:page], :order => "rights_key", :per_page => 25
-  end
-  
-  def new
-    
-  end
-  
-  def create
-    
-  end
-  
-  def edit
-    
-  end
-  
-  def update
-    
+    @rights_map = UserRight.all.inject({}) do |h, x|
+      h[x[:rights_key]] ||= []
+      h[x[:rights_key]] << "#{x.user.first_name} #{x.user.last_name}"
+      h
+    end
   end
 
   def delete_rights
-    
+    UserRight.destroy_all(["rights_key = ?", params[:key]])
   end
 end

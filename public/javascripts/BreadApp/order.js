@@ -13,7 +13,6 @@ $(document).ready(function() {
     }, 
     content: generate_overview_table()
   });
-  adjust_qtip_content();
 });
 
 function generate_overview_table() {

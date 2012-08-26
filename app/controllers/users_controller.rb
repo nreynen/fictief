@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+    params[:rights].each do |right|
+      params[:user][:user_rights] ||= []
+      params[:user][:user_rights] << UserRight.create({:user_id => @user.id, :rights_key => right})
+    end if params[:rights]
 
     if @user.save
       redirect_to(users_path, :flash => { :success => "User was successfully created..." })
@@ -29,6 +33,10 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
+    params[:rights].each do |right|
+      params[:user][:user_rights] ||= []
+      params[:user][:user_rights] << UserRight.create({:user_id => @user.id, :rights_key => right})
+    end if params[:rights]
 
     if @user.update_attributes(params[:user])
       redirect_to(users_path, :flash => { :success => "User was successfully updated..." })

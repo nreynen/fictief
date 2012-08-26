@@ -18,3 +18,19 @@
   <td><%= f.label "Password:" %></td>
   <td><%= f.text_field :password %></td>
 </tr>
+<tr>
+  <td><%= f.label "Rights" %></td>
+  <td>
+    <table>
+      <tbody>
+        <% RIGHTS.each_pair do |key, right| %>
+          <tr>
+            <td style="width: 10%;"><%= check_box_tag "rights][]", right, (@user.user_rights.map(&:rights_key).include?(right) rescue false) %></td>
+            <td><%= right %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+  </td>
+</tr>

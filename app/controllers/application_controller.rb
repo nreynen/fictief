@@ -10,25 +10,32 @@ class ApplicationController < ActionController::Base
     @menu = [
       {
         :name => "BreadApp", :children => [
-          { :name => "Overview", :url => "someUrl" }, 
-          { :name => "Categories", :url => categories_path }, 
-          { :name => "Orders", :url => orders_path }, 
-          { :name => "Items", :url => items_path }
-        ]
-      }, 
-      {
-        :name => "CMS", :children => [
-          { :name => "Statics", :url => statics_path }, 
-          { :name => "Users", :url => users_path }
+          { :name => "Orders", :url => orders_path }
         ]
       }
     ]
+    # Bread menu
+    @menu << {
+        :name => "BreadApp Admin", :children => [
+          { :name => "Overview", :url => bread_report_reports_path }, 
+          { :name => "Categories", :url => categories_path }, 
+          { :name => "Items", :url => items_path }
+        ]
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
+    # Admin menu
     @menu << {
         :name => "Admin", :children => [
           { :name => "User Rights", :url => user_rights_path },
           { :name => "Bla", :url => "someUrl" }
         ]
-    } if (@user.has_rights_for(RIGHTS[:admin]) rescue false)
+    } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
+    # CMS menu
+    @menu << {
+        :name => "CMS", :children => [
+          { :name => "Statics", :url => statics_path }, 
+          { :name => "Users", :url => users_path }
+        ]
+      } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
   end
   
   def js_map(attributes)
@@ -59,8 +66,8 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def ensure_is_admin
-    unless @user && @user.has_rights_for(RIGHTS[:admin])
+  def ensure_is_admin(keys = [RIGHTS[:admin]])
+    unless @user && @user.has_rights_for?(keys)
       flash[:error] = @template.put("rights_not_enough")
       redirect_to(home_root_path)
     end

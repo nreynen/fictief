@@ -29,7 +29,7 @@
           <%= order.created_at.strftime "%e %b %Y" %>
         </td>
         <td class="button_cell"><%= edit_link :url => edit_order_path(order) %></td>
-        <td class="button_cell"><%= destroy_link :url => order_path(order) %></td>
+        <td class="button_cell"><%= @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) ? destroy_link(:url => order_path(order)) : "&nbsp;" %></td>
         <td class="button_cell"><%= show_link :url => order_path(order) %></td>
       </tbody>
     <% end %>

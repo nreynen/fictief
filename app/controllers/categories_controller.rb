@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_filter :ensure_logged_in
+  before_filter lambda { |x| x.ensure_is_admin([RIGHTS[:admin], RIGHTS[:bread_admin]])}
   
   def index
     @categories = Category.paginate :page => params[:page], :order => "id", :per_page => 25
