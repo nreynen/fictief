@@ -7,6 +7,10 @@ module ActiveRecord
     
     module ClassMethods
       def date_to_int(date)
+        if date.is_a? String
+          y, m, d, *rest = date.scan(/\d+/)
+          date = Date.new(y.to_i, m.to_i, d.to_i)
+        end
         date = Date.new(date[:year].to_i, date[:month].to_i, date[:day].to_i) if date.is_a? Hash
         (date - Date.new(1970,1,1)).to_i unless date.nil?
       end

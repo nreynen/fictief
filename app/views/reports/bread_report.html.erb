@@ -1,3 +1,47 @@
 <div id="bread_report">
-  
+  <div id="picker_menu">
+    <label class="title_label">Pick View</label>
+    <div class="inner_content">
+      <input type="radio" name="view" onclick="$('.bread_report_view').toggle();" checked /> Number of breads<br />
+      <input type="radio" name="view" onclick="$('.bread_report_view').toggle();" /> Division 'Breads/People'
+    </div>
+    <div class="inner_right_content">
+      <%= @next_saturday.strftime("%e %b %Y") %>
+    </div>
+  </div>
+  <div id="breads_view" class="bread_report_view">
+    <table class="showtable" style="width: 100%;">
+      <tbody>
+        <% @breads_shorted.each_pair do |name, quant| %>
+          <tr>
+            <td><%= name %></td>
+            <td style="text-align: center;"><%= quant %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div id="people_view" class="bread_report_view" style="display: none;">
+    <table class="showtable" style="width: 100%;">
+      <tbody>
+        <% @people.each_pair do |name, hsh| %>
+          <tr>
+            <td style="vertical-align: top"><%= name %></td>
+            <td style="padding: 0px; width: 50%;">
+              <table class="showtable" style="width: 100%; margin: -1px;">
+                <tbody>
+                  <% hsh.each_pair do |key, quant| %>
+                    <tr>
+                      <td><%= key %></td>
+                      <td style="text-align: center;"><%= quant %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

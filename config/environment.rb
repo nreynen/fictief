@@ -43,3 +43,13 @@ Rails::Initializer.run do |config|
 end
 
 require 'will_paginate'
+
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address => "mail.yato-extreme.com",
+  :port => "25",
+  :domain => "yato-extreme.com",
+  :authentication => :plain,
+  :user_name => "noreply@helionresearch.com",
+  :password => "master_mailer_pass"
+}

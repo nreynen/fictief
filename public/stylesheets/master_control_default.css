@@ -393,7 +393,6 @@ div.login {
   width: 550px;
   margin: 0 auto;
   margin-top: 50px;
-  
 }
 a.looklike_button {
   background-color: #A6A2EB;
@@ -406,4 +405,44 @@ a.looklike_button:hover {
   background-color: #4400FF;
   border: 1px solid #A6A2EB;
   color: #E777EB;
+}
+#bread_report input[type=radio] {
+  width: auto;
+}
+#bread_report #picker_menu {
+  border: 1px solid #4400FF;
+  padding: 5px;
+  width: 888px;
+  margin: 10px 0;
+  display: block;
+}
+
+#bread_report #picker_menu .title_label {
+  position: relative;
+  top: -15px;
+  left: 10px;
+  border-radius: 25px;
+  border-left: 1px solid #4400FF;
+  border-right: 1px solid #4400FF;
+  background-color: #D9D9D9;
+  padding: 2px 5px;
+}
+
+#bread_report #picker_menu .inner_content {
+  margin-top: -10px;
+  width: 50%;
+}
+#bread_report #picker_menu .inner_right_content {
+  margin-top: -35px;
+  width: 40%;
+  text-align: right;
+  float: right;
+  font-size: 35px;
+  opacity: 0.1;
+  font-weight: bold;
+  display: block;
+  padding-right: 10px;
+}
+#bread_report .bread_report_view {
+  width: 100%;
 }

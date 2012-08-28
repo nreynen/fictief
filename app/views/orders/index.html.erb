@@ -6,13 +6,19 @@
       <td class="header_cell">Id</td>
       <td class="header_cell">User</td>
       <td class="header_cell">Paid?</td>
-      <td class="header_cell">Date</td>
+      <td class="header_cell">Saturday</td>
       <td class="display_none_header_cell"></td>
       <td class="display_none_header_cell"></td>
       <td class="header_cell"><%= @orders.total_entries %></td>
     </tbody>
     <tbody class="button_row">
-      <td colspan="4" class="header_cell"><%= new_link :url => new_order_path %></td>
+      <td colspan="4" class="header_cell">
+        <% if @can_order %>
+          <%= new_link :url => new_order_path %>
+        <% else %>
+          <%= put("orders_outside_hours") %>
+        <% end %>
+      </td>
     </tbody>
     <% @orders.each do |order| %>
       <tbody class="<%= cycle("even","odd") %>">
@@ -22,11 +28,14 @@
         <td>
           <%= order.user.name %>
         </td>
-        <td style="text-align: center;">
+        <td id="order_<%= order.id %>" style="text-align: center;">
           <%= niceify_bool order.paid %>
+          <% unless order.paid || !@user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
+            <%= link_to "Paid!", set_paid_orders_path(:id => order.id) %>
+          <% end %>
         </td>
         <td style="text-align: center;">
-          <%= order.created_at.strftime "%e %b %Y" %>
+          <%= order.saturday_int.strftime "%e %b %Y" %>
         </td>
         <td class="button_cell"><%= edit_link :url => edit_order_path(order) %></td>
         <td class="button_cell"><%= @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) ? destroy_link(:url => order_path(order)) : "&nbsp;" %></td>

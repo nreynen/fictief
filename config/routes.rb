@@ -10,5 +10,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories
   map.resources :user_sessions, :except => [:edit]
   map.resources :items
-  map.resources :orders
+  map.resources :orders, :collection => {:set_paid => [:get, :post]}
 end

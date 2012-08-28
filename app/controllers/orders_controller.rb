@@ -3,6 +3,8 @@ class OrdersController < ApplicationController
   
   def index
     @orders = Order.paginate :page => params[:page], :order => "id", :per_page => 25
+    now = Time.now
+    @can_order = !(now.strftime("%a") == "Sat" || (now.strftime("%a") == "Fri" && now.hour < 21))
   end
   
   def show
@@ -25,6 +27,11 @@ class OrdersController < ApplicationController
     @order.order = order_string
     
     if @order.save
+      MasterMailer.deliver_bread_alert({
+        :user => @user, 
+        :subject => "Bread Notification: You have created an order!", 
+        :message => "You have created a new order, containing #{@order.to_readable}.<br>If this is not the right order, or a mistake has been made, please edit it or contact us."
+      })
       redirect_to(orders_path, :flash => { :success => "Order was successfully created..." })
     else
       render :action => "new"
@@ -53,5 +60,13 @@ class OrdersController < ApplicationController
     @order.destroy
 
     redirect_to(orders_url, :flash => { :success => "Order was successfully destroyed..." })
+  end
+  
+  def set_paid
+    if Order.update_all("paid = 1", "id = #{params[:id]}")
+      redirect_to(orders_path, :flash => { :success => "Order was successfully updated..." })
+    else
+      redirect_to(orders_path, :flash => { :error => "Error occurred..." })
+    end
   end
 end
