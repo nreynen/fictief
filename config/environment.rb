@@ -46,10 +46,11 @@ require 'will_paginate'
 
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  :address => "mail.yato-extreme.com",
-  :port => "25",
+  :address => "smtp.gmail.com",
+  :port => 587,
   :domain => "yato-extreme.com",
   :authentication => :plain,
-  :user_name => "noreply@helionresearch.com",
-  :password => "master_mailer_pass"
+  :user_name => "noreply@yato-extreme.com",
+  :password => "noreply_extreme", 
+  :enable_starttls_auto => true
 }

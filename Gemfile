@@ -2,7 +2,7 @@ source :gemcutter
 source "http://gems.github.com"
 
 gem "rails", "2.3.8"
-
+gem "capistrano"
 gem "i18n", "~> 0.4.0"
 gem "mysql", "2.8.1"
 gem "rubyforge", "2.0.4"

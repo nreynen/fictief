@@ -26,6 +26,6 @@ production:
   reconnect: true
   database: MasterControl
   pool: 5
-  username: signup
+  username: root
   password: silver
   host: 127.0.0.1
