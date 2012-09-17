@@ -9,12 +9,18 @@ class ApplicationController < ActionController::Base
   def maintain_menu
     @menu = [
       {
-        :name => "BreadApp", :children => [
-          { :name => "Orders", :url => orders_path }
+        :name => "User", :children => [
+          { :name => "Change Password", :url => change_password_users_path }
         ]
       }
     ]
-    # Bread menu
+    # Bread user menu
+    @menu << {
+      :name => "BreadApp", :children => [
+        { :name => "Orders", :url => orders_path }
+      ]
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
+    # Bread admin menu
     @menu << {
       :name => "BreadApp Admin", :children => [
         { :name => "Overview", :url => bread_report_reports_path }, 
@@ -35,12 +41,6 @@ class ApplicationController < ActionController::Base
         { :name => "Users", :url => users_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
-    # CMS menu
-    @menu << {
-      :name => "User", :children => [
-        { :name => "Change Password", :url => change_password_users_path }
-      ]
-    }
   end
   
   def js_map(attributes)

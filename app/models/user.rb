@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   has_one :user_session, :dependent => :destroy
   has_many :user_rights, :dependent => :destroy
   
-  named_scope :without_order, lambda { |sat|
+  named_scope :with_order, lambda { |sat|
     {
-      :conditions => ["rerouted_to = ?", sat], :order => "first_name ASC"
+      :join => "LEFT OUTER JOIN orders ON users.id = orders.user_id", :conditions => ["orders.saturday_int = ?", sat]
     }
   }
   

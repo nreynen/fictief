@@ -1,44 +1,26 @@
 class ReminderMailer
   
+  # Run op donderdag.
+  
   def self.engage
     puts "Initializing ReminderMailer"
     puts "Finding users without order"
-    users = User.without_order
+    sat = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6))
+    users = User.map(&:id)
+    users_with = User.with_order(sat).find(:select => "id")
+    users_without = users - users_with
     
-    puts "#{users.length} shoppers found"
+    puts "#{users_without.length} shoppers found"
     
-    selection = ExportSelection.find(DB_MAPPING[:never_activated_selection_id]).parameters
-    skeleton = MailmergeSkel.find(DB_MAPPING[:never_activated_skel_id])
-    
-    reminder_ids = shoppers.inject([]) do |a, s|
-      a << (s.neveractivated_shopper_reminder || s.create_neveractivated_shopper_reminder)
-      a
-    end.map(&:id)
-    NeveractivatedShopperReminder.update_all("count = count + 1", ["id IN (?)", reminder_ids]) unless reminder_ids.empty?
-    
-    puts "Reminders made"
-    
-    mailmerge = admin.mailmerges.create(({
-      :atlas => true,
-      :subject => skeleton.subject,
-      :text => skeleton.text,
-      :tip => skeleton.tip,
-      :noreply => true,
-      :priority => skeleton.priority
-    }).merge({
-      :name => "",
-      :status => "Queueing...",
-      :parameters => {
-        :ids => shopper_ids.join(","),
-        :questions => selection,
-        :type => "mmerge"
-      }
-    }))
-    mailmerge.add_shoppers(shopper_ids)
-    mailmerge.update_attribute(:worker_id, "Creating...")
-    MailmergeWorker.async_do_mailmerge(:id => mailmerge.id).split(":").last
+    User.find(:all, :conditions => ["id IN (?)", users_without]).each do |usr|
+      MasterMailer.deliver_bread_alert({
+        :user => usr, 
+        :subject => "Bread Reminder: You haven't created an order!", 
+        :message => "You haven't created an order for this week. If you want, you can still order untill Friday at 21:00."
+      })
+    end
     
     puts "Mails sent."
-    puts "Terminating ActivationMailer"
+    puts "Terminating ReminderMailer"
   end
 end
