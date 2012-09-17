@@ -5,6 +5,20 @@ class MasterMailer < ActionMailer::Base
     recipients options[:user].email
     subject options[:subject]
     content_type "multipart/mixed"
-    body :user => options[:user], :message => options[:message]
+    part "multipart/related" do |m|
+      m.part "multipart/alternative" do |a|
+        a.part "text/plain" do |y|
+          y.body = options[:message].unhtml
+          y.transfer_encoding = "base64"
+        end
+        a.part "text/html" do |y|
+          y.body = options[:message]
+        end
+      end
+    end
+    
+    if options[:attachment] && options[:attachment_name] && options[:attachment_file_type]
+      attachment :content_type => options[:attachment_file_type], :body => File.read(options[:attachment]), :filename => options[:attachment_name]
+    end
   end
 end
