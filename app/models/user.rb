@@ -8,6 +8,12 @@ class User < ActiveRecord::Base
   has_one :user_session, :dependent => :destroy
   has_many :user_rights, :dependent => :destroy
   
+  named_scope :without_order, lambda { |sat|
+    {
+      :conditions => ["rerouted_to = ?", sat], :order => "first_name ASC"
+    }
+  }
+  
   def full_name
     "#{self.first_name} #{self.last_name}"
   end

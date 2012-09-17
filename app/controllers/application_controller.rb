@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
       :name => "User", :children => [
         { :name => "Change Password", :url => change_password_users_path }
       ]
-    } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
+    }
   end
   
   def js_map(attributes)
