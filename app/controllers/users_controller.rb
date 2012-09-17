@@ -51,4 +51,16 @@ class UsersController < ApplicationController
 
     redirect_to(users_url, :flash => { :success => "User was successfully destroyed..." })
   end
+  
+  def change_password
+    if params[:user]
+      if params[:user][:old_pwd] == @user.password && params[:user][:new_pwd].length > 7 && params[:user][:new_pwd] == params[:user][:rpt_pwd]
+        @user.password = params[:user][:new_pwd]
+        @user.save
+        flash[:success] = "Password was changed"
+      else
+        flash[:error] = "Password was not changed due to an unexpected error"
+      end
+    end
+  end
 end

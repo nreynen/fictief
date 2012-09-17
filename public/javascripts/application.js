@@ -12,11 +12,11 @@ function load_menu_resizer() {
 /* Dank u, Kai De Sutter */
 function resize_menu() {
   $("ul#menu").show();
-  var win_width = $(window).width();
+  var win_width = 826;
   var menu_items = ["ul#menu"];
   
   $(".spacer").width(0);
-  $(".spacer").width($(window).outerWidth() - $("#menu").width() - 1);
+  $(".spacer").width(826 - $("#menu").width() - 1);
 }
 
 function show_loader() {
