@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       :name => "BreadApp", :children => [
         { :name => "Orders", :url => orders_path }
       ]
-    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_user]]) rescue false)
     # Bread admin menu
     @menu << {
       :name => "BreadApp Admin", :children => [
