@@ -11,7 +11,10 @@ $(document).ready(function() {
          tooltip: 'bottomMiddle'
       }
     }, 
-    content: generate_overview_table()
+    content: {
+      text: generate_overview_table(), 
+      prerender: true
+    }
   });
 });
 
