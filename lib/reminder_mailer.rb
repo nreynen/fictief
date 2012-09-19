@@ -24,3 +24,5 @@ class ReminderMailer
     puts "Terminating ReminderMailer"
   end
 end
+
+ReminderMailer.engage
