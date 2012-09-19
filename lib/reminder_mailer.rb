@@ -1,4 +1,5 @@
 require "rubygems"
+require "date"
 
 class ReminderMailer
   
