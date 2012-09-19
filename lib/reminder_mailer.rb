@@ -1,5 +1,6 @@
 require "rubygems"
 require "date"
+require "activesupport"
 
 class ReminderMailer
   
