@@ -1,3 +1,5 @@
+require "rubygems"
+
 class ReminderMailer
   
   # Run op donderdag.
