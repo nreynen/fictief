@@ -8,7 +8,7 @@ class ReminderMailer
     puts "Initializing ReminderMailer"
     puts "Finding users without order"
     sat = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6))
-    users = User.map(&:id)
+    users = User.all.map(&:id)
     users_with = User.with_order(sat).find(:select => "id")
     users_without = users - users_with
     users_without = User.find_by_first_name("Nico")
