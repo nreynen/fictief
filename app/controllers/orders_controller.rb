@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_filter :ensure_logged_in
   
   def index
-    @orders = Order.paginate :page => params[:page], :order => "id", :per_page => 25
+    @orders = @user.orders.paginate :page => params[:page], :order => "id", :per_page => 25
     now = Time.now
     @can_order = !(now.strftime("%a") == "Sat" || (now.strftime("%a") == "Fri" && now.hour < 21))
   end
