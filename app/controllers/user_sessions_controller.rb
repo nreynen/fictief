@@ -21,7 +21,7 @@ class UserSessionsController < ApplicationController
       redirect_to(url || home_root_url)
     else
       flash[:error] = "Error while logging in."
-      render(:action => 'new')
+      redirect_to(new_user_session_path)
     end
   end
 
