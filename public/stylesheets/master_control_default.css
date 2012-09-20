@@ -455,3 +455,10 @@ a.looklike_button:hover {
 #bread_report .bread_report_view {
   width: 100%;
 }
+#main_welcome {
+  width: 100%;
+}
+#main_center {
+  width: 826px;
+  margin: 0 auto;
+}

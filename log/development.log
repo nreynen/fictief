@@ -51519,3 +51519,115 @@ Rendering root/home
   [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
 Rendered layouts/_nav (7.5ms)
 Completed in 160ms (View: 25, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:19:50) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 116ms (View: 77, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:21:02) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:21:24) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:22:31) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:23:03) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:24:19) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:24:37) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:25:23) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:25:52) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:26:11) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 93ms (View: 85, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:26:30) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:29:26) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:29:44) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-09-20 21:30:21) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/]
