@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_one :user_session, :dependent => :destroy
   has_many :user_rights, :dependent => :destroy
   
+  has_many :orders
+  
   named_scope :with_order, lambda { |sat|
     {
       :join => "LEFT OUTER JOIN orders ON users.id = orders.user_id", :conditions => ["orders.saturday_int = ?", sat]
