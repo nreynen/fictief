@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     end
     
     now = Time.now
-    @can_order = !(now.strftime("%a") == "Sat" || (now.strftime("%a") == "Fri" && now.hour < 21))
+    @can_order = !(now.strftime("%a") == "Sat" || (now.strftime("%a") == "Fri" && now.hour > 21))
   end
   
   def show
