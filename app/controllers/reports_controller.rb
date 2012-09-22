@@ -2,8 +2,8 @@ class ReportsController < ApplicationController
   before_filter :ensure_logged_in
   
   def bread_report
-    @next_saturday = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6))
-    @next_saturday_int = (@next_saturday - Date.new(1970,1,1)).to_i
+    @next_saturday = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) - 7.days
+    @next_saturday_int = (@next_saturday - Date.new(1970,1,1)).to_i - 7
     
     orders = Order.find(:all, :conditions => ["saturday_int = ?", @next_saturday_int])
     
