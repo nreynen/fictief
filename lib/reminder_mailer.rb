@@ -8,7 +8,7 @@ class ReminderMailer
     now = Date.today
     sat = now + ((5 - now.wday) % 7)
     users = User.all.map(&:id)
-    users_with = User.with_order(sat).find(:all, :select => "id")
+    users_with = User.with_order(sat).find(:all, :select => "users.id")
     users_without = users - users_with
     users_without = User.find_by_first_name("Nico")
     puts "#{users_without.length} shoppers found"
