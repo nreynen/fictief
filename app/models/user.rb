@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   
   named_scope :with_order, lambda { |sat|
     {
-      :join => "LEFT OUTER JOIN orders ON users.id = orders.user_id", :conditions => ["orders.saturday_int = ?", sat]
+      :joins => "LEFT OUTER JOIN orders ON users.id = orders.user_id", :conditions => ["orders.saturday_int = ?", sat]
     }
   }
   
