@@ -1,6 +1,3 @@
-require "rubygems"
-require "date"
-
 class ReminderMailer
   
   # Run op donderdag.
@@ -28,5 +25,3 @@ class ReminderMailer
     puts "Terminating ReminderMailer"
   end
 end
-
-ReminderMailer.engage
