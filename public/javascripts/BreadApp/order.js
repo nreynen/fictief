@@ -20,9 +20,13 @@ $(document).ready(function() {
 
 function generate_overview_table() {
   var stringeske = "<table><tbody><tr><td>Item</td><td>Total&nbsp;&euro;</td></tr>";
+  var total = 0;
   $(".quantity_field[value!='']").each(function(i, ob){
-    stringeske += "<tr><td>" + $("#" + $(ob).attr("td_id")).html() + "</td><td style='text-align: right;'>" + $(ob).val() + " * " + parseFloat($(ob).attr("price")) + " = " + (parseInt($(ob).val())*parseFloat($(ob).attr("price"))).toFixed(2) + "</td></tr>";
+    var priceke = parseInt($(ob).val()) * parseFloat($(ob).attr("price"));
+    total += priceke;
+    stringeske += "<tr><td>" + $("#" + $(ob).attr("td_id")).html() + "</td><td style='text-align: right;'>" + $(ob).val() + " * " + parseFloat($(ob).attr("price")) + " = " + (priceke).toFixed(2) + "</td></tr>";
   });
+  stringeske += "<tr><td>&nbsp;</td><td style='text-align: right;'>Total: &euro; " + (total).toFixed(2) + "</td></tr>";
   stringeske += "</tbody></table>"
   return stringeske;
 }

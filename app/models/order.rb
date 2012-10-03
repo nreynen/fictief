@@ -9,15 +9,18 @@ class Order < ActiveRecord::Base
   validates_presence_of :saturday_int
   
   def to_readable
-    self[:order].inject([]) do |a, x|
+    price = 0.0
+    readable = self[:order].inject([]) do |a, x|
       x.split(";").each do |arr|
         unless arr.blank?
           id, quant = arr.split(",")
-          name = Item.find(id).name
-          a << "#{quant} x #{name}"
+          it = Item.find(id)
+          price += (quant.to_f * it.price)
+          a << "#{quant} x #{it.name}"
         end
       end
       a
     end.join(", ")
+    [readable, ". Yielding a total of #{price} euro"].join("")
   end
 end

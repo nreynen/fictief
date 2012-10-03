@@ -51703,3 +51703,776 @@ Rendering template within layouts/application
 Rendering reports/bread_report
 Rendered layouts/_nav (13.5ms)
 Completed in 28460ms (View: 38, DB: 24) | 200 OK [http://localhost/reports/bread_report]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-10-03 19:29:12) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 117ms (View: 77, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-10-03 19:29:14) [GET]
+  [4;36;1mUserSession Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mStatic Columns (19.3ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 123ms (View: 48, DB: 34) | 200 OK [http://localhost/user_sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2012-10-03 19:29:16) [POST]
+  Parameters: {"authenticity_token"=>"/varJ100/vDhquo1c51vtufN+UcMTRAF0pscodmvBLs=", "user"=>{"password"=>"ownage1989", "login"=>"nreynen"}}
+  [4;35;1mUser Columns (30.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`password` = 'ownage1989' AND `users`.`login` = 'nreynen') LIMIT 1[0m
+  [4;35;1mUserSession Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserSession Create (0.5ms)[0m   [0mINSERT INTO `user_sessions` (`created_at`, `updated_at`, `user_id`, `path`, `ip_address`) VALUES('2012-10-03 19:29:16', '2012-10-03 19:29:16', 3, NULL, NULL)[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Redirected to http://localhost:3000/root/home
+Completed in 180ms (DB: 36) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-10-03 19:29:16) [GET]
+  [4;36;1mUserSession Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (16.7ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (21.0ms)
+Completed in 136ms (View: 63, DB: 27) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:29:20) [GET]
+  [4;35;1mUserSession Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.6ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.3ms)
+Completed in 259ms (View: 110, DB: 16) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:29:22) [GET]
+  [4;36;1mUserSession Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (9.1ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (92.0ms)
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.1ms)
+Completed in 300ms (View: 136, DB: 28) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:30:12) [GET]
+  [4;35;1mUserSession Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mCategory Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (68.2ms)
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.2ms)
+Completed in 242ms (View: 91, DB: 21) | 200 OK [http://localhost/orders/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:30:59) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (144.8ms)
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.1ms)
+Completed in 239ms (View: 167, DB: 21) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:31:01) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;35;1mItem Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (69.9ms)
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 167ms (View: 93, DB: 20) | 200 OK [http://localhost/orders/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:31:56) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (141.7ms)
+  [4;36;1mStatic Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.9ms)
+Completed in 237ms (View: 167, DB: 19) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:32:14) [GET]
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mCategory Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;35;1mItem Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (68.6ms)
+  [4;35;1mStatic Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.3ms)
+Completed in 161ms (View: 92, DB: 19) | 200 OK [http://localhost/orders/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:32:36) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (147.9ms)
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.3ms)
+Completed in 247ms (View: 171, DB: 22) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:32:45) [GET]
+  [4;35;1mUserSession Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.3ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mCategory Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (70.0ms)
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.3ms)
+Completed in 166ms (View: 94, DB: 21) | 200 OK [http://localhost/orders/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-10-03 19:32:57) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (70.0ms)
+  [4;36;1mStatic Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.5ms)
+Completed in 243ms (View: 172, DB: 20) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2012-10-03 19:33:17) [POST]
+  Parameters: {"items"=>{"6"=>{"quantity"=>"2"}, "1"=>{"quantity"=>""}, "2"=>{"quantity"=>"3"}, "4"=>{"quantity"=>""}, "5"=>{"quantity"=>"1"}}, "commit"=>"Add", "authenticity_token"=>"/varJ100/vDhquo1c51vtufN+UcMTRAF0pscodmvBLs=", "order"=>{"saturday_int"=>"2012-10-06", "user_id"=>"3"}}
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.5ms)[0m   [0mINSERT INTO `orders` (`created_at`, `history`, `saturday_int`, `paid`, `updated_at`, `order`, `user_id`) VALUES('2012-10-03 19:33:17', NULL, 15619, 0, '2012-10-03 19:33:17', '6,2;2,3;5,1;', 3)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 6) [0m
+
+TypeError (String can't be coerced into Float):
+  app/models/order.rb:18:in `+'
+  app/models/order.rb:18:in `to_readable'
+  app/models/order.rb:14:in `each'
+  app/models/order.rb:14:in `to_readable'
+  app/models/order.rb:13:in `each'
+  app/models/order.rb:13:in `inject'
+  app/models/order.rb:13:in `to_readable'
+  app/controllers/orders_controller.rb:38:in `create'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendered rescues/_trace (98.1ms)
+Rendered rescues/_request_and_response (93.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2012-10-03 19:34:02) [POST]
+  Parameters: {"items"=>{"6"=>{"quantity"=>"2"}, "1"=>{"quantity"=>""}, "2"=>{"quantity"=>"3"}, "4"=>{"quantity"=>""}, "5"=>{"quantity"=>"1"}}, "commit"=>"Add", "authenticity_token"=>"/varJ100/vDhquo1c51vtufN+UcMTRAF0pscodmvBLs=", "order"=>{"saturday_int"=>"2012-10-06", "user_id"=>"3"}}
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.5ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.3ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO `orders` (`created_at`, `history`, `saturday_int`, `paid`, `updated_at`, `order`, `user_id`) VALUES('2012-10-03 19:34:02', NULL, 15619, 0, '2012-10-03 19:34:02', '6,2;2,3;5,1;', 3)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 6) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 5) [0m
+Sent mail to nicoiserookni@gmail.com
+
+Date: Wed, 3 Oct 2012 19:34:03 +0200
+From: Bread Alerter <noreply@yato-extreme.com>
+To: nicoiserookni@gmail.com
+Subject: Bread Notification: You have created an order!
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary=mimepart_506c770b20129_8e4828e7f24134
+
+
+--mimepart_506c770b20129_8e4828e7f24134
+Content-Type: multipart/related; boundary=mimepart_506c770b211da_8e4828e7f242b6
+
+
+--mimepart_506c770b211da_8e4828e7f242b6
+Content-Type: multipart/alternative; boundary=mimepart_506c770b213ed_8e4828e7f2436f
+
+
+--mimepart_506c770b213ed_8e4828e7f2436f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Base64
+Content-Disposition: inline
+
+WW91IGhhdmUgY3JlYXRlZCBhIG5ldyBvcmRlciwgY29udGFpbmluZyAyIHgg
+Um9nZ2UsIG9uZ2VzbmVkZW4sIDMgeCBXaXQgYnJvb2QsIG9uZ2VzbmVkZW4s
+IDEgeCBHcmlqcywgb25nZXNuZWRlbi4gWWllbGRpbmcgYSB0b3RhbCBvZiA3
+LjggZXVyby5JZiB0aGlzIGlzIG5vdCB0aGUgcmlnaHQgb3JkZXIsIG9yIGEg
+bWlzdGFrZSBoYXMgYmVlbiBtYWRlLCBwbGVhc2UgZWRpdCBpdCBvciBjb250
+YWN0IHVzLg==
+
+--mimepart_506c770b213ed_8e4828e7f2436f
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+You have created a new order, containing 2 x Rogge, ongesneden, 3 x Wit b=
+rood, ongesneden, 1 x Grijs, ongesneden. Yielding a total of 7.8 euro.<br=
+>If this is not the right order, or a mistake has been made, please edit =
+it or contact us.=
+
+--mimepart_506c770b213ed_8e4828e7f2436f--
+
+--mimepart_506c770b211da_8e4828e7f242b6--
+
+--mimepart_506c770b20129_8e4828e7f24134--
+Redirected to http://localhost:3000/orders
+Completed in 4390ms (DB: 15) | 302 Found [http://localhost/orders]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:34:07) [GET]
+  [4;35;1mUserSession Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.9ms)
+Completed in 178ms (View: 111, DB: 14) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:45:47) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mOrder Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.5ms)
+Completed in 182ms (View: 115, DB: 15) | 200 OK [http://localhost/orders]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:46:15) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (8.2ms)
+Completed in 271ms (View: 203, DB: 15) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:46:29) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mStatic Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mOrder Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.7ms)
+Completed in 198ms (View: 129, DB: 16) | 200 OK [http://localhost/orders]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:46:58) [GET]
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.6ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 203ms (View: 121, DB: 17) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:48:53) [GET]
+  [4;36;1mUserSession Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.5ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mOrder Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.3ms)
+Completed in 256ms (View: 117, DB: 15) | 200 OK [http://localhost/orders]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-10-03 19:50:13) [GET]
+  [4;35;1mUserSession Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 25) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.5ms)
+Completed in 191ms (View: 120, DB: 14) | 200 OK [http://localhost/orders]

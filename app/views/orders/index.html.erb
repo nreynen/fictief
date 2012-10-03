@@ -14,7 +14,7 @@
     <tbody class="button_row">
       <td colspan="4" class="header_cell">
         <% if @can_order %>
-          <%= new_link :url => new_order_path %>
+          <span style="font-size: 20px; text-decoration: blink;"><%= new_link :url => new_order_path %></span>
         <% else %>
           <%= put("orders_outside_hours") %>
         <% end %>
