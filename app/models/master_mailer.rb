@@ -8,7 +8,7 @@ class MasterMailer < ActionMailer::Base
     subject options[:subject]
     content_type "multipart/mixed"
     
-    part "multipart/related" do |m|e
+    part "multipart/related" do |m|
       m.part "multipart/alternative" do |a|
         a.part "text/plain" do |y|
           y.body = options[:message].unhtml
