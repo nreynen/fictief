@@ -38,7 +38,7 @@
       <br />
       <table class="content_table" style="border:1px solid #C7C7C7; border-collapse:collapse; width:600px;" width="600" border="1" cellpadding="15" cellspacing="0" bordercolor="black" bgcolor="#D9D9D9">
         <tr>
-          <h1>Hello <%= @user.first_name %>, there is a new Bread Notification!</h1>
+          <h1>Hello <%= @user.first_name rescue "" %>, there is a new Bread Notification!</h1>
           <p>
             <%= yield %>
           </p>
