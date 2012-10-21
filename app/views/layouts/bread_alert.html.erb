@@ -1,0 +1,51 @@
+<style type="text/css">
+  .main_table {
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .content_table {
+    border:1px solid black; 
+    border-collapse:collapse; 
+    width:600px;
+  }
+
+  .style3 {
+    font-size: 15px;
+    font-weight:normal;
+  }
+  .style8 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+</style>
+
+<table class="main_table" style="font-family:Arial, Helvetica, sans-serif;" width="100%" border="0" align="center">
+  <tr align="center">
+    <th scope="row">
+      <table width="600" border="0">
+        <tr>
+          <th scope="row">
+            <div align="left">
+              <img src='http://yato-extreme.com/images/logo.png' width="600" height="80">
+            </div>
+          </th>
+        </tr>
+      </table>
+      <br />
+      <table class="content_table" style="border:1px solid #C7C7C7; border-collapse:collapse; width:600px;" width="600" border="1" cellpadding="15" cellspacing="0" bordercolor="black" bgcolor="#D9D9D9">
+        <tr>
+          <h1>Hello <%= @user.first_name %>, there is a new Bread Notification!</h1>
+          <p>
+            <%= yield %>
+          </p>
+          <p>Thanks for using MasterControl App and have a great day!</p>
+          <p>The <a href='http://www.yato-extreme.com/'>yato-extreme.com</a> team.</p>
+        </tr>
+      </table>
+    </th>
+  </tr>
+</table>

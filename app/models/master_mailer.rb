@@ -1,11 +1,14 @@
 class MasterMailer < ActionMailer::Base
   
+  layout "bread_alert"
+  
   def bread_alert(options)
     from "Bread Alerter <noreply@yato-extreme.com>"
     recipients options[:user].email
     subject options[:subject]
     content_type "multipart/mixed"
-    part "multipart/related" do |m|
+    
+    part "multipart/related" do |m|e
       m.part "multipart/alternative" do |a|
         a.part "text/plain" do |y|
           y.body = options[:message].unhtml
