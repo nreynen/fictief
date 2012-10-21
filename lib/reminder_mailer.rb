@@ -13,18 +13,18 @@ class ReminderMailer
     puts "#{users_without.length} shoppers found"
     users_without = [1]
     begin
-    User.find(:all, :conditions => ["id IN (?)", users_without]).each do |usr|
-      MasterMailer.deliver_bread_alert({
-        :user => usr, 
-        :subject => "Bread Reminder: You haven't created an order!", 
-        :message => "You haven't created an order for this week. If you want, you can still order until Friday at 21:00."
-      })
-    end
-    
-    puts "Mails sent."
-    puts "Terminating ReminderMailer"
-    rescue Exception => e
-      puts e
+      User.find(:all, :conditions => ["id IN (?)", users_without]).each do |usr|
+        MasterMailer.deliver_bread_alert({
+          :user => usr, 
+          :subject => "Bread Reminder: You haven't created an order!", 
+          :message => "You haven't created an order for this week. If you want, you can still order until Friday at 21:00."
+        })
+      end
+      
+      puts "Mails sent."
+      puts "Terminating ReminderMailer"
+    rescue Exception => exc
+      puts exc.inspect
     end
   end
 end
