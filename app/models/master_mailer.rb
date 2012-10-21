@@ -23,5 +23,7 @@ class MasterMailer < ActionMailer::Base
     if options[:attachment] && options[:attachment_name] && options[:attachment_file_type]
       attachment :content_type => options[:attachment_file_type], :body => File.read(options[:attachment]), :filename => options[:attachment_name]
     end
+  rescue Exception => exx
+    puts exx.message
   end
 end
