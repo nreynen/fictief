@@ -24,7 +24,7 @@ class ReminderMailer
       puts "Mails sent."
       puts "Terminating ReminderMailer"
     rescue Exception => exc
-      puts exc.inspect
+      puts exc.message
     end
   end
 end
