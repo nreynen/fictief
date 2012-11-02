@@ -54866,3 +54866,19 @@ Processing RootController#info (for 127.0.0.1 at 2012-11-02 11:29:24) [GET]
 Rendering template within layouts/application
 Rendering root/info
 Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 13:46:16) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 13:47:30) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/]
