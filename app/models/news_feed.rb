@@ -1,0 +1,7 @@
+class NewsFeed < ActiveRecord::Base
+  validates_presence_of :text
+  
+  named_scope :last_five, {
+    :order => "created_at DESC", :limit => 5
+  }
+end

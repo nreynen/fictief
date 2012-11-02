@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :statics, :except => [:show, :new, :create]
   map.resources :users, :collection => {:change_password => [:get, :post]}
   map.resources :user_rights, :only => [:index], :collection => {:delete_rights => [:get, :post]}
+  map.resources :news_feeds, :only => [:index, :new, :create]
   map.resources :reports, :only => [], :collection => {:bread_report => [:get, :post]}
   map.resources :categories
   map.resources :user_sessions, :except => [:edit]

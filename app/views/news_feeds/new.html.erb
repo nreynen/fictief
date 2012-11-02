@@ -1,0 +1,17 @@
+<div>
+  <h1>New Feed</h1>
+  <table class="showtable">
+    <% form_for @feed, :url => news_feeds_path do |f| %>
+      <%if error_messages_for 'feed' != nil%>
+        <%= error_messages_for 'feed' , :class=>"error_message" %>
+      <%end%>
+      <tr>
+        <td><%= f.label "Text:" %></td>
+        <td><%= f.text_area :text %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= f.submit "Add" %>&nbsp;<%= back_link :url => news_feeds_path %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

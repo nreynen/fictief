@@ -31,7 +31,8 @@ class ApplicationController < ActionController::Base
     # Admin menu
     @menu << {
       :name => "Admin", :children => [
-        { :name => "User Rights", :url => user_rights_path }
+        { :name => "User Rights", :url => user_rights_path }, 
+        { :name => "News Feeds", :url => news_feeds_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
     # CMS menu

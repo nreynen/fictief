@@ -1,4 +1,4 @@
-<div id="main_welcome" style="min-height: 400px;">
+<div id="main_welcome">
   <div id="main_center">
     <h1>MasterControlApp</h1>
     <div style="float: left; width: 500px; height: 150px;">
@@ -15,12 +15,33 @@
     </div>
     <div style="clear: both;"></div>
     <h1 style="margin-top: 20px;">Nieuwtjes</h1>
-    <div style="float: left; width: 400px; height: 200px;">
-      NEWSFEED
+    <div style="float: left; width: 400px;">
+      <div class='notice'>
+        <img height='45' width='45' src='/images/notice.png'>
+        <p>Het weekend van 1 december zal er<br>geen brood gebakken worden!</p>
+      </div>
+      <% @feeds.each do |feed| %>
+        <div class="feed">
+          <div class="feed_text"><%= feed.text %></div>
+          <div class="feed_date"><%= feed.created_at.strftime("%-d %b %Y %H:%M:%S") %></div>
+        </div>
+        <div style="clear: both;"></div>
+      <% end %>
     </div>
-    <div style="float: right; width: 400px; height: 200px;">
-      ARTICLES
+    <div style="float: right; width: 400px;">
+      <div style="width: 400px;">
+        <h3>Lorem Ipsum</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna nulla, dignissim eu auctor ut, posuere sed neque. Ut lacus leo, faucibus 
+        eget mattis vel, ullamcorper pretium tellus. Nam vel erat dui, sit amet imperdiet nibh. 
+        <img style="float: right; margin: 5px;" src="/images/sandwich.png">
+        Praesent tempus, mi sed interdum rhoncus, diam tortor 
+        semper libero, laoreet pulvinar massa ligula in orci.<br><br>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis 
+        egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et felis eu elit dignissim tempor. 
+        Cras nec lorem at sem tristique venenatis vel rutrum magna.
+      </div>
     </div>
+    <div style="clear: both;"></div>
   </div>
 </div>
 
