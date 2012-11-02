@@ -1,7 +1,7 @@
 module ApplicationHelper
   
   def link_to_with_highlighting(name, url, url_options, html_options)
-    link_to(name, url, url_options.merge(html_options))
+    link_to("#{name}<img src='/images/muffin.png' style='width: 16px; height: 16px; display: none; float: left; margin-right: 3px;'>", url, url_options.merge(html_options))
   end
   
   def generate_notice(notice)

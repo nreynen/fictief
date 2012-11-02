@@ -1,42 +1,44 @@
 <div id="menu_wrapper">
-  <ul id="menu">
-    <li class="logo border-bottom-left" >
-      <a href="<%= home_root_path %>"><%= image_tag("yato.png", :size => "45x45") %></a>
-    </li>
-    <% @menu.sort_by { |child| child[:name] }.each do |item| %>
-      <% parent = item[:name] %>
-      <% children = item[:children] %>
-      <li class="main_menu navigator">
-        <% modded_parent = parent.downcase.gsub(" ", "_") %>
-        <a id="<%= modded_parent %>" href="javascript:void(0);"><%= parent %></a>
-        <ul>
-          <% children.sort_by { |child| child[:name] }.each do |child| %>
-            <% if request.request_uri == (child[:url]) %>
-              <% highlight_class = "highlighted_menu" %>
-              <script type="text/javascript">
-                $("#<%= modded_parent %>").addClass("highlighted_menu");
-              </script>
-            <% end %>
-            <li>
-              <%= link_to_with_highlighting(child[:name], child[:url], {:target => child[:target]}, {:class => highlight_class}) %>
-            </li>
-          <% end %>
-        </ul>
+  <div id="menu_border">
+    <ul id="menu">
+      <li class="logo border-bottom-left" >
+        <a href="<%= home_root_path %>"><%= image_tag("yato.png", :size => "45x45") %></a>
       </li>
-    <% end unless @menu.nil? %>
-  
-    <%= yield :appmenu %>
-    <li class="spacer">
-      &nbsp;
-    </li>
-    <li class="tray sideline">
-      &nbsp;
-    </li>
-    <li class="logout sideline">
-      <%= link_to image_tag("logout.png", :size => "29x29", :style => "float: left; margin: 8px auto;"), user_session_path(@session), :method => :delete %>
-    </li>
-    <li class="ending border-bottom-right">
-      &nbsp;
-    </li>
-  </ul>
+      <% @menu.sort_by { |child| child[:name] }.each do |item| %>
+        <% parent = item[:name] %>
+        <% children = item[:children] %>
+        <li class="main_menu navigator">
+          <% modded_parent = parent.downcase.gsub(" ", "_") %>
+          <a id="<%= modded_parent %>" href="javascript:void(0);"><%= parent %><img src="/images/muffin.png" style="width: 16px; height: 16px; display: none; float: left; margin-top: 14px; margin-right: 3px;"></a>
+          <ul>
+            <% children.sort_by { |child| child[:name] }.each do |child| %>
+              <% if request.request_uri == (child[:url]) %>
+                <% highlight_class = "highlighted_menu" %>
+                <script type="text/javascript">
+                  $("#<%= modded_parent %>").addClass("highlighted_menu");
+                </script>
+              <% end %>
+              <li>
+                <%= link_to_with_highlighting(child[:name], child[:url], {:target => child[:target]}, {:class => highlight_class}) %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end unless @menu.nil? %>
+    
+      <%= yield :appmenu %>
+      <li class="spacer">
+        &nbsp;
+      </li>
+      <li class="tray sideline">
+        &nbsp;
+      </li>
+      <li class="logout sideline">
+        <%= link_to image_tag("logout.png", :size => "29x29", :style => "float: left; margin: 8px auto;"), user_session_path(@session), :method => :delete %>
+      </li>
+      <li class="ending border-bottom-right">
+        &nbsp;
+      </li>
+    </ul>
+  </div>
 </div>

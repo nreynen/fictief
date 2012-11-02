@@ -8,14 +8,45 @@ body {
   font-family: Helvetica, Arial, Verdana, sans-serif;
   font-size: 9pt;
   color: #4400FF; /* Blauw */
-  background-color: #D9D9D9; /* Lichtgrijze achtergrond */
-  background-image: url('../images/bg.png');
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  /*background-color: #D9D9D9; /* Lichtgrijze achtergrond */
+}
+#main_border_div {
+  width: 876px;
+  border-radius: 10px;
+  margin-top: 90px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('../images/grey.png');
+  background-repeat: repeat;
+}
+#menu_border {
+  width: 876px;
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  background-image: url('../images/grey.png');
+  background-repeat: repeat;
+}
+#main_table_div {
+  width: 836px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-image: url('../images/yellow.png');
+  background-repeat: repeat;
+}
+#main_overlay {
+  color: #2B2B2B;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 #page_wrapper {
-  width: 826px;
+  width: 876px;
+  height: auto;
+  left: 0;
   margin: 0 auto;
+  position: relative;
+  z-index: 3;
 }
 #menu_wrapper {
   position: fixed;
@@ -35,20 +66,23 @@ body {
   text-align: left;
 }
 #menu a {
-  color: #A6A2EB; /* Lichtblauw */
+  color: #2B2B2B; /* Lichtblauw */
   text-decoration: none;
 }
 #menu > li {
-  background-color: #2B2B2B; /* Zwart */
+  /*background-color: #2B2B2B; /* Zwart */
+  background-image: url('../images/yellow.png');
+  background-repeat: repeat;
   cursor: pointer;
   float: left;
   position: relative;
   padding: 0px 10px;
 }
 #menu > li a:hover, #menu > li:hover > a {
-  color: #E777EB; /* Paarse hover */
+  color: #4400FF;
 }
 #menu .logo {
+  background-image: none;
   background-color: #4400FF; /* Blauw */
   padding: 0px;
   width: 70px;
@@ -59,6 +93,8 @@ body {
 }
 #menu .logout:hover, #menu .main_menu:hover, #menu .tray:hover, #menu li li:hover {
   background-color: #000000;
+  background-image: url('../images/yellow.png');
+  background-repeat: repeat;
 }
 #menu li li:last-child:hover {
   background-color: #000000;
@@ -88,7 +124,9 @@ body {
   margin-top: 45px;
   width: 150px;
   line-height: 16px;
-  background-color: #2B2B2B; /* Zwart */
+  /*background-color: #2B2B2B; /* Zwart */
+  background-image: url('../images/yellow.png');
+  background-repeat: repeat;
   display: none;
   -webkit-border-radius: 0 0 20px 20px;
   -o-border-radius: 0 0 20px 20px;
@@ -109,13 +147,13 @@ body {
 }
 #menu li ul li a {
   display: block;
-  color: #A6A2EB; /* Lichtblauw */
+  color: #2B2B2B; /* Lichtblauw */
 }
 #menu li ul li a:hover {
-  color: #E777EB; /* Paarse hover */
+  color: #4400FF;
 }
 #menu li ul li:hover, #menu li ul li:hover a {
-  color: #E777EB; /* Paarse hover */
+  color: #4400FF;
 }
 #menu li ul li input {
   float: right;
@@ -192,9 +230,6 @@ body {
   -moz-border-radius: 0 0 15px 15px;
   border-radius: 0 0 15px 15px;
 }
-#page {
-  padding-top: 50px;
-}
 h1 {
   text-decoration: none;
   font-size: 25px;
@@ -249,8 +284,12 @@ a {
   width: 70px;
   text-align: center;
 }
+a.highlighted_menu img, #menu li a.highlighted_menu img {
+  display: block !important;
+}
 a.highlighted_menu, #menu li a.highlighted_menu {
-  color: #E777EB; /* Paarse hover */
+  font-weight: bold;
+  text-decoration: underline;
 }
 .even {
   background-color: #C1C1C1; /* Lichtgrijs */

@@ -52502,3 +52502,1964 @@ Completed in 114ms (View: 76, DB: 1) | 200 OK [http://localhost/]
   [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT users.id FROM `users` LEFT OUTER JOIN orders ON users.id = orders.user_id WHERE (orders.saturday_int = '2012-10-26') [0m
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (id IN (1)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:15:52) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 93ms (View: 55, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:16:33) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:16:45) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 23ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:16:59) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:17:29) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:27:08) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:27:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/grey.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:28:26) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:28:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/grey.png" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:30:16) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:30:39) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:31:18) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:31:35) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:32:06) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:32:10) [GET]
+  [4;36;1mUserSession Columns (29.0ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mStatic Columns (22.9ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 164ms (View: 65, DB: 54) | 200 OK [http://localhost/user_sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2012-11-02 10:32:15) [POST]
+  Parameters: {"authenticity_token"=>"HXgyGuhCI54IemD1DnpBnByz4Ve+u7KlIyJ2tJvQiAI=", "user"=>{"password"=>"ownage1989", "login"=>"nreynen"}}
+  [4;35;1mUser Columns (35.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`password` = 'ownage1989' AND `users`.`login` = 'nreynen') LIMIT 1[0m
+  [4;35;1mUserSession Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserSession Create (0.5ms)[0m   [0mINSERT INTO `user_sessions` (`created_at`, `updated_at`, `user_id`, `path`, `ip_address`) VALUES('2012-11-02 10:32:15', '2012-11-02 10:32:15', 3, NULL, NULL)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Redirected to http://localhost:3000/root/home
+Completed in 106ms (DB: 40) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:32:15) [GET]
+  [4;36;1mUserSession Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.6ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 26) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (16.1ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (11.5ms)
+Completed in 161ms (View: 58, DB: 26) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:32:16) [GET]
+
+ActionController::RoutingError (No route matches "/root/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:32:36) [GET]
+
+ActionController::RoutingError (No route matches "/root/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:32:40) [GET]
+
+ActionController::RoutingError (No route matches "/root/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:32:41) [GET]
+
+ActionController::RoutingError (No route matches "/root/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:34:21) [GET]
+
+ActionController::RoutingError (No route matches "/root/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2012-11-02 10:34:23) [DELETE]
+  Parameters: {"authenticity_token"=>"HXgyGuhCI54IemD1DnpBnByz4Ve+u7KlIyJ2tJvQiAI=", "id"=>"26"}
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 26) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.6ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 26) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserSession Destroy (0.5ms)[0m   [0mDELETE FROM `user_sessions` WHERE `id` = 26[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 86ms (DB: 9) | 302 Found [http://localhost/user_sessions/26]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:34:23) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:34:53) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mStatic Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 67ms (View: 44, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:34:54) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:35:13) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:35:30) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:35:32) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mStatic Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 52ms (View: 30, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:35:33) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:35:44) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:35:46) [GET]
+  [4;35;1mUserSession Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 61ms (View: 37, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:35:46) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:40:02) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:40:06) [GET]
+  [4;36;1mUserSession Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mStatic Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;36;1mStatic Load (0.6ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 49ms (View: 28, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:40:06) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:40:10) [GET]
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (1.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;35;1mStatic Load (2.9ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 153ms (View: 44, DB: 10) | 200 OK [http://localhost/user_sessions/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-02 10:40:11) [GET]
+
+ActionController::RoutingError (No route matches "/user_sessions/images/main_bg.jpg" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_load'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/lib/ruby-debug-ide.rb:112:in `debug_program'
+  /usr/local/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.16/bin/rdebug-ide:87
+  /usr/local/bin/rdebug-ide:19:in `load'
+  /usr/local/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:40:33) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mStatic Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 56ms (View: 35, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:40:44) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#info (for 127.0.0.1 at 2012-11-02 10:40:50) [GET]
+Rendering template within layouts/application
+Rendering root/info
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2012-11-02 10:40:52) [GET]
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mStatic Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_welcome') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_pwd') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'login_login') LIMIT 1[0m
+Completed in 49ms (View: 29, DB: 6) | 200 OK [http://localhost/user_sessions/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2012-11-02 10:40:54) [POST]
+  Parameters: {"authenticity_token"=>"HXgyGuhCI54IemD1DnpBnByz4Ve+u7KlIyJ2tJvQiAI=", "user"=>{"password"=>"ownage1989", "login"=>"nreynen"}}
+  [4;36;1mUser Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`password` = 'ownage1989' AND `users`.`login` = 'nreynen') LIMIT 1[0m
+  [4;36;1mUserSession Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserSession Create (0.4ms)[0m   [0;1mINSERT INTO `user_sessions` (`created_at`, `updated_at`, `user_id`, `path`, `ip_address`) VALUES('2012-11-02 10:40:54', '2012-11-02 10:40:54', 3, NULL, NULL)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Redirected to http://localhost:3000/root/home
+Completed in 46ms (DB: 7) | 302 Found [http://localhost/user_sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:40:54) [GET]
+  [4;35;1mUserSession Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.1ms)
+Completed in 82ms (View: 28, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:41:54) [GET]
+  [4;36;1mUserSession Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.6ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 83ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:48:05) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (1.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (9.0ms)
+Completed in 90ms (View: 35, DB: 13) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:48:14) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.1ms)
+Completed in 79ms (View: 26, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:48:52) [GET]
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.3ms)
+Completed in 83ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:49:01) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.9ms)
+Completed in 86ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:49:41) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (73.1ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.5ms)
+Completed in 153ms (View: 28, DB: 82) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:50:24) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.5ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (9.9ms)
+Completed in 83ms (View: 28, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:50:41) [GET]
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 83ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:51:03) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.7ms)
+Completed in 85ms (View: 26, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:51:57) [GET]
+  [4;35;1mUserSession Columns (21.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (9.9ms)
+Completed in 115ms (View: 36, DB: 30) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:53:17) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.3ms)
+Completed in 82ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:54:15) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.5ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (34.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.1ms)
+Completed in 116ms (View: 27, DB: 43) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:54:58) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.9ms)
+Completed in 82ms (View: 27, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:55:13) [GET]
+  [4;35;1mUserSession Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.7ms)
+Completed in 82ms (View: 26, DB: 13) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:57:20) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (11.5ms)
+Completed in 91ms (View: 36, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:57:53) [GET]
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.5ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (10.9ms)
+Completed in 83ms (View: 29, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:58:12) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 81ms (View: 26, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:59:08) [GET]
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.4ms)
+Completed in 82ms (View: 25, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 10:59:58) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.4ms)
+Completed in 81ms (View: 25, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 11:00:13) [GET]
+  [4;35;1mUserSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (8.5ms)
+Completed in 83ms (View: 30, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 11:00:25) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (9.6ms)
+Completed in 84ms (View: 28, DB: 11) | 200 OK [http://localhost/root/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-11-02 11:01:18) [GET]
+  [4;35;1mUserSession Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (28.5ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (9.5ms)
+Completed in 273ms (View: 160, DB: 42) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#bread_report (for 127.0.0.1 at 2012-11-02 11:01:27) [GET]
+  [4;36;1mUserSession Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` WHERE (saturday_int = 15640) [0m
+Rendering template within layouts/application
+Rendering reports/bread_report
+Rendered layouts/_nav (7.6ms)
+Completed in 94ms (View: 30, DB: 8) | 200 OK [http://localhost/reports/bread_report]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:01:31) [GET]
+  [4;35;1mUserSession Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.6ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mUserRight Load (0.3ms)[0m   [0mSELECT * FROM `user_rights` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;36;1mStatic Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (7.4ms)
+Completed in 121ms (View: 55, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-11-02 11:01:37) [GET]
+  [4;35;1mUserSession Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (8.6ms)
+Completed in 182ms (View: 112, DB: 15) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:01:55) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.5ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (9.1ms)
+Completed in 104ms (View: 39, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:06:51) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (15.3ms)
+Completed in 115ms (View: 49, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:07:03) [GET]
+  [4;36;1mUserSession Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.3ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (11.7ms)
+Completed in 114ms (View: 47, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:07:10) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.3ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.1ms)
+Completed in 99ms (View: 38, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:09:08) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.6ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.1ms)
+Completed in 108ms (View: 43, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:09:32) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.2ms)
+Completed in 104ms (View: 37, DB: 12) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:12:13) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (10.9ms)
+Completed in 110ms (View: 49, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:12:29) [GET]
+  [4;36;1mUserSession Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (10.1ms)
+Completed in 105ms (View: 39, DB: 13) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:12:40) [GET]
+  [4;36;1mUserSession Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.3ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.0ms)
+Completed in 102ms (View: 38, DB: 12) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:14:19) [GET]
+  [4;36;1mUserSession Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.3ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 100ms (View: 39, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:15:03) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;35;1mStatic Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (7.9ms)
+Completed in 104ms (View: 39, DB: 12) | 200 OK [http://localhost/user_rights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-11-02 11:15:10) [GET]
+  [4;36;1mUserSession Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.3ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mOrder Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (9.7ms)
+Completed in 203ms (View: 134, DB: 15) | 200 OK [http://localhost/orders]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-11-02 11:15:15) [GET]
+  [4;35;1mUserSession Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.6ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mCategory Load (13.1ms)[0m   [0mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mCategory Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 288ms (View: 191, DB: 26) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:15:23) [GET]
+  [4;35;1mUserSession Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.3ms)
+Completed in 99ms (View: 37, DB: 12) | 200 OK [http://localhost/user_rights]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserRightsController#index (for 127.0.0.1 at 2012-11-02 11:15:45) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mUserRight Load (0.6ms)[0m   [0mSELECT * FROM `user_rights` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering user_rights/index
+  [4;36;1mStatic Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (7.5ms)
+Completed in 101ms (View: 39, DB: 11) | 200 OK [http://localhost/user_rights]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-11-02 11:15:53) [GET]
+  [4;35;1mUserSession Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.6ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.4ms)
+Completed in 183ms (View: 110, DB: 15) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2012-11-02 11:16:00) [GET]
+  [4;36;1mUserSession Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` ORDER BY first_name ASC[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mItem Load (13.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 5) [0m
+  [4;36;1mItem Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 4) [0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.category_id = 6) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.category_id = 3) [0m
+Rendered orders/_form (127.7ms)
+  [4;36;1mStatic Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'order_alert_add') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (8.7ms)
+Completed in 257ms (View: 173, DB: 34) | 200 OK [http://localhost/orders/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2012-11-02 11:16:09) [GET]
+  [4;35;1mUserSession Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM `orders` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mOrder Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (9.1ms)
+Completed in 315ms (View: 138, DB: 17) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-11-02 11:16:11) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;35;1mStatic Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;35;1mCategory Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (8.4ms)
+Completed in 142ms (View: 77, DB: 15) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2012-11-02 11:16:14) [GET]
+  [4;36;1mUserSession Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mCategory Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/application
+Rendering categories/new
+Rendered categories/_form (22.1ms)
+  [4;35;1mStatic Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `statics`[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.7ms)
+Completed in 243ms (View: 85, DB: 13) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2012-11-02 11:16:16) [GET]
+  [4;35;1mUserSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM `categories` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering categories/index
+  [4;36;1mStatic Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mCategory Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.2ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (9.2ms)
+Completed in 149ms (View: 82, DB: 14) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2012-11-02 11:16:18) [GET]
+  [4;35;1mUserSession Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.4ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mItem Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.3ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (7.6ms)
+Completed in 366ms (View: 298, DB: 14) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2012-11-02 11:16:20) [GET]
+  [4;35;1mUserSession Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.4ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mItem Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/application
+Rendering items/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name ASC[0m
+  [4;35;1mCategory Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered items/_form (32.5ms)
+  [4;36;1mStatic Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (7.7ms)
+Completed in 160ms (View: 94, DB: 15) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#bread_report (for 127.0.0.1 at 2012-11-02 11:16:23) [GET]
+  [4;36;1mUserSession Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+  [4;36;1mOrder Load (0.5ms)[0m   [0;1mSELECT * FROM `orders` WHERE (saturday_int = 15640) [0m
+Rendering template within layouts/application
+Rendering reports/bread_report
+Rendered layouts/_nav (10.0ms)
+Completed in 174ms (View: 112, DB: 8) | 200 OK [http://localhost/reports/bread_report]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticsController#index (for 127.0.0.1 at 2012-11-02 11:16:27) [GET]
+  [4;35;1mUserSession Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.5ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mStatic Load (0.6ms)[0m   [0mSELECT * FROM `statics` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering statics/index
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mStatic Load (0.5ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+Rendered layouts/_nav (8.2ms)
+Completed in 279ms (View: 215, DB: 12) | 200 OK [http://localhost/statics]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-11-02 11:16:34) [GET]
+  [4;35;1mUserSession Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `user_sessions`[0m
+  [4;36;1mUserSession Load (0.3ms)[0m   [0;1mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mUserRight Load (0.6ms)[0m   [0mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;36;1mUserRight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `user_rights`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY id LIMIT 0, 25[0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mStatic Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_new') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_edit') LIMIT 1[0m
+  [4;35;1mStatic Load (0.5ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_destroy') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'are_you_sure') LIMIT 1[0m
+  [4;35;1mStatic Load (0.2ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_show') LIMIT 1[0m
+Rendered layouts/_nav (10.0ms)
+Completed in 230ms (View: 170, DB: 12) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#change_password (for 127.0.0.1 at 2012-11-02 11:16:39) [GET]
+  [4;36;1mUserSession Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.4ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.4ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering users/change_password
+  [4;36;1mStatic Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.3ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'link_back') LIMIT 1[0m
+Rendered layouts/_nav (8.5ms)
+Completed in 110ms (View: 57, DB: 10) | 200 OK [http://localhost/users/change_password]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RootController#home (for 127.0.0.1 at 2012-11-02 11:16:45) [GET]
+  [4;36;1mUserSession Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `user_sessions`[0m
+  [4;35;1mUserSession Load (0.3ms)[0m   [0mSELECT * FROM `user_sessions` WHERE (`user_sessions`.`id` = 27) [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mUserRight Load (0.5ms)[0m   [0;1mSELECT * FROM `user_rights` WHERE (`user_rights`.user_id = 3) [0m
+  [4;35;1mUserRight Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `user_rights`[0m
+Rendering template within layouts/application
+Rendering root/home
+  [4;36;1mStatic Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `statics`[0m
+  [4;35;1mStatic Load (0.4ms)[0m   [0mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_title') LIMIT 1[0m
+  [4;36;1mStatic Load (0.4ms)[0m   [0;1mSELECT * FROM `statics` WHERE (`statics`.`identifier` = 'home_welcome') LIMIT 1[0m
+Rendered layouts/_nav (7.2ms)
+Completed in 80ms (View: 25, DB: 11) | 200 OK [http://localhost/root/home]
