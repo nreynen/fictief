@@ -241,6 +241,7 @@ h1 {
   -moz-border-radius: 0 0 0 10px;
   border-radius: 0 0 0 10px;
   padding-left: 10px;
+  margin-top: 0px;
 }
 a {
   color: #4400FF;
@@ -440,7 +441,6 @@ div.login {
 #login_screen {
   width: 550px;
   margin: 0 auto;
-  margin-top: 50px;
 }
 a.looklike_button {
   background-color: #A6A2EB;
