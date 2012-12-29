@@ -3,13 +3,13 @@ class OrdersController < ApplicationController
   
   def index
     if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
-      @orders = Order.paginate :page => params[:page], :order => "id", :per_page => 25
+      @orders = Order.paginate :page => params[:page], :order => "id DESC", :per_page => 25
     else
-      @orders = @user.orders.paginate :page => params[:page], :order => "id", :per_page => 25
+      @orders = @user.orders.paginate :page => params[:page], :order => "id DESC", :per_page => 25
     end
     
     now = Time.now
-    @can_order = !(now.strftime("%a") == "Sat" || (now.strftime("%a") == "Fri" && now.hour > 21))
+    @can_order = !((now.strftime("%a") == "Sat" && now.hour > 6))
   end
   
   def show

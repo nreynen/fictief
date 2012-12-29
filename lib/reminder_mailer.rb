@@ -18,7 +18,7 @@ class ReminderMailer
       MasterMailer.deliver_bread_alert({
         :user => usr, 
         :subject => "Bread Reminder: You haven't created an order!", 
-        :message => "Hi, #{usr.first_name}.<br>You haven't created an order for this week. If you want, you can still order until Friday at 21:00.<br><br>Grtz from the <a href='http://yato-extreme.com'>yato-extreme</a> team."
+        :message => "Hi, #{usr.first_name}.<br>You haven't created an order for this week. If you want, you can still order until Saturday at 06:00.<br><br>Grtz from the <a href='http://yato-extreme.com'>yato-extreme</a> team."
       })
     end
     

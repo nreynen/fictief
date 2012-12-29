@@ -19,14 +19,14 @@
     <% next_saturday = @order.saturday_int rescue nil %>
     <% if @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
       <% if next_saturday.nil? %>
-        <% next_saturday = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) %>
+        <% next_saturday = ((Date.today.end_of_week - 1) >= Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) %>
         <% options = (0..4).inject([]){ |a, x| a << "<option value='#{next_saturday + x.weeks}'>#{(next_saturday + x.weeks).strftime('%e %b %Y')}</option>"; a}.join %>
         <%= select_tag "order[saturday_int]", options %>
       <% else %>
         <%= next_saturday.strftime("%e %b %Y") %>
       <% end %>
     <% else %>
-      <% next_saturday = next_saturday.nil? ? ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) : next_saturday %>
+      <% next_saturday = next_saturday.nil? ? ((Date.today.end_of_week - 1) >= Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) : next_saturday %>
       <%= next_saturday.strftime("%e %b %Y") %>
       <%= hidden_field_tag "order[saturday_int]", next_saturday %>
     <% end %>
