@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
       :name => "BreadApp Admin", :children => [
         { :name => "Overview", :url => bread_report_reports_path }, 
         { :name => "Categories", :url => categories_path }, 
-        { :name => "Items", :url => items_path }
+        { :name => "Items", :url => items_path }, 
+        { :name => "Reporting", :url => bread_logs_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
     # Admin menu

@@ -40,6 +40,36 @@ Rails::Initializer.run do |config|
     :f_one_admin => "F1 Admin",
     :poker_admin => "Poker Admin"
   }
+  
+  BREAD_LOG_CAT = {
+    10 => "Bloem - Wit", 
+    11 => "Bloem - 12granen", 
+    12 => "Bloem - Meergranen", 
+    13 => "Bloem - Andere", 
+    20 => "Chocolade - Bakchocolade", 
+    21 => "Chocolade - Smeltchocolade", 
+    22 => "Chocolade - Andere", 
+    30 => "Gedr. Fruit - Rozijnen", 
+    31 => "Gedr. Fruit - Perziken", 
+    32 => "Gedr. Fruit - Aardbeien", 
+    33 => "Gedr. Fruit - Krieken", 
+    34 => "Gedr. Fruit - Andere", 
+    40 => "Gist", 
+    40 => "Gist - Andere", 
+    50 => "Noten - Walnoten", 
+    51 => "Noten - Amandelen", 
+    52 => "Noten - Cashew", 
+    53 => "Noten - Hazelnoten", 
+    54 => "Noten - Pinda", 
+    55 => "Noten - Macadamia", 
+    56 => "Noten - Andere", 
+    60 => "Suiker - Fijne", 
+    61 => "Suiker - Bloemsuiker", 
+    62 => "Suiker - Grove", 
+    63 => "Suiker - Andere", 
+    70 => "Zaden - Maanzaad", 
+    71 => "Zaden - Andere"
+  }
 end
 
 require 'will_paginate'
