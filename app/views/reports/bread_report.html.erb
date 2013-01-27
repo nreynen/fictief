@@ -14,7 +14,7 @@
       <tbody>
         <% @breads_shorted.each_pair do |name, quant| %>
           <tr>
-            <td><%= name %></td>
+            <td style="text-align: right;"><%= name %></td>
             <td style="text-align: center;"><%= quant %></td>
           </tr>
         <% end %>
@@ -32,7 +32,7 @@
                 <tbody>
                   <% hsh.each_pair do |key, quant| %>
                     <tr>
-                      <td style="text-align: right;"><%= key %></td>
+                      <td><%= key %></td>
                       <td style="text-align: center;"><%= quant %></td>
                     </tr>
                   <% end %>
