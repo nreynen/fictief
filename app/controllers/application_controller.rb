@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
         { :name => "Language", :url => book_languages_path }, 
         { :name => "Genre", :url => book_genres_path }
       ]
-    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_user]]) rescue false)
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:book_admin]]) rescue false)
     # Bread user menu
     @menu << {
       :name => "BreadApp", :children => [
