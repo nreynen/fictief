@@ -1,0 +1,16 @@
+<div>
+  <h1><%= @item.name %></h1>
+  <table class="showtable">
+    <tr>
+      <td style="vertical-align: top;">Category</td>
+      <td><%= @item.category.name %></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Price</td>
+      <td><%= price @item.price %></td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= back_link :url => bread_items_path %></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+<%if error_messages_for 'item' != nil%>
+  <%= error_messages_for 'item' , :class=>"error_message" %>
+<%end%>
+
+<tr>
+  <td><%= f.label "Name:" %></td>
+  <td><%= f.text_field :name %></td>
+</tr>
+<tr>
+  <td><%= f.label "Price: (00.00)" %></td>
+  <td><%= f.text_field :price %></td>
+</tr>
+<tr>
+  <td><%= f.label "Category:" %></td>
+  <td><%= f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id) %></td>
+</tr>

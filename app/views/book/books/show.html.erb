@@ -1,0 +1,58 @@
+<div>
+  <h1><%= @book.title %></h1>
+  <table class="showtable">
+    <tr>
+      <td>Title</td>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td><%= @book.book_author.name rescue "Please update..." %></td>
+    </tr>
+    <tr>
+      <td>Publisher</td>
+      <td><%= @book.book_publisher.name rescue "Please update..." %></td>
+    </tr>
+    <tr>
+      <td>Genre</td>
+      <td><%= @book.book_genre.name rescue "Please update..." %></td>
+    </tr>
+    <tr>
+      <td>Language</td>
+      <td><%= @book.book_language.name rescue "Please update..." %></td>
+    </tr>
+    <tr>
+      <td>Original Language</td>
+      <td><%= @book.book_original_language.name rescue "Please update..." %></td>
+    </tr>
+    <tr>
+      <td>ISBN</td>
+      <td><%= @book.isbn %></td>
+    </tr>
+    <tr>
+      <td>Pages</td>
+      <td><%= @book.pages %></td>
+    </tr>
+    <tr>
+      <td>Print nr</td>
+      <td><%= @book.print_nr %></td>
+    </tr>
+    <tr>
+      <td>Print year</td>
+      <td><%= @book.print_year %></td>
+    </tr>
+    <tr>
+      <td>Series</td>
+      <td><%= @book.book_serie.name rescue "-" %></td>
+    </tr>
+    <tr>
+      <td>Comment</td>
+      <td><%= @book.comment rescue "-" %></td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Edit", edit_book_book_path(@book) %> | 
+        <%= link_to "Destroy", book_book_path(@book), :confirm => "Are you sure?", :method => :delete %> | 
+        <%= link_to "Back", book_books_path %></td>
+    </tr>
+  </table>
+</div>

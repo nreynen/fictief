@@ -1,0 +1,28 @@
+<div id="content_wrapper">
+  <h1>Book Overview</h1>
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Title</td>
+      <td class="header_cell">Author</td>
+      <td class="display_none_header_cell"></td>
+      <td class="display_none_header_cell"></td>
+      <td class="header_cell"><%= @count %></td>
+    </tbody>
+    <tbody class="button_row">
+      <td class="header_cell"><%= link_to "New book...", new_book_book_path %></td>
+    </tbody>
+    <% @books.each do |book| %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <%= book[:title] %>
+        </td>
+        <td>
+          <%= book.book_author[:name] rescue "Please update..." %>
+        </td>
+        <td class="button_cell"><%= link_to "Show", book_book_path(book) %></td>
+        <td class="button_cell"><%= link_to "Edit", edit_book_book_path(book) %></td>
+        <td class="button_cell"><%= link_to "Destroy", book_book_path(book), :confirm => "Are you sure?", :method => :delete %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

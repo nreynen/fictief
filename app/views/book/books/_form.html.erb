@@ -1,0 +1,54 @@
+<div>
+  <%if error_messages_for 'book' != nil%>
+    <%= error_messages_for 'book' , :class=>"error_message" %>
+  <%end%>
+
+  <tr>
+    <td><%= f.label :title %></td>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :author %></td>
+    <td><%= select_tag "book_book[author_id]", options_from_collection_for_select(@authors, "id", "name", @book.author_id) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :publisher %></td>
+    <td><%= select_tag "book_book[publisher_id]", options_from_collection_for_select(@publishers, "id", "name", @book.publisher_id) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :genre %></td>
+    <td><%= select_tag "book_book[genre_id]", options_from_collection_for_select(@genres, "id", "name", @book.genre_id) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :language %></td>
+    <td><%= select_tag "book_book[language_id]", options_from_collection_for_select(@languages, "id", "name", @book.language_id) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :original_language %></td>
+    <td><%= select_tag "book_book[original_language_id]", options_from_collection_for_select(@languages, "id", "name", @book.original_language_id) %></td>
+  </tr>
+  <tr>
+    <td>ISBN</td>
+    <td><%= text_field_tag "book_book[isbn]", @book.isbn %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :pages %></td>
+    <td><%= text_field_tag "book_book[pages]", @book.pages %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :print_nr %></td>
+    <td><%= text_field_tag "book_book[print_nr]", @book.print_nr %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :print_year %></td>
+    <td><%= text_field_tag "book_book[print_year]", @book.print_year %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :series %></td>
+    <td><%= select_tag "book_book[serie_id]", "<option value=''></option>#{options_from_collection_for_select(@series, "id", "name", @book.serie_id)}" %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :comment %></td>
+    <td><%= text_area_tag "book_book[comment]", @book.comment, :style => "width: 100%;" %></td>
+  </tr>
+</div>

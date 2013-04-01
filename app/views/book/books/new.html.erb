@@ -1,0 +1,14 @@
+<div>
+  <h1>New book</h1>
+  <table class="showtable">
+    <% form_for @book, :url => book_books_path do |f| %>
+      <%= render(:partial => 'form', :locals => { :f => f, :book => @book }) %>
+      <tr>
+        <td colspan="2"><%= f.submit "Create" %></td>
+      </tr>
+    <% end %>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Back", book_books_path %></td>
+    </tr>
+  </table>
+</div>

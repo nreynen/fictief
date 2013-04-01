@@ -1,0 +1,11 @@
+<div>
+  <h1>New Item</h1>
+  <table class="showtable">
+    <% form_for @item, :url => bread_items_path do |f| %>
+      <%= render(:partial => 'form', :locals => { :f => f, :item => @item }) %>
+      <tr>
+        <td colspan="2"><%= f.submit "Add" %>&nbsp;<%= back_link :url => bread_items_path %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1><%= @author[:name] %></h1>
+  <table class="showtable">
+    <tr>
+      <td>Name</td>
+      <td><%= @author[:name] %></td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Edit", edit_book_author_path(@author) %> | 
+        <%= link_to "Destroy", book_author_path(@author), :confirm => "Are you sure?", :method => :delete %> | 
+        <%= link_to "Back", book_authors_path %></td>
+    </tr>
+  </table>
+</div>

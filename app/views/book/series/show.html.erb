@@ -1,0 +1,18 @@
+<div>
+  <h1><%= @serie[:name] %></h1>
+  <table class="showtable">
+    <tr>
+      <td>Name</td>
+      <td><%= @serie[:name] %></td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td><%= @serie[:author][:name] rescue "Please update..." %></td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Edit", edit_book_series_path(@serie) %> | 
+        <%= link_to "Destroy", book_series_path(@serie), :confirm => "Are you sure?", :method => :delete %> | 
+        <%= link_to "Back", book_series_index_path %></td>
+    </tr>
+  </table>
+</div>

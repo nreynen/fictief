@@ -8,9 +8,21 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_rights, :only => [:index], :collection => {:delete_rights => [:get, :post]}
   map.resources :news_feeds, :only => [:index, :new, :create]
   map.resources :reports, :only => [], :collection => {:bread_report => [:get, :post]}
-  map.resources :bread_logs, :except => :destroy
-  map.resources :categories
   map.resources :user_sessions, :except => [:edit]
-  map.resources :items
-  map.resources :orders, :collection => {:set_paid => [:get, :post]}
+  
+  map.namespace :bread do |bread|
+    bread.resources :bread_logs, :except => :destroy
+    bread.resources :categories
+    bread.resources :items
+    bread.resources :orders, :collection => {:set_paid => [:get, :post]}
+  end
+  
+  map.namespace :book do |book|
+    book.resources :authors
+    book.resources :publishers
+    book.resources :genres
+    book.resources :languages
+    book.resources :series
+    book.resources :books
+  end
 end

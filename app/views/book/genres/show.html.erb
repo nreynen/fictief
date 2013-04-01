@@ -1,0 +1,14 @@
+<div>
+  <h1><%= @genre[:name] %></h1>
+  <table class="showtable">
+    <tr>
+      <td>Name</td>
+      <td><%= @genre[:name] %></td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Edit", edit_book_genre_path(@genre) %> | 
+        <%= link_to "Destroy", book_genre_path(@genre), :confirm => "Are you sure?", :method => :delete %> | 
+        <%= link_to "Back", book_genres_path %></td>
+    </tr>
+  </table>
+</div>

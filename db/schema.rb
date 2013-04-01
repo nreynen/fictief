@@ -9,7 +9,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130127130514) do
+ActiveRecord::Schema.define(:version => 20130203141257) do
+
+  create_table "authors", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "books", :force => true do |t|
+    t.string   "title",                :null => false
+    t.integer  "author_id",            :null => false
+    t.integer  "publisher_id",         :null => false
+    t.string   "isbn",                 :null => false
+    t.string   "pages",                :null => false
+    t.integer  "genre_id",             :null => false
+    t.integer  "print_nr",             :null => false
+    t.integer  "print_year",           :null => false
+    t.integer  "language_id",          :null => false
+    t.integer  "original_language_id", :null => false
+    t.integer  "serie_id"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "books", ["author_id"], :name => "index_books_on_author_id"
+  add_index "books", ["genre_id"], :name => "index_books_on_genre_id"
+  add_index "books", ["language_id"], :name => "index_books_on_language_id"
+  add_index "books", ["original_language_id"], :name => "index_books_on_original_language_id"
+  add_index "books", ["publisher_id"], :name => "index_books_on_publisher_id"
+  add_index "books", ["serie_id"], :name => "index_books_on_serie_id"
 
   create_table "bread_logs", :force => true do |t|
     t.integer  "cat_id",                                   :null => false
@@ -26,10 +56,22 @@ ActiveRecord::Schema.define(:version => 20130127130514) do
     t.datetime "updated_at"
   end
 
+  create_table "genres", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "items", :force => true do |t|
     t.string   "name"
     t.decimal  "price",       :precision => 4, :scale => 2
     t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "languages", :force => true do |t|
+    t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +91,22 @@ ActiveRecord::Schema.define(:version => 20130127130514) do
     t.string   "order"
     t.integer  "saturday_int"
   end
+
+  create_table "publishers", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "place"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "series", :force => true do |t|
+    t.string   "name",       :null => false
+    t.integer  "author_id",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "series", ["author_id"], :name => "index_series_on_author_id"
 
   create_table "statics", :force => true do |t|
     t.string   "identifier", :null => false

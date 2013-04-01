@@ -1,0 +1,14 @@
+<div>
+  <%if error_messages_for 'serie' != nil%>
+    <%= error_messages_for 'serie' , :class=>"error_message" %>
+  <%end%>
+
+  <tr>
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :author %></td>
+    <td><%= select_tag "book_serie[author_id]", options_from_collection_for_select(@authors, "id", "name") %></td>
+  </tr>
+</div>

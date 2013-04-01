@@ -14,19 +14,30 @@ class ApplicationController < ActionController::Base
         ]
       }
     ]
+    # BookApp user menu
+    @menu << {
+      :name => "BookApp", :children => [
+        { :name => "Authors", :url => book_authors_path }, 
+        { :name => "Book", :url => book_books_path },
+        { :name => "Publisher", :url => book_publishers_path }, 
+        { :name => "Series", :url => book_series_index_path }, 
+        { :name => "Language", :url => book_languages_path }, 
+        { :name => "Genre", :url => book_genres_path }
+      ]
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_user]]) rescue false)
     # Bread user menu
     @menu << {
       :name => "BreadApp", :children => [
-        { :name => "Orders", :url => orders_path }
+        { :name => "Orders", :url => bread_orders_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_user]]) rescue false)
     # Bread admin menu
     @menu << {
       :name => "BreadApp Admin", :children => [
         { :name => "Overview", :url => bread_report_reports_path }, 
-        { :name => "Categories", :url => categories_path }, 
-        { :name => "Items", :url => items_path }, 
-        { :name => "Reporting", :url => bread_logs_path }
+        { :name => "Categories", :url => bread_categories_path }, 
+        { :name => "Items", :url => bread_items_path }, 
+        { :name => "Reporting", :url => bread_bread_logs_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
     # Admin menu

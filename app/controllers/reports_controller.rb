@@ -5,7 +5,7 @@ class ReportsController < ApplicationController
     @next_saturday = ((Date.today.end_of_week - 1) > Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) - 7.days
     @next_saturday_int = (@next_saturday - Date.new(1970,1,1)).to_i
     
-    orders = Order.find(:all, :conditions => ["saturday_int = ?", @next_saturday_int])
+    orders = Bread::Order.find(:all, :conditions => ["saturday_int = ?", @next_saturday_int])
     
     
     @breads_shorted = orders.inject({}) do |h, x|
@@ -18,7 +18,7 @@ class ReportsController < ApplicationController
       end
       h
     end.inject({}) do |h, x|
-      name = Item.find(x[0]).name
+      name = Bread::Item.find(x[0]).name
       good_name = name.split(",")[0]
       h[good_name] ||= 0
       h[good_name] += x[1]
@@ -30,7 +30,7 @@ class ReportsController < ApplicationController
       x[:order].split(";").each do |arr|
         unless arr.blank?
           id, quant = arr.split(",")
-          name = Item.find(id).name
+          name = Bread::Item.find(id).name
           h[user] ||= {}
           h[user][name] = quant
         end

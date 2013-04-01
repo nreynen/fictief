@@ -1,0 +1,15 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "BreadApp/order.js" %>
+<% end %>
+
+<div>
+  <h1>New Order</h1>
+  <table class="showtable">
+    <% form_for @order, :url => bread_orders_path do |f| %>
+      <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
+      <tr>
+        <td colspan="2"><%= f.submit "Add", :confirm => put("order_alert_add") %>&nbsp;<%= back_link :url => bread_orders_path %><span style="float: right;" id="overview_hover">Hover for overview</span></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

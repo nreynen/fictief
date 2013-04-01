@@ -1,0 +1,24 @@
+<div id="content_wrapper">
+  <h1>Language Overview</h1>
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Name</td>
+      <td class="display_none_header_cell"></td>
+      <td class="display_none_header_cell"></td>
+      <td class="header_cell"><%= @count %></td>
+    </tbody>
+    <tbody class="button_row">
+      <td class="header_cell"><%= link_to "New language...", new_book_language_path %></td>
+    </tbody>
+    <% @languages.each do |language| %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <%= language[:name] %>
+        </td>
+        <td class="button_cell"><%= link_to "Show", book_language_path(language) %></td>
+        <td class="button_cell"><%= link_to "Edit", edit_book_language_path(language) %></td>
+        <td class="button_cell"><%= link_to "Destroy", book_language_path(language), :confirm => "Are you sure?", :method => :delete %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

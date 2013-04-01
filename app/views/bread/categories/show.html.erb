@@ -1,0 +1,27 @@
+<div>
+  <h1><%= @category.name %></h1>
+  <table class="showtable">
+    <tr>
+      <td style="vertical-align: top;">Items</td>
+      <td>
+        <table class="filltable">
+          <thead class="table_header">
+            <th class="header_cell">Current Items</th>
+            <th class="header_cell">Price</th>
+          </thead>
+          <tbody>
+            <% @category.items.each do |item| %>
+              <tr>
+                <td><%= item.name %></td>
+                <td><%= item.price %> &euro;</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr class="button_row">
+      <td colspan="2"><%= back_link :url => bread_categories_path %></td>
+    </tr>
+  </table>
+</div>
