@@ -1,8 +1,13 @@
 class Book::LanguagesController < ApplicationController
+  before_filter :check_rights
   
   def index
     @languages = Book::Language.all_sorted.paginate :page => params[:page], :order => "name ASC", :per_page => 25
     @count = @languages.length
+  end
+  
+  def check_rights
+    @has_rights = (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:book_admin]]) rescue false)
   end
   
   def show

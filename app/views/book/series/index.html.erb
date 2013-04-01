@@ -19,9 +19,9 @@
         <td>
           <%= serie.book_author[:name] rescue "Please update..." %>
         </td>
-        <td class="button_cell"><%= link_to "Show", book_series_path(serie) %></td>
-        <td class="button_cell"><%= link_to "Edit", edit_book_series_path(serie) %></td>
-        <td class="button_cell"><%= link_to "Destroy", book_series_path(serie), :confirm => "Are you sure?", :method => :delete %></td>
+        <td class="button_cell"><%= link_to("Show", book_series_path(serie)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Edit", edit_book_series_path(serie)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Destroy", book_series_path(serie), :confirm => "Are you sure?", :method => :delete) if @has_rights %></td>
       </tbody>
     <% end %>
   </table>

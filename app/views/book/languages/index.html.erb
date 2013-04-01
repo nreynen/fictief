@@ -15,9 +15,9 @@
         <td>
           <%= language[:name] %>
         </td>
-        <td class="button_cell"><%= link_to "Show", book_language_path(language) %></td>
-        <td class="button_cell"><%= link_to "Edit", edit_book_language_path(language) %></td>
-        <td class="button_cell"><%= link_to "Destroy", book_language_path(language), :confirm => "Are you sure?", :method => :delete %></td>
+        <td class="button_cell"><%= link_to("Show", book_language_path(language)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Edit", edit_book_language_path(language)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Destroy", book_language_path(language), :confirm => "Are you sure?", :method => :delete) if @has_rights %></td>
       </tbody>
     <% end %>
   </table>

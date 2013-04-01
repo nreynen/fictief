@@ -15,9 +15,9 @@
         <td>
           <%= genre[:name] %>
         </td>
-        <td class="button_cell"><%= link_to "Show", book_genre_path(genre) %></td>
-        <td class="button_cell"><%= link_to "Edit", edit_book_genre_path(genre) %></td>
-        <td class="button_cell"><%= link_to "Destroy", book_genre_path(genre), :confirm => "Are you sure?", :method => :delete %></td>
+        <td class="button_cell"><%= link_to("Show", book_genre_path(genre)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Edit", edit_book_genre_path(genre)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Destroy", book_genre_path(genre), :confirm => "Are you sure?", :method => :delete) if @has_rights %></td>
       </tbody>
     <% end %>
   </table>

@@ -1,8 +1,13 @@
 class Book::SeriesController < ApplicationController
+  before_filter :check_rights
   
   def index
     @series = Book::Serie.all_sorted_with_author.paginate :page => params[:page], :order => "name ASC", :per_page => 25
     @count = @series.length
+  end
+  
+  def check_rights
+    @has_rights = (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:book_admin]]) rescue false)
   end
   
   def show
