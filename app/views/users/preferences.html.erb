@@ -1,0 +1,47 @@
+<script type="text/javascript">
+  function make_year() {
+    var datake = $("#start_date").val();
+    $(".workday_start_cell").html("<img src='/images/load.gif' style='width: 150px; float: right; margin-right: -9px; margin-top: -5px; display: block;'>");
+    
+    $.ajax({
+      url: "<%= preferences_users_path %>",
+      type: "POST", 
+      data: {
+        pref: {
+          action: "make_year", 
+          data: {
+            start: datake
+          }
+        }
+      }, 
+      success: function(data) {
+        if(data == "ok") {
+          $(".workday_start_cell").html("Finished!");
+        }
+      }, 
+      complete: function() {
+        
+      }, 
+      error: function() {
+        $(".workday_start_cell").html("Error happened... Contact admin!");
+      }
+    });
+  }
+</script>
+
+<h1>Preferences</h1>
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td colspan="2"><div class="sub_header_div">WorkCal</div></td>
+    </tr>
+    <tr>
+      <td style="width: 33%;">Make (this and) next year</td>
+      <td style="text-align: center;" class="workday_start_cell"><%= text_field_tag("start_date", "DD/MM/YYYY", :style => "width: 150px;") %> <a href="javascript:void(0);" onclick="make_year(); return false;">Make from this date!</a></td>
+    </tr>
+    <tr>
+      <td style="width: 33%;">Hourly Wage</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

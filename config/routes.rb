@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :root, :only => [:index], :collection => {:info => :get, :home => :get, :error => :get, :login => [:get, :post]}
   
   map.resources :statics, :except => [:show, :new, :create]
-  map.resources :users, :collection => {:change_password => [:get, :post]}
+  map.resources :users, :collection => {:change_password => [:get, :post], :preferences => [:get, :post]}
   map.resources :user_rights, :only => [:index], :collection => {:delete_rights => [:get, :post]}
   map.resources :news_feeds, :only => [:index, :new, :create]
   map.resources :reports, :only => [], :collection => {:bread_report => [:get, :post]}

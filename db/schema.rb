@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402111912) do
+ActiveRecord::Schema.define(:version => 20130402131109) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",       :null => false
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20130402111912) do
     t.integer  "user_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "wage"
   end
 
   add_index "designations", ["user_id"], :name => "index_designations_on_user_id"
@@ -157,6 +158,7 @@ ActiveRecord::Schema.define(:version => 20130402111912) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.text     "pref",       :limit => 16777215
   end
 
   create_table "workdays", :force => true do |t|

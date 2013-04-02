@@ -540,3 +540,13 @@ a.looklike_button:hover {
 #sequence_table td.font_bordered {
   border: 1px dotted #000000;
 }
+.sub_header_div {
+  width: 80%;
+  background-color: #4400FF;
+  color: #E777EB;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}

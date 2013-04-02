@@ -27,6 +27,38 @@ class UsersController < ApplicationController
     end
   end
   
+  def preferences
+    if (params[:pref][:action] == "make_year" rescue false)
+      d, m, y = params[:pref][:data][:start].split("/").inject([]){|a, x| a << x.to_i; a}
+      start_int = (Date.new(y, m, d) - Date.new(1970, 1, 1)).to_i
+      cur_int = start_int
+      start_seq = (@user.workday_sequences.last.seq.split(";").compact rescue [])
+      cur_seq_position = 0
+      
+      while cur_seq_position < start_seq.length || cur_int < start_int + 365 do
+        cur_seq_position = 0 if cur_seq_position == start_seq.length
+        
+        w = Workday::Workday.find(:first, :conditions => ["day = ? AND user_id = ?", cur_int, @user.id])
+        if w.nil?
+          ww = Workday::Workday.new({
+            :user_id => @user.id, 
+            :day => cur_int, 
+            :designation_id => start_seq[cur_seq_position]
+          })
+          ww.save
+        else
+          w[:designation_id] = start_seq[cur_seq_position]
+          w.save
+        end
+        
+        cur_int += 1
+        cur_seq_position += 1
+      end unless start_seq.empty?
+      
+      render :text => "ok" and return
+    end
+  end
+  
   def edit
     @user = User.find(params[:id])
   end

@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
     @menu = [
       {
         :name => "User", :children => [
-          { :name => "Change Password", :url => change_password_users_path }
+          { :name => "Change Password", :url => change_password_users_path }, 
+          { :name => "Preferences", :url => preferences_users_path }
         ]
       }
     ]
