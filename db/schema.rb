@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203141257) do
+ActiveRecord::Schema.define(:version => 20130402111912) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",       :null => false
@@ -56,6 +56,16 @@ ActiveRecord::Schema.define(:version => 20130203141257) do
     t.datetime "updated_at"
   end
 
+  create_table "designations", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "colour",     :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "designations", ["user_id"], :name => "index_designations_on_user_id"
+
   create_table "genres", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at"
@@ -99,6 +109,15 @@ ActiveRecord::Schema.define(:version => 20130203141257) do
     t.datetime "updated_at"
   end
 
+  create_table "sequences", :force => true do |t|
+    t.string   "seq",        :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sequences", ["user_id"], :name => "index_sequences_on_user_id"
+
   create_table "series", :force => true do |t|
     t.string   "name",       :null => false
     t.integer  "author_id",  :null => false
@@ -139,5 +158,17 @@ ActiveRecord::Schema.define(:version => 20130203141257) do
     t.datetime "updated_at"
     t.string   "email"
   end
+
+  create_table "workdays", :force => true do |t|
+    t.integer  "user_id",        :null => false
+    t.integer  "day",            :null => false
+    t.integer  "designation_id", :null => false
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workdays", ["day"], :name => "index_workdays_on_day"
+  add_index "workdays", ["user_id"], :name => "index_workdays_on_user_id"
 
 end

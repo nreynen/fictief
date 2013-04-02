@@ -518,3 +518,25 @@ a.looklike_button:hover {
   font-size: 9px;
   float: right;
 }
+.font_bordered {
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+}
+#sequence_table {
+  width: 700px;
+}
+#sequence_table td {
+  width: 100px;
+  border: 1px solid #000000;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+}
+#sequence_table tr.first_tr td {
+  background-color: #4400FF;
+  color: #E777EB;
+}
+#sequence_table td.font_bordered {
+  border: 1px dotted #000000;
+}

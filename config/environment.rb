@@ -39,7 +39,8 @@ Rails::Initializer.run do |config|
     :bread_admin => "Bread Admin",
     :f_one_admin => "F1 Admin",
     :poker_admin => "Poker Admin",
-    :book_admin => "Book Admin"
+    :book_admin => "Book Admin",
+    :workday_user => "WorkCal User"
   }
   
   BREAD_LOG_CAT = {

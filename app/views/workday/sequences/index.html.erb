@@ -1,0 +1,22 @@
+<div id="content_wrapper">
+  <h1>Sequence Overview</h1>
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Name</td>
+      <td class="display_none_header_cell"></td>
+      <td class="header_cell"><%= @count %></td>
+    </tbody>
+    <tbody class="button_row">
+      <td class="header_cell"><%= link_to "New sequence...", new_workday_sequence_path %></td>
+    </tbody>
+    <% @sequences.each do |des| %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <%= shorten(des.seq) %>
+        </td>
+        <td class="button_cell"><%= link_to("Edit", edit_workday_sequence_path(des)) if @has_rights %></td>
+        <td class="button_cell"><%= link_to("Destroy", workday_sequence_path(des), :confirm => "Are you sure?", :method => :delete) if @has_rights %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

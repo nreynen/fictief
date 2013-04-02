@@ -25,4 +25,10 @@ ActionController::Routing::Routes.draw do |map|
     book.resources :series
     book.resources :books
   end
+  
+  map.namespace :workday do |work|
+    work.resources :designations
+    work.resources :workdays
+    work.resources :sequences
+  end
 end

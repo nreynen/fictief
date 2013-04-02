@@ -1,0 +1,14 @@
+<div>
+  <h1>Editing sequence</h1>
+  <table class="showtable">
+    <% form_for @sequence, :url => workday_sequence_path(@sequence) do |f| %>
+      <%= render(:partial => 'form', :locals => { :f => f, :sequence => @sequence }) %>
+      <tr>
+        <td colspan="2"><%= f.submit "Update" %></td>
+      </tr>
+    <% end %>
+    <tr class="button_row">
+      <td colspan="2"><%= link_to "Back", workday_sequences_path %></td>
+    </tr>
+  </table>
+</div>

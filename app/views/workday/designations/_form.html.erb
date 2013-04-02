@@ -1,0 +1,15 @@
+<div>
+  <%if error_messages_for 'designation' != nil%>
+    <%= error_messages_for 'designation' , :class=>"error_message" %>
+  <%end%>
+
+  <tr>
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>Colour (#3FDBAZ -> 3FDBAZ) (<a href="http://colorpicker.com/" target="_BLANK">Colorpicker</a>)</td>
+    <td><%= f.text_field :colour %></td>
+  </tr>
+  <%= hidden_field_tag "workday_designation[user_id]", @user.id %>
+</div>

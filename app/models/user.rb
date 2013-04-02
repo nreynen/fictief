@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   
   has_one :user_session, :dependent => :destroy
   has_many :user_rights, :dependent => :destroy
+  has_many :workday_designations, :dependent => :destroy, :foreign_key => "user_id", :class_name => "Workday::Designation"
   
   has_many :orders
   

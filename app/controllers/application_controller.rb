@@ -16,6 +16,14 @@ class ApplicationController < ActionController::Base
     ]
     # BookApp user menu
     @menu << {
+      :name => "WorkCal", :children => [
+        { :name => "Designations", :url => workday_designations_path }, 
+        { :name => "Workdays", :url => workday_workdays_path }, 
+        { :name => "Sequences", :url => workday_sequences_path }
+      ]
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:workday_user]]) rescue false)
+    # BookApp user menu
+    @menu << {
       :name => "BookApp", :children => [
         { :name => "Authors", :url => book_authors_path }, 
         { :name => "Book", :url => book_books_path },

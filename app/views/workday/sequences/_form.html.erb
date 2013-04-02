@@ -1,0 +1,111 @@
+<script type="text/javascript">
+  var current_day = [0, 0];
+  var current_sequence = "<%= @seq %>";
+  
+  function add_to_sequence() {
+    var val = $("#designations").val();
+    current_sequence += val;
+    current_sequence += ";";
+    $("#workday_sequence_seq").val(current_sequence);
+    
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").html($("#designations option:selected").html());
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("style", $("#designations option:selected").attr("style"));
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("class", $("#designations option:selected").attr("class"));
+    
+    add_day();
+  }
+  
+  function add_day() {
+    current_day[1] = current_day[1] + 1
+    
+    if(current_day[1] == 7) {
+      current_day[1] = 0
+      current_day[0] = current_day[0] + 1
+      $("#sequence_table tbody").append("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+    }
+  }
+  
+  function remove_day() {
+    if(current_day[0] != 0) {
+      current_day[1] = current_day[1] - 1
+      
+      if(current_day[1] == -1) {
+        current_day[1] = 6
+        current_day[0] = current_day[0] - 1
+        $("#sequence_table tbody tr:eq(" + (current_day[0] + 2) + ")").remove();
+      }
+    }
+  }
+  
+  function delete_last() {
+    var x = current_sequence.split(";");
+    x.pop();
+    x.pop();
+    x.push("");
+    current_sequence = x.join(";");
+    $("#workday_sequence_seq").val(current_sequence);
+    
+    remove_day();
+    
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").html("");
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("style", "");
+    $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("class", "");
+  }
+  
+  $(document).ready(function() {
+    if(current_sequence.length > 0) {
+      bla = current_sequence.split(";");
+      bla.pop();
+      $.each(bla, function(i, x) {
+        $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").html($("#designations option[value='" + x + "']").html());
+        $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("style", $("#designations option[value='" + x + "']").attr("style"));
+        $("#sequence_table tbody tr:eq(" + (current_day[0] + 1) + ") td:eq(" + (current_day[1]) + ")").attr("class", $("#designations option[value='" + x + "']").attr("class"));
+        
+        add_day();
+      });
+    }
+  });
+</script>
+
+<div>
+  <%if error_messages_for 'sequence' != nil%>
+    <%= error_messages_for 'sequence' , :class=>"error_message" %>
+  <%end%>
+
+  <tr>
+    <td>Controls</td>
+    <td>
+      <%= select_tag "designations", @options, :style => "width: 100px;" %> <%= link_to "Add to sequence", "javascript:void(0);", :onclick => "add_to_sequence(); return false;" %><br>
+      <%= link_to "Delete last", "javascript:void(0);", :onclick => "delete_last(); return false;" %>
+    </td>
+  </tr>
+  <tr>
+    <td>Sequence</td>
+    <td>
+      <table id="sequence_table" cellspacing="0" border="1">
+        <tbody>
+          <tr class="first_tr">
+            <td>MO</td>
+            <td>TU</td>
+            <td>WE</td>
+            <td>TH</td>
+            <td>FR</td>
+            <td>SA</td>
+            <td>SU</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <%= hidden_field_tag "workday_sequence[user_id]", @user.id %>
+  <%= hidden_field_tag "workday_sequence[seq]", "" %>
+</div>
