@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :workday_sequences, :dependent => :destroy, :foreign_key => "user_id", :class_name => "Workday::Sequence"
   has_many :workday_workdays, :dependent => :destroy, :foreign_key => "user_id", :class_name => "Workday::Workday"
   
-  has_many :orders
+  has_many :orders, :dependent => :destroy, :foreign_key => "user_id", :class_name => "Bread::Order"
   
   serialize :pref, Hash
   
