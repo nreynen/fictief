@@ -5,6 +5,7 @@
     <tbody class="table_header">
       <td class="header_cell">Id</td>
       <td class="header_cell">Name</td>
+      <td class="header_cell">Enabled</td>
       <td class="display_none_header_cell"></td>
       <td class="display_none_header_cell"></td>
       <td class="header_cell"><%= @items.total_entries %></td>
@@ -19,6 +20,9 @@
         </td>
         <td>
           <%= item.name %>
+        </td>
+        <td>
+          <%= niceify_bool item.enabled %>
         </td>
         <td class="button_cell"><%= edit_link :url => edit_bread_item_path(item) %></td>
         <td class="button_cell"><%= destroy_link :url => bread_item_path(item) %></td>
