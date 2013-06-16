@@ -320,7 +320,7 @@ tbody:not(.table_header) tr table tr:hover {
 input {
   width: 99%;
 }
-input[type="submit"] {
+input[type="submit"], input[type="checkbox"] {
   width: auto;
 }
 .notice, .error, .success {

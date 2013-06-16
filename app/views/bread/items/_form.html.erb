@@ -14,3 +14,10 @@
   <td><%= f.label "Category:" %></td>
   <td><%= f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id) %></td>
 </tr>
+<tr>
+  <td><%= f.label "Enabled:" %></td>
+  <td>
+    <%= hidden_field_tag "bread_item[enabled]", "0" %>
+    <%= check_box_tag "bread_item[enabled]", true, item.enabled %>
+  </td>
+</tr>

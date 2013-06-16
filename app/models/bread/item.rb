@@ -5,4 +5,8 @@ class Bread::Item < ActiveRecord::Base
   validates_presence_of :category_id
   validates_presence_of :name
   validates_presence_of :price
+  
+  named_scope :enabled, {
+    :conditions => ["enabled = ?", true]
+  }
 end

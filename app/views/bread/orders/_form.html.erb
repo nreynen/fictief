@@ -56,7 +56,7 @@
         <% Bread::Category.find(:all, :order => "name ASC").each do |category| %>
           <div class="tab_content tab_content_<%= category.id %>">
             <table style="width: 480px;">
-              <% category.items.each do |item| %>
+              <% category.items.enabled.each do |item| %>
                 <tr>
                   <td id="quantity_<%= item.id %>"><%= item.name %></td>
                   <td><span>Quantity: <%= sprintf "%5.2f", item.price %>&euro; * </span><%= text_field_tag "items[#{item.id}][quantity]", (quantities["#{item.id}"] rescue ""), :style => "width: 20px;", :class => "quantity_field", :price => item.price, :td_id => "quantity_#{item.id}", :onkeyup => "adjust_qtip_content();" %></td>
