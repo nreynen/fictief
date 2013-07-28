@@ -31,7 +31,7 @@ class Bread::OrdersController < ApplicationController
     end
     @order.order = order_string
     
-    if @order.save
+    if order_string.length > 0 && @order.save
       MasterMailer.deliver_bread_alert({
         :user => @user, 
         :subject => "Bread Notification: You have created an order!", 
