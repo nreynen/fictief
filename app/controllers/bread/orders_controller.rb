@@ -23,13 +23,13 @@ class Bread::OrdersController < ApplicationController
   
   def create
     @order = Bread::Order.new(params[:bread_order])
-    order_string = ""
+    order_string = []
     y, m, d = params[:bread_order][:saturday_int].split("-")
     params[:bread_order][:saturday_int] = Date.new(y.to_i, m.to_i, d.to_i)
     params[:items].each_pair do |item_id, x|
-      order_string << "#{item_id},#{x[:quantity]};" unless x[:quantity].blank?
+      order_string << "#{item_id},#{x[:quantity]}" unless x[:quantity].blank?
     end
-    @order.order = order_string
+    @order.order = order_string.join(";")
     
     if order_string.length > 0 && @order.save
       MasterMailer.deliver_bread_alert({
@@ -52,6 +52,11 @@ class Bread::OrdersController < ApplicationController
     @order = Bread::Order.find(params[:id])
     y, m, d = params[:bread_order][:saturday_int].split("-")
     params[:bread_order][:saturday_int] = Date.new(y.to_i, m.to_i, d.to_i)
+    order_string = []
+    params[:items].each_pair do |item_id, x|
+      order_string << "#{item_id},#{x[:quantity]}" unless x[:quantity].blank?
+    end
+    @order.order = order_string.join(";")
 
     if @order.update_attributes(params[:bread_order])
       redirect_to(bread_orders_path, :flash => { :success => "Order was successfully updated..." })

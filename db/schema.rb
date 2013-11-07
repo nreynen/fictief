@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616104032) do
+ActiveRecord::Schema.define(:version => 20131107233140) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",       :null => false
@@ -160,6 +160,14 @@ ActiveRecord::Schema.define(:version => 20130616104032) do
     t.datetime "updated_at"
     t.string   "email"
     t.text     "pref",       :limit => 16777215
+    t.string   "type"
+  end
+
+  create_table "weekly_orders", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "workdays", :force => true do |t|

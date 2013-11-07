@@ -6,6 +6,36 @@ class ApplicationController < ActionController::Base
   before_filter :maintain_session
   before_filter :maintain_menu
   
+  def ensure_is_admin(keys = [RIGHTS[:admin]])
+    unless @user && @user.has_rights_for?(keys)
+      flash[:error] = @template.put("rights_not_enough")
+      redirect_to(home_root_path)
+    end
+  end
+  
+  def ensure_logged_in
+    unless @user
+      flash[:error] = @template.put("error_login")
+      redirect_to(new_user_session_path)
+    end
+  end
+  
+  def ensure_logged_out
+    if @user
+      flash[:error] = "You must logout first"
+      redirect_to(home_root_url)
+    end
+  end
+  
+  def js_map(attributes)
+    mapping = ["<script type='text/javascript'>"]
+    attributes.each do |x|
+      mapping << %Q{var #{x[0].to_s} = "#{@template.escape_javascript(x[1])}";}
+    end
+    mapping << "</script>"
+    mapping.join
+  end
+  
   def maintain_menu
     @menu = [
       {
@@ -37,7 +67,8 @@ class ApplicationController < ActionController::Base
     # Bread user menu
     @menu << {
       :name => "BreadApp", :children => [
-        { :name => "Orders", :url => bread_orders_path }
+        { :name => "Orders", :url => bread_orders_path }, 
+        { :name => "Weekly Order", :url => bread_weekly_orders_path }
       ]
     } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_user]]) rescue false)
     # Bread admin menu
@@ -65,15 +96,6 @@ class ApplicationController < ActionController::Base
     } if (@user.has_rights_for?([RIGHTS[:admin]]) rescue false)
   end
   
-  def js_map(attributes)
-    mapping = ["<script type='text/javascript'>"]
-    attributes.each do |x|
-      mapping << %Q{var #{x[0].to_s} = "#{@template.escape_javascript(x[1])}";}
-    end
-    mapping << "</script>"
-    mapping.join
-  end
-  
   def maintain_session
     if session[:user]
       @session = UserSession.find(session[:user]) rescue nil
@@ -83,27 +105,6 @@ class ApplicationController < ActionController::Base
         session[:user] = nil
         redirect_to(root_url)
       end
-    end
-  end
-  
-  def ensure_logged_in
-    unless @user
-      flash[:error] = @template.put("error_login")
-      redirect_to(new_user_session_path)
-    end
-  end
-  
-  def ensure_is_admin(keys = [RIGHTS[:admin]])
-    unless @user && @user.has_rights_for?(keys)
-      flash[:error] = @template.put("rights_not_enough")
-      redirect_to(home_root_path)
-    end
-  end
-  
-  def ensure_logged_out
-    if @user
-      flash[:error] = "You must logout first"
-      redirect_to(home_root_url)
     end
   end
 end

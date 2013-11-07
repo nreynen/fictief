@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
     bread.resources :categories
     bread.resources :items
     bread.resources :orders, :collection => {:set_paid => [:get, :post]}
+    bread.resources :weekly_orders
   end
   
   map.namespace :book do |book|
@@ -24,6 +25,10 @@ ActionController::Routing::Routes.draw do |map|
     book.resources :languages
     book.resources :series
     book.resources :books
+  end
+  
+  map.namespace :dnu do |dnu|
+    dnu.resources :overviews, :only => [:index], :collection => {:home => :get, :register => [:post, :get], :login => [:post, :get]}
   end
   
   map.namespace :workday do |work|

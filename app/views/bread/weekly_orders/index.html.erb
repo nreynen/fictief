@@ -1,0 +1,35 @@
+<h1>Weekly Order</h1>
+<div id="searchwrapper">
+  <table class="showtable">
+    <tbody class="table_header">
+      <td class="header_cell">Items</td>
+      <td class="header_cell">Price</td>
+    </tbody>
+    <tbody class="button_row">
+      <td colspan="4" class="header_cell">
+        <% if @can_create %>
+          <span style="font-size: 20px; text-decoration: blink;"><%= new_link :url => new_bread_weekly_order_path %></span>
+        <% else %>
+          <%= put("max_one_preorder") %>
+        <% end %>
+      </td>
+    </tbody>
+    <% unless @can_create %>
+      <tbody class="<%= cycle("even","odd") %>">
+        <td>
+          <ul>
+            <% @order.order.split(";").each do |x| %>
+              <% item = Bread::Item.find(x.split(",").first) %>
+              <li><%= item.name %> * <%= x.split(",")[1] %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+          <%= sprintf "%5.2f", @order.total_price %>
+        </td>
+        <td class="button_cell"><%= edit_link :url => edit_bread_weekly_order_path(@order) %></td>
+        <td class="button_cell"><%= @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) ? destroy_link(:url => bread_weekly_order_path(@order)) : "&nbsp;" %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>
