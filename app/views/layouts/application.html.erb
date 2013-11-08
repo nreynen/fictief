@@ -2,10 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<!--    <link type="image/x-icon" href="/images/favicon.ico" rel="shortcut icon"></link>
-    <link rel="image_src" href="http://evaluator.helionresearch.com/images/logo_sp1.png" />
-    <meta property="og:image" content="http://evaluator.helionresearch.com/images/logo_sp1.png" />-->
-    <meta name="generator" content="Nico Reynen" />   
+    <meta name="generator" content="Nico Reynen" />
     
     <%= stylesheet_link_tag "/stylesheets/master_control_default" %>
     
@@ -16,10 +13,7 @@
     <%= yield :head %>
     
     <%= @js_mapping if @js_mapping %>
-    </head>
-      <script type="text/javascript">
-        $.backstretch("/images/main_bg.jpg");
-    </script>
+  </head>
   <body>
     <div id="main_overlay">
       <div id="page_wrapper">
@@ -46,5 +40,8 @@
         </div>
       </div>
     </div>
+  <script type="text/javascript">
+    $.backstretch("/images/main_bg.jpg");
+  </script>
   </body>
 </html>
