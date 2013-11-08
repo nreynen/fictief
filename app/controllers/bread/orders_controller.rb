@@ -69,7 +69,7 @@ class Bread::OrdersController < ApplicationController
     @order = Bread::Order.find(params[:id])
     @order.destroy
 
-    redirect_to(orders_url, :flash => { :success => "Order was successfully destroyed..." })
+    redirect_to(bread_orders_url, :flash => { :success => "Order was successfully destroyed..." })
   end
   
   def set_paid
