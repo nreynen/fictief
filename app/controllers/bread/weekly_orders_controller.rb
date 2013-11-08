@@ -58,6 +58,6 @@ class Bread::WeeklyOrdersController < ApplicationController
     @order = Bread::WeeklyOrder.find(params[:id])
     @order.destroy
 
-    redirect_to(orders_url, :flash => { :success => "Weekly Order was successfully destroyed..." })
+    redirect_to(weekly_orders_url, :flash => { :success => "Weekly Order was successfully destroyed..." })
   end
 end
