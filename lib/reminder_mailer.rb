@@ -7,8 +7,9 @@ class ReminderMailer
     puts "Finding users without order"
     now = Date.today
     sat = ((Date.today.end_of_week - 1) >= Date.today ? (Date.today.end_of_week - 1) : (Date.today.end_of_week + 6)) #now + ((5 - now.wday) % 7)
+    sat_int = (sat - Date.new(1970,1,1)).to_i
     users = User.all.map(&:id)
-    users_with = User.with_order(sat).find(:all, :select => "users.id").map(&:id)
+    users_with = User.with_order(sat_int).find(:all, :select => "users.id").map(&:id)
     users_without = users - users_with
     
     puts "#{users_without.length} shoppers found"
