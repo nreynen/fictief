@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Fictief::Application.config.secret_key_base = '1168ace05bc4317a9adac145150ada5e311cd475dfd5399d4d4cfe6c8de265a39371afd8f89aaa4e1841585306cf167d8b40186c8f47d392cceb5fabeb180cf7'
+fictief::Application.config.secret_key_base = '1168ace05bc4317a9adac145150ada5e311cd475dfd5399d4d4cfe6c8de265a39371afd8f89aaa4e1841585306cf167d8b40186c8f47d392cceb5fabeb180cf7'

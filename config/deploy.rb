@@ -1,4 +1,4 @@
-set :application, "Fictief"
+set :application, "fictief"
 set :repo_url, "git@github.com:nreynen/fictief.git"
 set :scm, :git
 set :branch, "master"
