@@ -1,4 +1,4 @@
-MasterControl::Application.routes.draw do
+Fictief::Application.routes.draw do
   # namespace :book do |book|
     # resources :authors
     # resources :books

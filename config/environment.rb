@@ -1,6 +1,6 @@
 require File.expand_path('../application', __FILE__)
 
-MasterControl::Application.configure do
+Fictief::Application.configure do
   config.sass.line_comments = false
   config.sass.cache = false
   
@@ -73,4 +73,4 @@ MasterControl::Application.configure do
   }
 end
 
-MasterControl::Application.initialize!
+Fictief::Application.initialize!
