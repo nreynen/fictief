@@ -15,7 +15,7 @@
       <% end %>
       <% if children %>
         <ul>
-          <% children.sort_by { |child| child[:name] }.each do |child| %>
+          <% children.compact.sort{|a, b| a[:name] <=> b[:name] }.each do |child| %>
             <% if request.original_fullpath == (child[:url]) %>
               <script type="text/javascript">
                 $("#<%= modded_parent %>").parent().addClass("selected_menu");

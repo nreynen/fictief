@@ -74,7 +74,7 @@ class ApplicationController < ActionController::Base
     # BreadApp menu
     @menu << {
       :name => "BreadApp", :children => [
-        ({ :name => "Overview", :url => bread_report_reports_path } if (@user.has_rights_for?([RIGHTS[:bread_admin]]) rescue false)), 
+        ({:name => "Overview", :url => bread_report_reports_path} if (@user.has_rights_for?([RIGHTS[:bread_admin]]) rescue false)), 
         ({:name => "Categories", :url => bread_categories_path} if (@user.has_rights_for?([RIGHTS[:bread_admin]]) rescue false)), 
         ({:name => "Reporting", :url => bread_bread_logs_path} if (@user.has_rights_for?([RIGHTS[:bread_admin]]) rescue false)), 
         {:name => "Orders", :url => bread_orders_path}, 
