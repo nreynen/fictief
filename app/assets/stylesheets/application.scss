@@ -8,7 +8,7 @@
 @import "jquery.qtip";
 
 body {
-  background-image: url("back_repeat.png");
+  background-image: asset-url("back_repeat.png", image);
   margin: 0px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 12px;
@@ -428,7 +428,7 @@ h2 {
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  background-image: url("minus.png");
+  background-image: asset-url("minus.png", image);
   background-size: 19px 19px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -437,18 +437,18 @@ h2 {
   width: 19px;
   height: 19px;
   margin-left: 5px;
-  background-image: url("plus.png");
+  background-image: asset-url("plus.png", image);
   background-size: 19px 19px;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 .item_decrease:hover {
-  background-image: url("minus_blue.png");
+  background-image: asset-url("minus_blue.png", image);
   background-size: 19px 19px;
   background-repeat: no-repeat;
 }
 .item_increase:hover {
-  background-image: url("plus_blue.png");
+  background-image: asset-url("plus_blue.png", image);
   background-size: 19px 19px;
   background-repeat: no-repeat;
 }
