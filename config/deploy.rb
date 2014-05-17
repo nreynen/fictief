@@ -6,6 +6,7 @@ set :deploy_to, "/var/www/fictief"
 set :user, "nreynen"
 set :admin_runner, "nreynen"
 set :runner, "nreynen"
+set :log_level, :debug
 
 namespace :deploy do
   desc 'Restart application'
