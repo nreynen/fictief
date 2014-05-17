@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-fictief::Application.load_tasks
+MasterControl::Application.load_tasks
