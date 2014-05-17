@@ -7,6 +7,8 @@ set :user, "nreynen"
 set :admin_runner, "nreynen"
 set :runner, "nreynen"
 set :log_level, :debug
+set :rails_env, "production"
+set :deploy_via, :copy
 
 namespace :deploy do
   desc 'Restart application'
