@@ -1,16 +1,22 @@
-<div>
-  <h1><%= @item.name %></h1>
-  <table class="showtable">
-    <tr>
-      <td style="vertical-align: top;">Category</td>
-      <td><%= @item.category.name %></td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Price</td>
-      <td><%= price @item.price %></td>
-    </tr>
-    <tr class="button_row">
-      <td colspan="2"><%= back_link :url => bread_items_path %></td>
-    </tr>
-  </table>
+<h1><%= @item.name %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Name</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @item.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Category</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @item.category.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Price</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= price @item.price %></div>
+    </div>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => bread_items_path %>
 </div>

@@ -1,17 +1,20 @@
-<div>
-  <h1>New Feed</h1>
-  <table class="showtable">
-    <% form_for @feed, :url => news_feeds_path do |f| %>
-      <%if error_messages_for 'feed' != nil%>
-        <%= error_messages_for 'feed' , :class=>"error_message" %>
-      <%end%>
-      <tr>
-        <td><%= f.label "Text:" %></td>
-        <td><%= f.text_area :text %></td>
-      </tr>
-      <tr>
-        <td colspan="2"><%= f.submit "Add" %>&nbsp;<%= back_link :url => news_feeds_path %></td>
-      </tr>
-    <% end %>
-  </table>
+<h1>New Feed</h1>
+
+<%= form_for @feed, :url => news_feeds_path(@feed) do |f| %>
+  <% if @feed.errors.any? %>
+    <div class="error_message">
+      <p>
+        <%= @feed.errors.full_messages.join("<br>").html_safe %>
+      </p>
+    </div>
+  <% end %>
+  
+  <div style="width: 500px; margin: 0 auto;">
+    Text:<br><%= f.text_area :text, {:style => "width: 490px; height: 250px;"} %>
+  </div>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Update", "$('form').last().submit();" %>
+  <%= back_link :url => news_feeds_path %>
 </div>

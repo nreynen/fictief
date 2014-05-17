@@ -1,21 +1,26 @@
-<div>
-  <h1><%= @user.full_name %></h1>
-  <table class="showtable">
-    <tr>
-      <td style="vertical-align: top;">Orders</td>
-      <td>
-        <table class="filltable">
-          <thead class="table_header">
-            <th style="width: 50px;" class="header_cell">Order Id</th>
-            <th class="header_cell">Items</th>
-            <th class="header_cell">Quantity</th>
-            <th style="width: 50px;" class="header_cell">Price</th>
-          </thead>
-        </table>
-      </td>
-    </tr>
-    <tr class="button_row">
-      <td colspan="2"><%= back_link :url => users_path %></td>
-    </tr>
-  </table>
+<h1><%= @usr.full_name %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">First Name</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @usr.first_name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Last Name</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @usr.last_name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Email</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @usr.email %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Created at</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @usr.created_at.in_our_time %></div>
+    </div>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => users_path %>
 </div>

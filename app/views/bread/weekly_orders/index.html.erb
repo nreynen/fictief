@@ -1,35 +1,39 @@
-<h1>Weekly Order</h1>
-<div id="searchwrapper">
-  <table class="showtable">
-    <tbody class="table_header">
-      <td class="header_cell">Items</td>
-      <td class="header_cell">Price</td>
-    </tbody>
-    <tbody class="button_row">
-      <td colspan="4" class="header_cell">
-        <% if @can_create %>
-          <span style="font-size: 20px; text-decoration: blink;"><%= new_link :url => new_bread_weekly_order_path %></span>
-        <% else %>
-          <%= put("max_one_preorder") %>
-        <% end %>
-      </td>
-    </tbody>
-    <% unless @can_create %>
-      <tbody class="<%= cycle("even","odd") %>">
-        <td>
-          <ul>
-            <% @order.order.split(";").each do |x| %>
-              <% item = Bread::Item.find(x.split(",").first) %>
-              <li><%= item.name %> * <%= x.split(",")[1] %></li>
-            <% end %>
-          </ul>
-        </td>
-        <td>
-          <%= sprintf "%5.2f", @order.total_price %>
-        </td>
-        <td class="button_cell"><%= edit_link :url => edit_bread_weekly_order_path(@order) %></td>
-        <td class="button_cell"><%= @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) ? destroy_link(:url => bread_weekly_order_path(@order)) : "&nbsp;" %></td>
-      </tbody>
+<h1>Weekly Orders</h1>
+<% if @user.has_rights_for?([RIGHTS[:admin]]) %>
+  <div class="grid_table" style="width: 500px">
+    <% Bread::WeeklyOrder.all.each do |order| %>
+      <%= render :partial => "table_helpers/single_header", :locals => {:title => "Order: #{User.find(order.user_id).full_name}"} %>
+      <div class="grid_body">
+        <%= render :partial => "item_list", :locals => {:order => order} %>
+        <div class="grid_row <%= cycle("even", "odd") %>">
+          <div style="width: 100%;" class="grid_cell"><%= edit_link :url => edit_bread_weekly_order_path(order) %>&nbsp;&nbsp;<%= destroy_link :url => bread_weekly_order_path(order) %></div>
+        </div>
+      </div>
     <% end %>
-  </table>
-</div>
+  </div>
+  
+  <div class="submit_row">
+    <%= back_link :url => home_root_index_path %>
+    <%= new_link :url => new_bread_weekly_order_path %>
+  </div>
+<% else %>
+  <div class="grid_table" style="width: 500px">
+    <%= render :partial => "table_helpers/single_header", :locals => {:title => "Items"} %>
+    <div class="grid_body">
+      <% unless @can_create %>
+        <%= render :partial => "item_list", :locals => {:order => @order} %>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="submit_row">
+    <%= back_link :url => home_root_index_path %>
+    <% if @can_create %>
+      <%= new_link :url => new_bread_weekly_order_path %>
+    <% else %>
+      <%= edit_link :text => put("link_edit"), :url => edit_bread_weekly_order_path(@order) %>
+      <%= destroy_link(:text => put("link_destroy"), :url => bread_weekly_order_path(@order)) if @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
+      <%= put("max_one_preorder") %>
+    <% end %>
+  </div>
+<% end %>

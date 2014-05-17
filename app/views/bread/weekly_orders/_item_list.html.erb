@@ -1,0 +1,11 @@
+<% order.order.split(";").each do |x| %>
+  <% item = Bread::Item.find(x.split(",").first) %>
+  <div class="grid_row <%= cycle("even", "odd") %>">
+    <div style="width: 50%;" class="grid_cell"><%= item.name %></div>
+    <div style="width: 50%;" class="grid_cell"><%= price item.price %> * <%= x.split(",")[1] %></div>
+  </div>
+<% end %>
+<div class="grid_row <%= cycle("even", "odd") %>">
+  <div style="width: 50%;" class="grid_cell rightalign">Total:</div>
+  <div style="width: 50%;" class="grid_cell leftalign"><%= price order.total_price %></div>
+</div>

@@ -1,11 +1,10 @@
-<div>
-  <h1>New User</h1>
-  <table class="showtable">
-    <% form_for @user, :url => users_path do |f| %>
-      <%= render(:partial => 'form', :locals => { :f => f, :user => @user }) %>
-      <tr>
-        <td colspan="2"><%= f.submit "Add" %>&nbsp;<%= back_link :url => users_path %></td>
-      </tr>
-    <% end %>
-  </table>
+<h1>New User</h1>
+
+<%= form_for @usr, :url => users_path do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :user => @usr }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Create", "$('form').last().submit();" %>
+  <%= back_link :url => users_path %>
 </div>

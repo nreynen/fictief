@@ -1,15 +1,11 @@
-<% content_for :head do %>
-  <%= javascript_include_tag "BreadApp/order.js" %>
+<h1>New Weekly Order</h1>
+
+<%= form_for @order, :url => bread_weekly_orders_path do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
 <% end %>
 
-<div>
-  <h1>New Weekly Order</h1>
-  <table class="showtable">
-    <% form_for @order, :url => bread_weekly_orders_path do |f| %>
-      <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
-      <tr>
-        <td colspan="2"><%= f.submit "Add", :confirm => put("order_alert_add") %>&nbsp;<%= back_link :url => bread_weekly_orders_path %><span style="float: right;" id="overview_hover">Hover for overview</span></td>
-      </tr>
-    <% end %>
-  </table>
+<div class="submit_row">
+  <%= link_to_function "Create", "if (confirm(\"#{put("order_alert_add")}\")){$('form').last().submit();}" %>
+  <%= back_link :url => bread_weekly_orders_path %>
+  <a href="javascript:void(0);" id="overview_hover" style="float: left; margin-left: 5px;">Hover for overview</a>
 </div>

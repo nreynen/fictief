@@ -11,7 +11,7 @@ class NewsFeedsController < ApplicationController
   end
   
   def create
-    @feed = NewsFeed.new(params[:news_feed])
+    @feed = NewsFeed.new(params[:news_feed].permit(:text))
     
     if @feed.save
       redirect_to(news_feeds_path, :flash => { :success => "NewsFeed was successfully created..." })

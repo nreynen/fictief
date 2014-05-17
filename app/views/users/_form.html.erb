@@ -1,40 +1,39 @@
-<%if error_messages_for 'user' != nil%>
-  <%= error_messages_for 'user' , :class=>"error_message" %>
-<%end%>
+<% if user.errors.any? %>
+  <div class="error_message">
+    <p>
+      <%= user.errors.full_messages.join("<br>").html_safe %>
+    </p>
+  </div>
+<% end %>
 
-<tr>
-  <td><%= f.label "First Name:" %></td>
-  <td><%= f.text_field :first_name %></td>
-</tr>
-<tr>
-  <td><%= f.label "Last Name:" %></td>
-  <td><%= f.text_field :last_name %></td>
-</tr>
-<tr>
-  <td><%= f.label "Login:" %></td>
-  <td><%= f.text_field :login %></td>
-</tr>
-<tr>
-  <td><%= f.label "Password:" %></td>
-  <td><%= f.text_field :password %></td>
-</tr>
-<tr>
-  <td><%= f.label "Email:" %></td>
-  <td><%= f.text_field :email %></td>
-</tr>
-<tr>
-  <td><%= f.label "Rights" %></td>
-  <td>
-    <table>
-      <tbody>
-        <% RIGHTS.each_pair do |key, right| %>
-          <tr>
-            <td style="width: 10%;"><%= check_box_tag "rights][]", right, (@user.user_rights.map(&:rights_key).include?(right) rescue false) %></td>
-            <td><%= right %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    
-  </td>
-</tr>
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">First Name:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :first_name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Last Name:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :last_name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Login:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :login %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Password:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :password %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Email:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :email %></div>
+    </div>
+    <% rights = RIGHTS.sort{|a, b| a[1] <=> b[1]} %>
+    <% rights.each do |(key, right)| %>
+      <div class="grid_row">
+        <div style="width: 50%;" class="grid_cell rightalign"><%= key == rights.first.first ? "Rights" : "" %></div>
+        <div style="width: 50%;" class="grid_cell leftalign"><%= check_box_tag "rights][]", right, (@usr.user_rights.map(&:rights_key).include?(right) rescue false) %> <%= right %></div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,33 +1,27 @@
 <h1>Users</h1>
-<div id="searchwrapper">
-  <%= will_paginate @users, :params => params %>
-  <table class="showtable">
-    <tbody class="table_header">
-      <td class="header_cell">Id</td>
-      <td class="header_cell">Name</td>
-      <td class="header_cell">Login</td>
-      <td class="display_none_header_cell"></td>
-      <td class="display_none_header_cell"></td>
-      <td class="header_cell"><%= @users.total_entries %></td>
-    </tbody>
-    <tbody class="button_row">
-      <td colspan="3" class="header_cell"><%= new_link :url => new_user_path %></td>
-    </tbody>
-    <% @users.each do |user| %>
-      <tbody class="<%= cycle("even","odd") %>">
-        <td>
-          <%= user.id %>
-        </td>
-        <td>
-          <%= user.name %>
-        </td>
-        <td>
-          <%= user.login %>
-        </td>
-        <td class="button_cell"><%= edit_link :url => edit_user_path(user) %></td>
-        <td class="button_cell"><%= destroy_link :url => user_path(user) %></td>
-        <td class="button_cell"><%= show_link :url => user_path(user) %></td>
-      </tbody>
+<%= will_paginate @usrs, :params => params %>
+<div class="grid_table">
+  <div class="grid_header">
+    <div class="grid_row">
+      <div style="width: 5%;" class="grid_cell">ID</div>
+      <div style="width: 45%;" class="grid_cell">Name</div>
+      <div style="width: 40%;" class="grid_cell">Login</div>
+      <div style="width: 10%;" class="grid_cell">&nbsp;</div>
+    </div>
+  </div>
+  <div class="grid_body">
+    <% @usrs.each do |user| %>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 5%;" class="grid_cell"><%= user.id %></div>
+        <div style="width: 45%;" class="grid_cell leftalign"><%= user.full_name %></div>
+        <div style="width: 40%;" class="grid_cell"><%= user.login %></div>
+        <div style="width: 10%;" class="grid_cell"><%= edit_link :url => edit_user_path(user) %>&nbsp;&nbsp;<%= destroy_link :url => user_path(user) %>&nbsp;&nbsp;<%= show_link :url => user_path(user) %></div>
+      </div>
     <% end %>
-  </table>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => home_root_index_path %>
+  <%= new_link :url => new_user_path %>
 </div>

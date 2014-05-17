@@ -7,7 +7,6 @@ class ReportsController < ApplicationController
     
     orders = Bread::Order.find(:all, :conditions => ["saturday_int = ?", @next_saturday_int])
     
-    
     @breads_shorted = orders.inject({}) do |h, x|
       x[:order].split(";").each do |arr|
         unless arr.blank?

@@ -1,11 +1,10 @@
-<div>
-  <h1>New Category</h1>
-  <table class="showtable">
-    <% form_for @category, :url => bread_categories_path do |f| %>
-      <%= render(:partial => 'form', :locals => { :f => f, :category => @category }) %>
-      <tr>
-        <td colspan="2"><%= f.submit "Add" %>&nbsp;<%= back_link :url => bread_categories_path %></td>
-      </tr>
-    <% end %>
-  </table>
+<h1>New Category</h1>
+
+<%= form_for @category, :url => bread_categories_path do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :category => @category }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Create", "$('form').last().submit();" %>
+  <%= back_link :url => bread_categories_path %>
 </div>

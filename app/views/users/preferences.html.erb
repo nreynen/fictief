@@ -30,18 +30,42 @@
 </script>
 
 <h1>Preferences</h1>
-<table style="width: 100%;">
-  <tbody>
-    <tr>
-      <td colspan="2"><div class="sub_header_div">WorkCal</div></td>
-    </tr>
-    <tr>
-      <td style="width: 33%;">Make (this and) next year</td>
-      <td style="text-align: center;" class="workday_start_cell"><%= text_field_tag("start_date", "DD/MM/YYYY", :style => "width: 150px;") %> <a href="javascript:void(0);" onclick="make_year(); return false;">Make from this date!</a></td>
-    </tr>
-    <tr>
-      <td style="width: 33%;">Hourly Wage</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="grid_table" style="width: 750px;">
+  <%= render :partial => "table_helpers/single_header", :locals => {:title => "User"} %>
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign"></div>
+      <div style="width: 50%;" class="grid_cell leftalign"></div>
+    </div>
+  </div>
+  <% if @rights_of_user.include?("Bread User") %>
+    <%= render :partial => "table_helpers/empty_row" %>
+    <%= render :partial => "table_helpers/single_header", :locals => {:title => "BreadApp"} %>
+    <div class="grid_body">
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 50%;" class="grid_cell rightalign"></div>
+        <div style="width: 50%;" class="grid_cell leftalign"></div>
+      </div>
+    </div>
+  <% end %>
+  <% if @rights_of_user.include?("WorkCal User") %>
+    <%= render :partial => "table_helpers/empty_row" %>
+    <%= render :partial => "table_helpers/single_header", :locals => {:title => "WorkCal"} %>
+    <div class="grid_body">
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 50%;" class="grid_cell rightalign">Make (this and) next year</div>
+        <div style="width: 50%;" class="grid_cell leftalign"><%= text_field_tag("start_date", "DD/MM/YYYY", :style => "width: 150px;") %> <a href="javascript:void(0);" onclick="make_year(); return false;">Make from this date!</a></div>
+      </div>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 50%;" class="grid_cell rightalign">Hourly Wage:</div>
+        <div style="width: 50%;" class="grid_cell leftalign">.</div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="submit_row">
+  <%#= link_to_function "Update", "$('form').last().submit();" %>
+  <%= back_link :url => home_root_index_path %>
+</div>

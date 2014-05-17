@@ -1,52 +1,47 @@
-<%if error_messages_for 'weekly_order' != nil%>
-  <%= error_messages_for 'weekly_order' , :class=>"error_message" %>
-<%end%>
+<% if order.errors.any? %>
+  <div class="error_message">
+    <p>
+      <%= order.errors.full_messages.join("<br>").html_safe %>
+    </p>
+  </div>
+<% end %>
 
-<tr>
-  <td><%= f.label "User:" %></td>
-  <td>
-    <% if @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
-      <%= f.select :user_id, options_from_collection_for_select(User.find(:all, :order => "first_name ASC"), :id, :name, order.user_id) %>
-    <% else %>
-      <%= @user %>
-      <%= hidden_field_tag "bread_weekly_order[user_id]", @user.id %>
-    <% end %>
-  </td>
-</tr>
-<tr>
-  <td><%= f.label "Items:" %></td>
-  <td style="width: 700px; min-width: 700px; max-width: 700px;">
-    <div id="tabination">
-      <div class="tabs">
-        
-        <% quantities = order.order.split(";").inject({}) do |h, x| 
-          item = x.split(",")
-          h[item[0]] = item[1]
-          h
-        end unless order.order.nil? %>
-        
-        <% Bread::Category.find(:all, :order => "name ASC").each do |category| %>
-          <div tab_id="<%= category.id %>" class="tab" onclick="open_tab('<%= category.id %>')">
-            <span><%= category.name %></span>
-          </div>
-        <% end %>
-      </div>
-      <div class="tabs_contents">
-        <% Bread::Category.find(:all, :order => "name ASC").each do |category| %>
-          <div class="tab_content tab_content_<%= category.id %>">
-            <table style="width: 480px;">
-              <% category.items.enabled.each do |item| %>
-                <tr>
-                  <td id="quantity_<%= item.id %>"><%= item.name %></td>
-                  <td><span>Quantity: <%= sprintf "%5.2f", item.price %>&euro; * </span><%= text_field_tag "items[#{item.id}][quantity]", (quantities["#{item.id}"] rescue ""), :style => "width: 20px;", :class => "quantity_field", :price => item.price, :td_id => "quantity_#{item.id}", :onkeyup => "adjust_qtip_content();" %></td>
-                </tr>
-                <span></span>
-                
-              <% end %>
-            </table>
-          </div>
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">User:</div>
+      <div style="width: 50%;" class="grid_cell leftalign">
+        <% if @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
+          <%= f.select :user_id, options_from_collection_for_select(User.find(:all, :order => "first_name ASC"), :id, :name, order.user_id) %>
+        <% else %>
+          <%= @user %>
+          <%= hidden_field_tag "bread_order[user_id]", @user.id %>
         <% end %>
       </div>
     </div>
-  </td>
-</tr>
+  </div>
+</div>
+<div class="grid_table" style="width: 500px;">
+  <% Bread::Category.find(:all, :order => "name ASC").each do |category| %>
+    <div class="grid_header cat_header">
+      <div class="grid_row">
+        <div style="width: 100%;" class="grid_cell" onclick="$('.cat_row').hide(); $('.cat_<%= category.id %>').toggle();"><%= category.name %></div>
+      </div>
+    </div>
+    <% quantities = (order.order || "").split(";").inject({}) do |h, x| 
+      item = x.split(",")
+      h[item[0].to_i] = item[1].to_i
+      h
+    end %>
+    <% category.items.enabled.ordered_by_name.each do |item| %>
+      <div class="grid_body cat_row cat_<%= category.id %>" style="display: none;">
+        <div class="grid_row <%= cycle("even", "odd") %>">
+          <div style="width: 50%;" class="grid_cell rightalign cell_<%= item.id %>"><%= item.name %></div>
+          <div style="width: 50%;" class="grid_cell leftalign">
+            <%= sprintf "%5.2f", item.price %>&euro; * <%= render(:partial => "/bread/orders/item_increment", :locals => {:item => item, :quantity => quantities[item.id]}) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

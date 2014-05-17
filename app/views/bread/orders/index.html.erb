@@ -1,46 +1,38 @@
 <h1>Orders</h1>
-<div id="searchwrapper">
-  <%= will_paginate @orders, :params => params %>
-  <table class="showtable">
-    <tbody class="table_header">
-      <td class="header_cell">Id</td>
-      <td class="header_cell">User</td>
-      <td class="header_cell">Paid?</td>
-      <td class="header_cell">Saturday</td>
-      <td class="display_none_header_cell"></td>
-      <td class="display_none_header_cell"></td>
-      <td class="header_cell"><%= @orders.total_entries %></td>
-    </tbody>
-    <tbody class="button_row">
-      <td colspan="4" class="header_cell">
-        <% if @can_order %>
-          <span style="font-size: 20px; text-decoration: blink;"><%= new_link :url => new_bread_order_path %></span>
-        <% else %>
-          <%= put("orders_outside_hours") %>
-        <% end %>
-      </td>
-    </tbody>
+<%= will_paginate @orders, :params => params %>
+<div class="grid_table" style="width: 950px">
+  <div class="grid_header">
+    <div class="grid_row">
+      <div style="width: 5%;" class="grid_cell">ID</div>
+      <div style="width: 55%;" class="grid_cell">User</div>
+      <div style="width: 10%;" class="grid_cell">Paid?</div>
+      <div style="width: 20%;" class="grid_cell">Saturday</div>
+      <div style="width: 10%;" class="grid_cell">&nbsp;</div>
+    </div>
+  </div>
+  <div class="grid_body">
     <% @orders.each do |order| %>
-      <tbody class="<%= cycle("even","odd") %>">
-        <td>
-          <%= order.id %>
-        </td>
-        <td>
-          <%= order.user.name %>
-        </td>
-        <td id="order_<%= order.id %>" style="text-align: center;">
-          <%= niceify_bool order.paid %>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 5%;" class="grid_cell"><%= order.id %></div>
+        <div style="width: 55%;" class="grid_cell leftalign"><%= order.user.name %></div>
+        <div style="width: 10%;" class="grid_cell leftalign">
+          <%= order.paid.to_img %>
           <% unless order.paid || !@user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
             <%= link_to "Paid!", set_paid_bread_orders_path(:id => order.id) %>
           <% end %>
-        </td>
-        <td style="text-align: center;">
-          <%= order.saturday_int.strftime "%e %b %Y" %>
-        </td>
-        <td class="button_cell"><%= edit_link :url => edit_bread_order_path(order) %></td>
-        <td class="button_cell"><%= @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) ? destroy_link(:url => bread_order_path(order)) : "&nbsp;" %></td>
-        <td class="button_cell"><%= show_link :url => bread_order_path(order) %></td>
-      </tbody>
+        </div>
+        <div style="width: 20%;" class="grid_cell"><%= order.saturday_int.in_our_time(:time) %></div>
+        <div style="width: 10%;" class="grid_cell"><%= edit_link :url => edit_bread_order_path(order) %>&nbsp;&nbsp;<%= destroy_link(:url => bread_order_path(order)) if @user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>&nbsp;&nbsp;<%= show_link :url => bread_order_path(order) %></div>
+      </div>
     <% end %>
-  </table>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => home_root_index_path %>
+  <% if @can_order %>
+    <%= new_link :url => new_bread_order_path %>
+  <% else %>
+    <%= put("orders_outside_hours") %>
+  <% end %>
 </div>

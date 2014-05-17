@@ -10,7 +10,7 @@ class Bread::Order < ActiveRecord::Base
   
   def to_readable
     price = 0.0
-    readable = self[:order].inject([]) do |a, x|
+    readable = self[:order].split(";").inject([]) do |a, x|
       x.split(";").each do |arr|
         unless arr.blank?
           id, quant = arr.split(",")

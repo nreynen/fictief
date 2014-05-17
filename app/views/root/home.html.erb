@@ -1,3 +1,10 @@
-<h1><%= put "home_title" %></h1>
-
-<%= put "home_welcome" %>
+<% if @user %>
+  <h1>Quicklinks</h1>
+  <div class="quicklink_row" style="margin-top: -15px;">
+    <%= new_link(:text => "New Bread Order", :url => new_bread_order_path) if (@user.has_rights_for?([RIGHTS[:bread_user]]) rescue false) && @can_order %>
+    <%= link_to("Logout", url_for(@session), {:method => :delete}) %>
+  </div><br>
+  <%= render :partial => "main_logged_in_content", :locals => {:feeds => @feeds} %>
+<% else %>
+  <%= render :partial => "main_content", :locals => {:feeds => @feeds} %>
+<% end %>

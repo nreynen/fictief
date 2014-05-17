@@ -1,18 +1,12 @@
-<% content_for :head do %>
-  <%= javascript_include_tag "BreadApp/order.js" %>
+<h1>Edit Order</h1>
+
+<%= form_for @order, :url => bread_order_path(@order) do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
 <% end %>
 
-<div>
-  <h1>Edit order</h1>
-  <table class="showtable">
-    <% form_for @order, :url => bread_order_path(@order) do |f| %>
-      <%= render(:partial => 'form', :locals => { :f => f, :order => @order }) %>
-      <tr>
-        <td colspan="2"><%= f.submit "Update", :confirm => put("order_alert_update") %><span style="float: right;" id="overview_hover">Hover for overview</span></td>
-      </tr>
-    <% end %>
-    <tr class="button_row">
-      <td colspan="2"><%= show_link :url => bread_order_path(@order) %> | <%= back_link :url => bread_orders_path %></td>
-    </tr>
-  </table>
+<div class="submit_row">
+  <%= link_to_function "Update", "if (confirm(\"#{put("order_alert_update")}\")){$('form').last().submit();}" %>
+  <%= show_link :text => put("link_show"), :url => bread_order_path(@order) %>
+  <%= back_link :url => bread_orders_path %>
+  <a href="javascript:void(0);" id="overview_hover" style="float: left; margin-left: 5px;">Hover for overview</a>
 </div>

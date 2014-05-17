@@ -1,27 +1,26 @@
-<div>
-  <h1><%= @category.name %></h1>
-  <table class="showtable">
-    <tr>
-      <td style="vertical-align: top;">Items</td>
-      <td>
-        <table class="filltable">
-          <thead class="table_header">
-            <th class="header_cell">Current Items</th>
-            <th class="header_cell">Price</th>
-          </thead>
-          <tbody>
-            <% @category.items.each do |item| %>
-              <tr>
-                <td><%= item.name %></td>
-                <td><%= item.price %> &euro;</td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr class="button_row">
-      <td colspan="2"><%= back_link :url => bread_categories_path %></td>
-    </tr>
-  </table>
+<h1><%= @category.name %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Name</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @category.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Description</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @category.description %></div>
+    </div>
+    <% items = @category.items.sort{|a, b| a.name <=> b.name} %>
+    <% items.each do |item| %>
+      <div class="grid_row">
+        <div style="width: 50%;" class="grid_cell rightalign"><%= item == items.first ? "Items" : "" %></div>
+        <div style="width: 40%;" class="grid_cell rightalign"><%= item.name %></div>
+        <div style="width: 10%;" class="grid_cell leftalign"><%= item.price %> &euro;</div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => bread_categories_path %>
 </div>

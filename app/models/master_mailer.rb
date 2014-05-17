@@ -1,27 +1,17 @@
 class MasterMailer < ActionMailer::Base
-  
+  default from: 'Bread Alerter <noreply@yato-extreme.com>'
   layout "bread_alert"
   
   def bread_alert(options)
-    from "Bread Alerter <noreply@yato-extreme.com>"
-    recipients options[:user].email
-    subject options[:subject]
-    content_type "multipart/mixed"
-    
-    part "multipart/related" do |m|
-      m.part "multipart/alternative" do |a|
-        a.part "text/plain" do |y|
-          y.body = options[:message].unhtml
-          y.transfer_encoding = "base64"
-        end
-        a.part "text/html" do |y|
-          y.body = options[:message]
-        end
-      end
-    end
+    @user = options[:user]
     
     if options[:attachment] && options[:attachment_name] && options[:attachment_file_type]
-      attachment :content_type => options[:attachment_file_type], :body => File.read(options[:attachment]), :filename => options[:attachment_name]
+      attachments[options[:attachment_name]] = File.read(options[:attachment])
     end
+    
+    mail(
+      to: options[:user].email, 
+      subject: options[:subject]
+    )
   end
 end

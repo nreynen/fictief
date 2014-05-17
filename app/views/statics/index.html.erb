@@ -1,32 +1,26 @@
 <h1>Statics</h1>
-<div id="searchwrapper">
-  <% if @statics.total_entries < 1 %>
-    <p>No statics found...</p>
-  <% else %>
-    <%= will_paginate @statics, :params => params %>
-    <table class="showtable">
-      <tbody class="table_header">
-        <td class="header_cell">Id</td>
-        <td class="header_cell">Identifier</td>
-        <td class="header_cell">Text</td>
-        <td class="display_none_header_cell"></td>
-        <td class="header_cell"><%= @statics.total_entries %></td>
-      </tbody>
-      <% @statics.each do |static| %>
-        <tbody class="<%= cycle("even","odd") %>">
-          <td>
-            <%= static.id %>
-          </td>
-          <td>
-            <%= static.identifier %>
-          </td>
-          <td>
-            <%= shorten static.text %>
-          </td>
-          <td class="button_cell"><%= edit_link :url => edit_static_path(static) %></td>
-          <td class="button_cell"><%= destroy_link :url => static_path(static) %></td>
-        </tbody>
-      <% end %>
-    </table>
-  <% end %>
+<%= will_paginate @statics, :params => params %>
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_header">
+    <div class="grid_row">
+      <div style="width: 10%;" class="grid_cell">ID</div>
+      <div style="width: 30%;" class="grid_cell">Identifier</div>
+      <div style="width: 40%;" class="grid_cell">Text</div>
+      <div style="width: 20%;" class="grid_cell">&nbsp;</div>
+    </div>
+  </div>
+  <div class="grid_body">
+    <% @statics.each do |static| %>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 10%;" class="grid_cell"><%= static.id %></div>
+        <div style="width: 30%;" class="grid_cell leftalign"><%= static.identifier %></div>
+        <div style="width: 40%;" class="grid_cell leftalign"><%= shorten static.text, 30 %></div>
+        <div style="width: 20%;" class="grid_cell"><%= edit_link :url => edit_static_path(static) %>&nbsp;&nbsp;<%= destroy_link :url => static_path(static) %></div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => home_root_index_path %>
 </div>

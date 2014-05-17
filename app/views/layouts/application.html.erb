@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>MasterControl</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="generator" content="Nico Reynen" />
     
-    <%= stylesheet_link_tag "/stylesheets/master_control_default" %>
-    
-    <%= javascript_include_tag "jquery-1.7.1.js" %>
-    <%= javascript_include_tag "jquery.qtip.min.js" %>
-    <%= javascript_include_tag "application.js", "jquery.backstretch.min.js", "general/tabination.js" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
     
     <%= yield :head %>
     
     <%= @js_mapping if @js_mapping %>
   </head>
   <body>
-    <div id="main_overlay">
-      <div id="page_wrapper">
-        <%= render(:partial => "layouts/nav.html") if @user %>
-        <div id="main_border_div">
-          <div id="main_table_div">
-            <div id="page">
-              <div id="home_page_wrp_up"  class="greywrap wrappers">
-                <div class="shade middlemargin">
-                  <%= generate_notice flash %>
-                </div>
-                <div id="hoofdwrap" class="middlemargin">
-                  <div class="shadow">
-                    <div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="home_page_wrp_down" class="wrappers">
-                <%= yield :content or yield %>
-              <div>
-            </div>
-          </div>
-        </div>
+    <div id="main_page">
+      <div id="main_banner">
+        <%= render :partial => "layouts/main_page_support/header" %>
+      </div>
+      <div id="main_menu">
+        <%= render :partial => "layouts/main_page_support/navigation" %>
+      </div>
+      <div id="main_content">
+        <%= generate_notice flash %>
+        <%= yield %>
+      </div>
+      <div id="main_footer">
+        <%= render :partial => "layouts/main_page_support/footer" %>
       </div>
     </div>
-  <script type="text/javascript">
-    $.backstretch("/images/main_bg.jpg");
-  </script>
   </body>
 </html>

@@ -1,14 +1,11 @@
-<div>
-  <h1>Edit category</h1>
-  <table class="showtable">
-    <% form_for @category, :url => bread_category_path(@category) do |f| %>
-      <%= render(:partial => 'form', :locals => { :f => f, :category => @category }) %>
-      <tr>
-        <td colspan="2"><%= f.submit "Update" %></td>
-      </tr>
-    <% end %>
-    <tr class="button_row">
-      <td colspan="2"><%= show_link :url => bread_category_path(@category) %> | <%= back_link :url => bread_categories_path %></td>
-    </tr>
-  </table>
+<h1>Edit Category</h1>
+
+<%= form_for @category, :url => bread_category_path(@category) do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :category => @category }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Update", "$('form').last().submit();" %>
+  <%= show_link :text => put("link_show"), :url => bread_category_path(@category) %>
+  <%= back_link :url => bread_categories_path %>
 </div>

@@ -1,12 +1,20 @@
-<%if error_messages_for 'category' != nil%>
-  <%= error_messages_for 'category' , :class=>"error_message" %>
-<%end%>
+<% if category.errors.any? %>
+  <div class="error_message">
+    <p>
+      <%= category.errors.full_messages.join("<br>").html_safe %>
+    </p>
+  </div>
+<% end %>
 
-<tr>
-  <td><%= f.label "Name:" %></td>
-  <td><%= f.text_field :name %></td>
-</tr>
-<tr>
-  <td><%= f.label "Description:" %></td>
-  <td><%= f.text_field :description %></td>
-</tr>
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Name:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Description:</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :description %></div>
+    </div>
+  </div>
+</div>

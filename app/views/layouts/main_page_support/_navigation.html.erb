@@ -1,0 +1,33 @@
+<ul id="main_menu_holder">
+  <% @menu.each do |item| %>
+    <% parent = item[:name] %>
+    <% children = item[:children] %>
+    <li class="<%= (request.original_fullpath == (item[:url]) ? "selected_menu" : "") %>">
+      <% modded_parent = parent.downcase.gsub(" ", "_") %>
+      <% if children %>
+        <a id="<%= modded_parent %>" href="javascript:void(0);"><%= parent %></a>
+      <% else %>
+        <% if parent == "Logout" %>
+          <%= link_to_with_highlighting(parent, url_for(@session), {:method => :delete}, {}) %>
+        <% else %>
+          <%= link_to_with_highlighting(parent, item[:url], {:target => item[:target]}, {}) %>
+        <% end %>
+      <% end %>
+      <% if children %>
+        <ul>
+          <% children.sort_by { |child| child[:name] }.each do |child| %>
+            <% if request.original_fullpath == (child[:url]) %>
+              <script type="text/javascript">
+                $("#<%= modded_parent %>").parent().addClass("selected_menu");
+              </script>
+              <% highlight_class = "selected_menu" %>
+            <% end %>
+            <li class="<%= (request.original_fullpath == (child[:url]) ? "selected_menu" : "") %>">
+              <%= link_to_with_highlighting(child[:name], child[:url], {:target => child[:target]}, {}) %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </li>
+  <% end unless @menu.nil? %>
+</ul>

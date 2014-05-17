@@ -1,0 +1,6 @@
+<div class="item_incrementor">
+  <div class="item_decrease" item="<%= item.id %>" onclick="decrement_item('<%= item.id %>')"></div>
+  <div id="item_show_<%= item.id %>" class="quantity_field" price="<%= item.price %>" td_id="<%= item.id %>"><%= quantity || 0 %></div>
+  <div class="item_increase" item="<%= item.id %>" onclick="increment_item('<%= item.id %>')"></div>
+  <%= text_field_tag "items[#{item.id}]", (quantity || 0), {:style => "display: none;"} %>
+</div>

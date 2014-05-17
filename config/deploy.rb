@@ -1,38 +1,28 @@
-require 'capistrano'
-require "bundler/capistrano"
-
-set :deploy_via, :remote_cache
-
-set :application, "fictief"
-set :deploy_to, "/var/www/#{application}"
-
-role :app, "master.yato-extreme.com"
-role :web, "master.yato-extreme.com"
-role :db, "master.yato-extreme.com", :primary => true
-
-set :port, 5555
+set :application, "MasterControl"
+set :repo_url, "git@github.com:nreynen/master_control.git"
+set :scm, :git
 set :branch, "master"
-
-set :default_stage, "development"
-set :stages, %w(production development)
-
-set :repository, "git@github.com:nreynen/fictief.git"
-#set :ssh_options, { :forward_agent => true }
-set :scm, "git"
-
-set :repository_cache, "git_cache"
-set :deploy_via, :remote_cache
+set :deploy_to, "/var/www/master_control"
 set :user, "nreynen"
 set :admin_runner, "nreynen"
-
 set :runner, "nreynen"
 
-
-
 namespace :deploy do
-  desc "Restart Application"
-  task :restart, :roles => :app do
-    run "touch #{current_path}/tmp/restart.txt"
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
   end
+  
+  # after :restart, :clear_cache do
+    # on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # within release_path do
+        # with :rails_env => :production do
+          # execute :rake, 'memcached:flush'
+        # end
+      # end
+    # end
+  # end
+  after :finishing, 'deploy:cleanup'
 end
-

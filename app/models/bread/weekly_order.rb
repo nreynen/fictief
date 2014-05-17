@@ -1,5 +1,4 @@
 class Bread::WeeklyOrder < ActiveRecord::Base
-  
   belongs_to :user
   
   validates_presence_of :user_id
@@ -7,7 +6,7 @@ class Bread::WeeklyOrder < ActiveRecord::Base
   
   def to_readable
     price = 0.0
-    readable = self[:order].inject([]) do |a, x|
+    readable = self[:order].split(";").inject([]) do |a, x|
       x.split(";").each do |arr|
         unless arr.blank?
           id, quant = arr.split(",")

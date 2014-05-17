@@ -3,14 +3,15 @@
     $(document).ready(function() {
       $(".user_hoverer").each(function(i, ob) {
         $(ob).qtip({
-          style: { name: 'cream', tip: true }, 
+          style: {classes: 'qtip-blue qtip-shadow', tip: true}, 
           position: {
-            corner: {
-               target: 'topMiddle',
-               tooltip: 'bottomMiddle'
-            }
+            my: "top center",
+            at: "bottom center",
+            target: $(ob)
           }, 
-          content: "<table><tbody><tr><td>" + $(ob).attr("users") + "</td></tr></tbody></table>"
+          content: {
+            text: "<table><tbody><tr><td>" + $(ob).attr("users") + "</td></tr></tbody></table>"
+          }
         });
       });
     });
@@ -18,22 +19,21 @@
 <% end %>
 
 <h1>Security Rights</h1>
-<div id="searchwrapper">
-  <table class="showtable">
-    <tbody class="table_header">
-      <td class="header_cell">Right</td>
-      <td class="header_cell">Users</td>
-    </tbody>
-    <% @rights_map.each_pair do |key, arr| %>
-      <tbody class="<%= cycle("even","odd") %>">
-        <td>
-          <%= key %>
-        </td>
-        <td style="text-align: center;">
-          <span class="user_hoverer" users="<%= arr.join("<br>") %>">Hover for users</span>
-        </td>
-        <td class="button_cell"><%= destroy_link :url => delete_rights_user_rights_path(:key => key) %></td>
-      </tbody>
+<div class="grid_table">
+  <div class="grid_header">
+    <div class="grid_row">
+      <div style="width: 50%;" class="grid_cell">Right Name</div>
+      <div style="width: 40%;" class="grid_cell">Users</div>
+      <div style="width: 10%;" class="grid_cell">&nbsp;</div>
+    </div>
+  </div>
+  <div class="grid_body">
+    <% @rights_map.sort{|a, b| a[0] <=> b[0]}.each do |(key, arr)| %>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 50%;" class="grid_cell leftalign"><%= key %></div>
+        <div style="width: 40%;" class="grid_cell"><span class="user_hoverer" users="<%= arr.join("</td></tr><tr><td>") %>">Hover for users</span></div>
+        <div style="width: 10%;" class="grid_cell"><%= destroy_link :url => delete_rights_user_rights_path(:key => key) %></div>
+      </div>
     <% end %>
-  </table>
+  </div>
 </div>

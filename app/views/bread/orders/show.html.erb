@@ -1,54 +1,29 @@
-<div>
-  <h1>Order <%= @order.id %></h1>
-  <table class="showtable">
-    <tr>
-      <td>User</td>
-      <td><%= @order.user.name %></td>
-    </tr>
-    <tr>
-      <td>Due Date</td>
-      <td><%= @order.saturday_int.strftime("%e %b %Y") %></td>
-    </tr>
-        
-    <% quantities = @order.order.split(";").inject({}) do |h, x| 
-      item = x.split(",")
-      h[item[0]] = item[1]
-      h
-    end unless @order.order.nil? %>
-        
-    <tr>
-      <td style="vertical-align: top;">Items</td>
-      <td>
-        <table class="filltable">
-          <thead class="table_header">
-            <th style="width: 50px;" class="header_cell">Item Id</th>
-            <th class="header_cell">Name</th>
-            <th class="header_cell">Quantity</th>
-            <th style="width: 50px;" class="header_cell">Price</th>
-          </thead>
-          <tbody>
-            <% total = 0.0 %>
-            <% quantities.each_pair do |item_id, quantity| %>
-              <% item = Bread::Item.find item_id %>
-              <% prc = (quantity.to_i * item.price.to_f) %>
-              <% total += prc %>
-              <tr>
-                <td><%= item.id %></td>
-                <td><%= item.name %></td>
-                <td style="text-align: center;"><%= quantity %></td>
-                <td style="text-align: center;"><%= price prc %></td>
-              </tr>
-            <% end %>
-            <tr>
-              <td colspan="3" class="display_none_cell" style="text-align: right;">Total: </td>
-              <td style="text-align: center;"><%= price total %></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr class="button_row">
-      <td colspan="2"><%= back_link :url => bread_orders_path %></td>
-    </tr>
-  </table>
+<h1>Order <%= @order.id %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">User</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @order.user.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Due Date</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @order.saturday_int.in_our_time(:time) %></div>
+    </div>
+    <% @quantities.each do |(item_id, value)| %>
+      <div class="grid_row">
+        <div style="width: 50%;" class="grid_cell rightalign"><%= item_id == @quantities.first.first ? "Items" : "" %></div>
+        <div style="width: 40%;" class="grid_cell rightalign"><%= value[0] %> * <%= value[1] %></div>
+        <div style="width: 10%;" class="grid_cell"><%= price value[2] %></div>
+      </div>
+    <% end %>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Total</div>
+      <div style="width: 50%;" class="grid_cell rightalign"><%= price @total %></div>
+    </div>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => bread_orders_path %>
 </div>

@@ -1,0 +1,71 @@
+<% content_for :head do %>
+  <style>
+    #main_content {
+      background-color: #D9D9FF;
+    }
+    .fingerpoint_link {
+      padding: 10px 30px;
+      border: 1px solid #000000;
+      background-color: #000080;
+      color: #FFFFFF;
+      border-radius: 15px;
+      text-decoration: none;
+      line-height: 20px;
+      margin-top: 10px;
+      opacity: 0.7;
+      font-size: 30px;
+    }
+    .fingerpoint_link:hover {
+      opacity: 1;
+    }
+  </style>
+<% end %>
+
+<div style="width: 960px; margin: 0 auto; margin-top: 10px;">
+  <div style="width: 465px; min-height: 50px; float: left; border-radius: 0 0 0 15px; border-left: 2px solid #000080; border-bottom: 2px solid #000080; padding-left: 5px; padding-right: 5px; padding-bottom: 5px;">
+    <span style="font-size: 20px; color: #000080;">MasterControl App</span><br><br>
+    Welkom op de MasterControlApp. Deze applicatie dient als verzamelpunt van verscheidene kleinere applicaties. De hoofdapplicatie is BreadApp. Dit is momenteel ook de enige live applicatie.
+    Binnenkort zal het aloude BoekApp ook zijn weg vinden naar Rubyland.<br>
+    De ganse site is samengesteld in <a href="http://rubyonrails.org/" target="_BLANK" style="text-decoration: none;">Ruby on Rails</a>, met behulp van <a href="http://jquery.com/" target="_BLANK" style="text-decoration: none;">jQuery</a>.<br>
+    Indien er vragen of bugmeldingen zijn, binnenkort zal er een contact-pagina komen. Voorlopig kan alles mondeling of via mijn (bekend) mailadres gemeld worden.<br>
+    <br>
+    Grtz,<br>
+    Het Yato Extreme Team.
+  </div>
+  <div style="width: 465px; min-height: 50px; float: right; border-radius: 0 15px 0 0; border-right: 2px solid #000080; border-top: 2px solid #000080; padding-right: 5px; padding-left: 5px; padding-top: 5px;">
+    <table>
+      <tbody>
+        <tr>
+          <td><%= image_tag "/assets/fingerpoint.gif" %></td>
+          <td rowspan="3"><%= link_to("Exit MasterControl", url_for(@session), {:method => :delete, :class => "fingerpoint_link"}) %></td>
+        </tr>
+        <tr>
+          <td><%= image_tag "/assets/fingerpoint.gif" %></td>
+        </tr>
+        <tr>
+          <td><%= image_tag "/assets/fingerpoint.gif" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="width: 950px; min-height: 50px; margin: 0 auto; margin-top: 10px; border-radius: 0 0 0 15px; border-left: 2px solid #000080; border-bottom: 2px solid #000080; padding-left: 5px; padding-right: 5px; padding-bottom: 5px;">
+  <div style="width: 460px; float: right; border-radius: 0 15px 0 0; border-right: 2px solid #000080; border-top: 2px solid #000080; padding-right: 5px; padding-left: 5px; margin-right: -5px;">
+    &nbsp;
+  </div>
+  <div style="clear: both;"></div>
+  <div style="width: 940px; float: right; border-right: 2px solid #000080; padding-right: 5px; padding-left: 5px; margin-right: -5px;" class="feeds">
+    <span style="font-size: 20px; color: #000080;">News Feed</span>
+    <% feeds.each do |feed| %>
+      <div class="feed">
+        <div class="feed_text"><%= feed.text.html_safe %></div>
+        <div class="feed_date"><%= feed.created_at.in_our_time %></div>
+      </div>
+      <div style="clear: both;"></div>
+    <% end %>
+  </div>
+  <div style="clear: both;"></div>
+  <br><br>
+</div>

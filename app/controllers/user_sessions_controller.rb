@@ -3,7 +3,7 @@ class UserSessionsController < ApplicationController
   before_filter :ensure_logged_out, :only => [:new, :create]
   
   def index
-    redirect_to(new_user_session_path)
+    redirect_to(home_root_index_path)
   end
   
   def new
@@ -11,17 +11,16 @@ class UserSessionsController < ApplicationController
   end
   
   def create
-    @user = User.find_by_login_and_password(params[:user][:login], params[:user][:password])
+    @user = User.where(:login => params[:user][:login], :password => params[:user][:password]).first
     @session = UserSession.new(:user_id => @user.id) unless @user.nil?
     if @user && @session.save
       session[:user] = @session.id
       flash[:success] = "Hello #{@session.user.first_name}, you are logged in."
       url = session[:request_url]
       session[:request_url] = nil
-      redirect_to(url || home_root_url)
+      redirect_to(url || home_root_index_url)
     else
-      flash[:error] = "Error while logging in."
-      redirect_to(new_user_session_path)
+      redirect_to(new_user_session_path + "?error=1")
     end
   end
 
@@ -30,6 +29,6 @@ class UserSessionsController < ApplicationController
     session[:user] = @user = nil
     flash[:notice] = "You are logged out."
     session[:expiry_time] = 60.minutes.from_now
-    redirect_to(root_url)
+    redirect_to(home_root_index_url)
   end
 end
