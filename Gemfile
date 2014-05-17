@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'therubyracer'
 gem "activesupport"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass'
