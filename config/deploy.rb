@@ -2,7 +2,7 @@ set :application, "MasterControl"
 set :repo_url, "git@github.com:nreynen/fictief.git"
 set :scm, :git
 set :branch, "master"
-set :deploy_to, "/var/www/MasterControl"
+set :deploy_to, "/var/www/fictief"
 set :user, "nreynen"
 set :admin_runner, "nreynen"
 set :runner, "nreynen"
