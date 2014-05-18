@@ -4,6 +4,7 @@ class MasterMailer < ActionMailer::Base
   
   def bread_alert(options)
     @user = options[:user]
+    @message = options[:message]
     
     if options[:attachment] && options[:attachment_name] && options[:attachment_file_type]
       attachments[options[:attachment_name]] = File.read(options[:attachment])
