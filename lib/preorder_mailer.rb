@@ -20,11 +20,11 @@ class PreorderMailer
     
     User.find(:all, :conditions => ["id IN (?)", orders.map(&:user_id)]).each do |usr|
       puts "Mailing user #{usr.email}"
-      MasterMailer.deliver_bread_alert({
+      MasterMailer.bread_alert({
         :user => usr, 
         :subject => "Bread Reminder: An automatic order was executed!", 
         :message => "Hi, #{usr.first_name}.<br>Your Weekly Order was executed. If this is a mistake, or you haven't got a weekly order, change this on the website.<br><br>Grtz from the <a href='http://yato-extreme.com'>yato-extreme</a> team."
-      })
+      }).deliver
     end
     
     puts "Orders made."
