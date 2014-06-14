@@ -37,9 +37,9 @@ class Bread::OrdersController < ApplicationController
   
   def index
     if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
-      @orders = Bread::Order.paginate :page => params[:page], :order => "id DESC", :per_page => 25
+      @orders = Bread::Order.paginate :page => params[:page], :order => "id DESC", :per_page => 10
     else
-      @orders = @user.orders.paginate :page => params[:page], :order => "id DESC", :per_page => 25
+      @orders = @user.orders.paginate :page => params[:page], :order => "id DESC", :per_page => 10
     end
     
     now = Time.now
