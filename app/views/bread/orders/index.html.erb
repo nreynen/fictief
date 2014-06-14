@@ -15,7 +15,7 @@
       <div class="grid_row <%= cycle("even", "odd") %>">
         <div style="width: 5%;" class="grid_cell"><%= order.id %></div>
         <div style="width: 55%;" class="grid_cell leftalign"><%= order.user.name %></div>
-        <div style="width: 10%;" class="grid_cell leftalign">
+        <div style="width: 10%;" class="grid_cell">
           <%= order.paid.to_img %>
           <% unless order.paid || !@user.has_rights_for?([RIGHTS[:bread_admin], RIGHTS[:admin]]) %>
             <%= link_to "Paid!", set_paid_bread_orders_path(:id => order.id) %>
