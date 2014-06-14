@@ -34,7 +34,7 @@ class Bread::WeeklyOrdersController < ApplicationController
   end
   
   def index
-    @order = Bread::WeeklyOrder.find_by_user_id(@user.id)
+    @order = Bread::WeeklyOrder.find(:first, :conditions => ["user_id = ?", @user.id])
     @can_create = @order.nil?
   end
   
