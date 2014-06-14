@@ -20,7 +20,7 @@
   <div class="grid_table" style="width: 500px">
     <%= render :partial => "table_helpers/single_header", :locals => {:title => "Items"} %>
     <div class="grid_body">
-      <% unless @can_create %>
+      <% if @order %>
         <%= render :partial => "item_list", :locals => {:order => @order} %>
       <% end %>
     </div>

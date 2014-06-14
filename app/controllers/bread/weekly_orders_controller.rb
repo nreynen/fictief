@@ -34,10 +34,7 @@ class Bread::WeeklyOrdersController < ApplicationController
   end
   
   def index
-    if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:bread_admin]]) rescue false)
-      @order = Bread::WeeklyOrder.find_by_user_id(@user.id)
-    end
-    
+    @order = Bread::WeeklyOrder.find_by_user_id(@user.id)
     @can_create = @order.nil?
   end
   
