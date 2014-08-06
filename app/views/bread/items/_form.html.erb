@@ -18,7 +18,7 @@
     </div>
     <div class="grid_row <%= cycle("even", "odd") %>">
       <div style="width: 30%;" class="grid_cell rightalign">Category:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id), :style => "width: 90%;" %></div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id) %></div>
     </div>
     <div class="grid_row <%= cycle("even", "odd") %>">
       <div style="width: 30%;" class="grid_cell rightalign">Enabled:</div>

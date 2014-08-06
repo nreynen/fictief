@@ -1,11 +1,10 @@
 MasterControl::Application.routes.draw do
   namespace :book do |book|
     resources :authors, :except => :destroy
-    # resources :books
-    # resources :genres, :except => :destroy
-    # resources :languages, :except => :destroy
+    resources :books
+    resources :genres, :except => :destroy
     resources :publishers, :except => :destroy
-    # resources :series, :except => :destroy
+    resources :series, :except => :destroy
   end
   namespace :bread do |bread|
     resources :bread_logs, :except => :destroy

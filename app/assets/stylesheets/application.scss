@@ -273,6 +273,9 @@ h2 {
 .grid_cell.rightalign:after {
   content: "\00a0\00a0\00a0";
 }
+.grid_cell select {
+  width: 90%;
+}
 .grid_header .grid_row .grid_cell {
   background-color: #000000;
 }

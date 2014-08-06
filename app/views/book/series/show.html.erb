@@ -1,0 +1,18 @@
+<h1><%= @serie.name %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Name</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @serie.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Author</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @serie.author.name %></div>
+    </div>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => book_series_index_path %>
+</div>

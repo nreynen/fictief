@@ -1,14 +1,18 @@
-<h1><%= @author.name %></h1>
+<h1><%= @publisher.name %></h1>
 
 <div class="grid_table" style="width: 500px;">
   <div class="grid_body">
     <div class="grid_row <%= cycle("even", "odd") %>">
       <div style="width: 50%;" class="grid_cell rightalign">Name</div>
-      <div style="width: 50%;" class="grid_cell leftalign"><%= @author.name %></div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @publisher.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 50%;" class="grid_cell rightalign">Place</div>
+      <div style="width: 50%;" class="grid_cell leftalign"><%= @publisher.place.blank? ? "-" : @publisher.place %></div>
     </div>
   </div>
 </div>
 
 <div class="submit_row">
-  <%= back_link :url => book_authors_path %>
+  <%= back_link :url => book_publishers_path %>
 </div>

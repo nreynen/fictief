@@ -1,7 +1,7 @@
-<% if publisher.errors.any? %>
+<% if genre.errors.any? %>
   <div class="error_message">
     <p>
-      <%= publisher.errors.full_messages.join("<br>").html_safe %>
+      <%= genre.errors.full_messages.join("<br>").html_safe %>
     </p>
   </div>
 <% end %>
@@ -11,10 +11,6 @@
     <div class="grid_row <%= cycle("even", "odd") %>">
       <div style="width: 30%;" class="grid_cell rightalign">Name:</div>
       <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :name, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Place:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :place, :style => "width: 90%;" %></div>
     </div>
   </div>
 </div>

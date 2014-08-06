@@ -1,19 +1,21 @@
-<h1>Authors</h1>
-<%= will_paginate @authors, :params => params %>
+<h1>Publishers</h1>
+<%= will_paginate @publishers, :params => params %>
 <div class="grid_table" style="width: 500px;">
   <div class="grid_header">
     <div class="grid_row">
       <div style="width: 10%;" class="grid_cell">ID</div>
-      <div style="width: 70%;" class="grid_cell">Name</div>
+      <div style="width: 35%;" class="grid_cell">Name</div>
+      <div style="width: 35%;" class="grid_cell">Place</div>
       <div style="width: 20%;" class="grid_cell">&nbsp;</div>
     </div>
   </div>
   <div class="grid_body">
-    <% @authors.each do |author| %>
+    <% @publishers.each do |publisher| %>
       <div class="grid_row <%= cycle("even", "odd") %>">
-        <div style="width: 10%;" class="grid_cell"><%= author.id %></div>
-        <div style="width: 70%;" class="grid_cell leftalign"><%= author.name %></div>
-        <div style="width: 20%;" class="grid_cell"><%= edit_link :url => edit_book_author_path(author) %>&nbsp;&nbsp;<%= show_link :url => book_author_path(author) %></div>
+        <div style="width: 10%;" class="grid_cell"><%= publisher.id %></div>
+        <div style="width: 35%;" class="grid_cell leftalign"><%= publisher.name %></div>
+        <div style="width: 35%;" class="grid_cell leftalign"><%= publisher.place.blank? ? "-" : publisher.place %></div>
+        <div style="width: 20%;" class="grid_cell"><%= edit_link :url => edit_book_publisher_path(publisher) %>&nbsp;&nbsp;<%= show_link :url => book_publisher_path(publisher) %></div>
       </div>
     <% end %>
   </div>
@@ -21,5 +23,5 @@
 
 <div class="submit_row">
   <%= back_link :url => home_root_index_path %>
-  <%= new_link :url => new_book_author_path %>
+  <%= new_link :url => new_book_publisher_path %>
 </div>

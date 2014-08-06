@@ -1,7 +1,7 @@
-<% if publisher.errors.any? %>
+<% if serie.errors.any? %>
   <div class="error_message">
     <p>
-      <%= publisher.errors.full_messages.join("<br>").html_safe %>
+      <%= serie.errors.full_messages.join("<br>").html_safe %>
     </p>
   </div>
 <% end %>
@@ -13,8 +13,8 @@
       <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :name, :style => "width: 90%;" %></div>
     </div>
     <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Place:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :place, :style => "width: 90%;" %></div>
+      <div style="width: 30%;" class="grid_cell rightalign">Author:</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :author_id, options_from_collection_for_select(Book::Author.ordered_by_name, :id, :name, serie.author_id), :include_blank => true %></div>
     </div>
   </div>
 </div>

@@ -1,0 +1,10 @@
+<h1>New Genre</h1>
+
+<%= form_for @genre, :url => book_genres_path do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :genre => @genre }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Create", "$('form').last().submit();" %>
+  <%= back_link :url => book_genres_path %>
+</div>

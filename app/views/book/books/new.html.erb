@@ -1,0 +1,10 @@
+<h1>New Book</h1>
+
+<%= form_for @book, :url => book_books_path do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :book => @book }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Create", "$('form').last().submit();" %>
+  <%= back_link :url => book_books_path %>
+</div>

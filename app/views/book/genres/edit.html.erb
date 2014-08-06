@@ -1,0 +1,11 @@
+<h1>Edit Genre</h1>
+
+<%= form_for @genre, :url => book_genre_path(@genre) do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :genre => @genre }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Update", "$('form').last().submit();" %>
+  <%= show_link :text => put("link_show"), :url => book_genre_path(@genre) %>
+  <%= back_link :url => book_genres_path %>
+</div>

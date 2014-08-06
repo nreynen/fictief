@@ -1,0 +1,58 @@
+<h1><%= @book.title %></h1>
+
+<div class="grid_table" style="width: 500px;">
+  <div class="grid_body">
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Title</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.title %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Author</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.author.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Publisher</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.publisher.name %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Genre</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.genre.name %></div>
+    </div>
+    <% unless @book.serie_id.blank? %>
+      <div class="grid_row <%= cycle("even", "odd") %>">
+        <div style="width: 30%;" class="grid_cell rightalign">Serie</div>
+        <div style="width: 70%;" class="grid_cell leftalign">The <%= (@book.serie_nr.ordinalize rescue "Xth") %> book of '<%= @book.serie.name %>'</div>
+      </div>
+    <% end %>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">ISBN</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.isbn %></div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Extra information</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.title %> has <%= @book.pages.blank? ? "an unknown number of" : @book.pages %> pages.</div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">&nbsp;</div>
+      <div style="width: 70%;" class="grid_cell leftalign">
+        <% if @book.language_id == @book.original_language_id %>
+          It's in <%= @book.language.name %>, which is the original language.
+        <% else %>
+          It was translated to <%= @book.language.name %> from <%= @book.orginal_language.name %>.
+        <% end %>
+      </div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">&nbsp;</div>
+      <div style="width: 70%;" class="grid_cell leftalign">This is the <%= @book.print_nr.ordinalize %> print. Printed in <%= @book.print_year %>.</div>
+    </div>
+    <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">Comment</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= @book.comment.blank? ? "-" : @book.comment %></div>
+    </div>
+  </div>
+</div>
+
+<div class="submit_row">
+  <%= back_link :url => book_books_path %>
+</div>
