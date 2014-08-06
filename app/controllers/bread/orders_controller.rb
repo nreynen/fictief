@@ -12,11 +12,11 @@ class Bread::OrdersController < ApplicationController
     @order.order = order_string.join(";")
     
     if order_string.length > 0 && @order.save
-      # MasterMailer.bread_alert({
-        # :user => @user, 
-        # :subject => "Bread Notification: You have created an order!", 
-        # :message => "You have created a new order, containing #{@order.to_readable}.<br>If this is not the right order, or a mistake has been made, please edit it or contact us."
-      # }).deliver
+      MasterMailer.bread_alert({
+        :user => @user, 
+        :subject => "Bread Notification: You have created an order!", 
+        :message => "You have created a new order, containing #{@order.to_readable}.<br>If this is not the right order, or a mistake has been made, please edit it or contact us."
+      }).deliver
       redirect_to(bread_orders_path, :flash => { :success => "Order was successfully created... Mail could not be sent!" })
     else
       render :action => "new"
