@@ -10,11 +10,11 @@ class Bread::WeeklyOrdersController < ApplicationController
     @order.order = order_string.join(";")
     
     if order_string.length > 0 && @order.save
-      # MasterMailer.bread_alert({
-        # :user => @user, 
-        # :subject => "Bread Notification: You have created a weekly order!", 
-        # :message => "You have created a new weekly order, containing #{@order.to_readable}.<br>If this is not yours, or a mistake has been made, please edit it or contact us."
-      # }).deliver
+      MasterMailer.bread_alert({
+        :user => @user, 
+        :subject => "Bread Notification: You have created a weekly order!", 
+        :message => "You have created a new weekly order, containing #{@order.to_readable}.<br>If this is not yours, or a mistake has been made, please edit it or contact us."
+      }).deliver
       redirect_to(bread_weekly_orders_path, :flash => { :success => "Order was successfully created..." })
     else
       render :action => "new"

@@ -17,7 +17,7 @@ class Bread::OrdersController < ApplicationController
         :subject => "Bread Notification: You have created an order!", 
         :message => "You have created a new order, containing #{@order.to_readable}.<br>If this is not the right order, or a mistake has been made, please edit it or contact us."
       }).deliver
-      redirect_to(bread_orders_path, :flash => { :success => "Order was successfully created... Mail could not be sent!" })
+      redirect_to(bread_orders_path, :flash => { :success => "Order was successfully created... Mail sent!" })
     else
       render :action => "new"
     end
