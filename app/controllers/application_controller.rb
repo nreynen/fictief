@@ -60,16 +60,16 @@ class ApplicationController < ActionController::Base
     # } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:workday_user]]) rescue false)
     
     # BookApp menu
-    # @menu << {
-      # :name => "BookApp", :children => [
-        # { :name => "Authors", :url => book_authors_path }, 
+    @menu << {
+      :name => "BookApp", :children => [
+        { :name => "Authors", :url => book_authors_path }, 
         # { :name => "Book", :url => book_books_path },
         # { :name => "Publisher", :url => book_publishers_path }, 
         # { :name => "Series", :url => book_series_index_path }, 
         # { :name => "Language", :url => book_languages_path }, 
         # { :name => "Genre", :url => book_genres_path }
-      # ]
-    # } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:book_admin]]) rescue false)
+      ]
+    } if (@user.has_rights_for?([RIGHTS[:admin], RIGHTS[:book_admin]]) rescue false)
     
     # BreadApp menu
     @menu << {

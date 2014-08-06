@@ -1,0 +1,11 @@
+<h1>Edit Author</h1>
+
+<%= form_for @author, :url => book_author_path(@author) do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f, :author => @author }) %>
+<% end %>
+
+<div class="submit_row">
+  <%= link_to_function "Update", "$('form').last().submit();" %>
+  <%= show_link :text => put("link_show"), :url => book_author_path(@author) %>
+  <%= back_link :url => book_authors_path %>
+</div>

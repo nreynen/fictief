@@ -13,10 +13,6 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '~> 3.0'
 
-group :doc do
-  gem 'sdoc', require: false
-end
-
 group :development do
   gem "capistrano"
   gem "capistrano-rvm"
