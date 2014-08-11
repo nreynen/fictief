@@ -46,8 +46,8 @@
     <%= grid_row("Genre*:", cycle("even", "odd")){f.select :genre_id, options_from_collection_for_select(Book::Genre.ordered_by_name, :id, :name, book.genre_id), :include_blank => true} %>
     <%= grid_row("Print nr*:", cycle("even", "odd")){f.text_field :print_nr, :style => "width: 90%;"} %>
     <%= grid_row("Print year*:", cycle("even", "odd")){f.text_field :print_year, :style => "width: 90%;"} %>
-    <%= grid_row("Language:", cycle("even", "odd")){f.select :language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.language_id), :include_blank => true} %>
-    <%= grid_row("Original Language:", cycle("even", "odd")){f.select :original_language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.original_language_id), :include_blank => true} %>
+    <%= grid_row("Language*:", cycle("even", "odd")){f.select :language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.language_id), :include_blank => true} %>
+    <%= grid_row("Original Language*:", cycle("even", "odd")){f.select :original_language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.original_language_id), :include_blank => true} %>
     <%= grid_row("Serie:", cycle("even", "odd")){f.select :serie_id, options_from_collection_for_select(Book::Serie.ordered_by_name, :id, :name, book.serie_id), :include_blank => true} %>
     <%= grid_row("Serie nr:", cycle("even", "odd")){f.text_field :serie_nr, :style => "width: 90%;"} %>
     <%= grid_row("Comment:", cycle("even", "odd")){f.text_area :comment, :style => "width: 90%; height: 15px;"} %>

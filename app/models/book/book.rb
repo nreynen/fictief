@@ -12,6 +12,8 @@ class Book::Book < ActiveRecord::Base
   validates_presence_of :print_nr
   validates_presence_of :print_year
   validates_presence_of :genre_id
+  validates_presence_of :language_id
+  validates_presence_of :original_language_id
   
   attr_accessor :author_name, :publisher_name
   
