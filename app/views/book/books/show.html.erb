@@ -38,7 +38,7 @@
         <% if @book.language_id == @book.original_language_id %>
           It's in <%= @book.language.name %>, which is the original language.
         <% else %>
-          It was translated to <%= @book.language.name %> from <%= @book.orginal_language.name %>.
+          It was translated to <%= @book.language.name %> from <%= @book.original_language.name %>.
         <% end %>
       </div>
     </div>
