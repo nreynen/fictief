@@ -296,6 +296,11 @@ h2 {
   height: 1px;
   float: left;
 }
+.books .field_with_errors {
+  width: auto;
+  height: auto;
+  float: left;
+}
 .field_with_errors input {
   border: 1px solid red;
   margin-left: 10px;

@@ -6,7 +6,7 @@
   </div>
 <% end %>
 
-<div class="grid_table" style="width: 500px;">
+<div class="grid_table books" style="width: 500px;">
   <div class="grid_body">
     <%= grid_row("Title*:", cycle("even", "odd")){f.text_field :title, :style => "width: 90%;"} %>
     <div class="grid_row <%= cycle("even", "odd") %>">
