@@ -3,11 +3,11 @@ class Book::BooksController < ApplicationController
   before_filter lambda { |x| x.ensure_is_admin([RIGHTS[:admin], RIGHTS[:book_admin]])}
   
   def create
-    if params[:book_book][:author_name]
+    unless params[:book_book][:author_name].blank?
       author = Book::Author.find_or_create_by_name(params[:book_book][:author_name])
       params[:book_book][:author_id] = author.id
     end
-    if params[:book_book][:publisher_name]
+    unless params[:book_book][:publisher_name].blank?
       publisher = Book::Publisher.find_or_create_by_name(params[:book_book][:publisher_name])
       params[:book_book][:publisher_id] = publisher.id
     end
@@ -39,11 +39,11 @@ class Book::BooksController < ApplicationController
   def update
     @book = Book::Book.find(params[:id])
     
-    if params[:book_book][:author_name]
+    unless params[:book_book][:author_name].blank?
       author = Book::Author.find_or_create_by_name(params[:book_book][:author_name])
       params[:book_book][:author_id] = author.id
     end
-    if params[:book_book][:publisher_name]
+    unless params[:book_book][:publisher_name].blank?
       publisher = Book::Publisher.find_or_create_by_name(params[:book_book][:publisher_name])
       params[:book_book][:publisher_id] = publisher.id
     end
