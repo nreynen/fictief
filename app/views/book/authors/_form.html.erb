@@ -8,9 +8,6 @@
 
 <div class="grid_table" style="width: 500px;">
   <div class="grid_body">
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Name:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :name, :style => "width: 90%;" %></div>
-    </div>
+    <%= grid_row("Name:", cycle("even", "odd")){f.text_field :name, :style => "width: 90%;"} %>
   </div>
 </div>

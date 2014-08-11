@@ -10,5 +10,7 @@ class Book::Book < ActiveRecord::Base
   validates_presence_of :author_id
   validates_presence_of :publisher_id
   
+  attr_accessor :author_name, :publisher_name
+  
   scope :ordered_by_title, ->{order("title ASC")}
 end

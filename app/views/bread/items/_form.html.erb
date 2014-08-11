@@ -6,26 +6,12 @@
   </div>
 <% end %>
 
+<%= hidden_field_tag "bread_item[enabled]", "0" %>
 <div class="grid_table" style="width: 500px;">
   <div class="grid_body">
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Name:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :name, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Price: (00.00):</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :price, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Category:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id) %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Enabled:</div>
-      <div style="width: 70%;" class="grid_cell leftalign">
-        <%= hidden_field_tag "bread_item[enabled]", "0" %>
-        <%= check_box_tag "bread_item[enabled]", true, item.enabled %>
-      </div>
-    </div>
+    <%= grid_row("Name:", cycle("even", "odd")){f.text_field :name, :style => "width: 90%;"} %>
+    <%= grid_row("Price: (00.00)", cycle("even", "odd")){f.text_field :price, :style => "width: 90%;"} %>
+    <%= grid_row("Category:", cycle("even", "odd")){f.select :category_id, options_from_collection_for_select(Bread::Category.find(:all, :order => "name ASC"), :id, :name, item.category_id} %>
+    <%= grid_row("Enabled:", cycle("even", "odd")){check_box_tag "bread_item[enabled]", true, item.enabled} %>
   </div>
 </div>

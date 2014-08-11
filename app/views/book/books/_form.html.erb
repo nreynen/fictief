@@ -8,57 +8,48 @@
 
 <div class="grid_table" style="width: 500px;">
   <div class="grid_body">
+    <%= grid_row("Title*:", cycle("even", "odd")){f.text_field :title, :style => "width: 90%;"} %>
     <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Title*:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :title, :style => "width: 90%;" %></div>
+      <div style="width: 30%;" class="grid_cell rightalign">New Author?</div>
+      <div style="width: 70%;" class="grid_cell leftalign">
+        <%= radio_button_tag "author_place_holder", "Yes", false, :onclick => "$('.author_lines').toggle();" %> Yes |
+        <%= radio_button_tag "author_place_holder", "No", true, :onclick => "$('.author_lines').toggle();" %> No
+      </div>
     </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
+    <% odd_even = cycle("even", "odd") %>
+    <div class="grid_row <%= odd_even %> author_lines">
       <div style="width: 30%;" class="grid_cell rightalign">Author*:</div>
       <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :author_id, options_from_collection_for_select(Book::Author.ordered_by_name, :id, :name, book.author_id), :include_blank => true %></div>
     </div>
+    <div class="grid_row <%= odd_even %> author_lines" style="display: none;">
+      <div style="width: 30%;" class="grid_cell rightalign">Author*:</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :author_name, :style => "width: 90%;" %></div>
+    </div>
     <div class="grid_row <%= cycle("even", "odd") %>">
+      <div style="width: 30%;" class="grid_cell rightalign">New Publisher?</div>
+      <div style="width: 70%;" class="grid_cell leftalign">
+        <%= radio_button_tag "publisher_place_holder", "Yes", false, :onclick => "$('.publisher_lines').toggle();" %> Yes |
+        <%= radio_button_tag "publisher_place_holder", "No", true, :onclick => "$('.publisher_lines').toggle();" %> No
+      </div>
+    </div>
+    <% odd_even = cycle("even", "odd") %>
+    <div class="grid_row <%= odd_even %> publisher_lines">
       <div style="width: 30%;" class="grid_cell rightalign">Publisher*:</div>
       <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :publisher_id, options_from_collection_for_select(Book::Publisher.ordered_by_name, :id, :name, book.publisher_id), :include_blank => true %></div>
     </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">ISBN:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :isbn, :style => "width: 90%;" %></div>
+    <div class="grid_row <%= odd_even %> publisher_lines" style="display: none;">
+      <div style="width: 30%;" class="grid_cell rightalign">Publisher*:</div>
+      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :publisher_name, :style => "width: 90%;" %></div>
     </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Pages:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :pages, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Genre:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :genre_id, options_from_collection_for_select(Book::Genre.ordered_by_name, :id, :name, book.genre_id), :include_blank => true %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Print nr:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :print_nr, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Print Year:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :print_year, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Language:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.language_id), :include_blank => true %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Original Language:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :original_language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.original_language_id), :include_blank => true %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Serie:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.select :serie_id, options_from_collection_for_select(Book::Serie.ordered_by_name, :id, :name, book.serie_id), :include_blank => true %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Serie nr:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_field :serie_nr, :style => "width: 90%;" %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 30%;" class="grid_cell rightalign">Comment:</div>
-      <div style="width: 70%;" class="grid_cell leftalign"><%= f.text_area :comment, :style => "width: 90%; height: 15px;" %></div>
-    </div>
+    <%= grid_row("ISBN:", cycle("even", "odd")){f.text_field :isbn, :style => "width: 90%;"} %>
+    <%= grid_row("Pages:", cycle("even", "odd")){f.text_field :pages, :style => "width: 90%;"} %>
+    <%= grid_row("Genre:", cycle("even", "odd")){f.select :genre_id, options_from_collection_for_select(Book::Genre.ordered_by_name, :id, :name, book.genre_id), :include_blank => true} %>
+    <%= grid_row("Print nr*:", cycle("even", "odd")){f.text_field :print_nr, :style => "width: 90%;"} %>
+    <%= grid_row("Print year*:", cycle("even", "odd")){f.text_field :print_year, :style => "width: 90%;"} %>
+    <%= grid_row("Language:", cycle("even", "odd")){f.select :language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.language_id), :include_blank => true} %>
+    <%= grid_row("Original Language:", cycle("even", "odd")){f.select :original_language_id, options_from_collection_for_select(Language.ordered_by_name, :id, :name, book.original_language_id), :include_blank => true} %>
+    <%= grid_row("Serie:", cycle("even", "odd")){f.select :serie_id, options_from_collection_for_select(Book::Serie.ordered_by_name, :id, :name, book.serie_id), :include_blank => true} %>
+    <%= grid_row("Serie nr:", cycle("even", "odd")){f.text_field :serie_nr, :style => "width: 90%;"} %>
+    <%= grid_row("Comment:", cycle("even", "odd")){f.text_area :comment, :style => "width: 90%; height: 15px;"} %>
   </div>
 </div>

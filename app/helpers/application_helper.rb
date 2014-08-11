@@ -93,6 +93,15 @@ module ApplicationHelper
     generate_link options
   end
   
+  def grid_row(text, odd_even, &block)
+    content_tag(:div, {:class => "grid_row #{odd_even}"}) do
+      [content_tag(:div, text, {:class => "grid_cell rightalign", :style => "width: 30%;"}), 
+      content_tag(:div, {:class => "grid_cell leftalign", :style => "width: 70%;"}) do
+        block.call()
+      end].join.html_safe
+    end
+  end
+  
   private
   
   def generate_link(_options = {})

@@ -8,17 +8,8 @@
 
 <div class="grid_table" style="width: 500px;">
   <div class="grid_body">
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 50%;" class="grid_cell rightalign">Category:</div>
-      <div style="width: 50%;" class="grid_cell leftalign"><%= select_tag("bread_bread_log[cat_id]", options_for_select(BREAD_LOG_CAT.sort{|a, b| a[1] <=> b[1]}.inject([]){|a, (k, v)| a << [v, k]; a})) %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 50%;" class="grid_cell rightalign">Date: (DD/MM/YYYY)</div>
-      <div style="width: 50%;" class="grid_cell leftalign"><%= text_field_tag "log_date", (bread_log.event_date.strftime("%d/%m/%Y") rescue Date.today.strftime("%d/%m/%Y")) %></div>
-    </div>
-    <div class="grid_row <%= cycle("even", "odd") %>">
-      <div style="width: 50%;" class="grid_cell rightalign">Price: (00.00)</div>
-      <div style="width: 50%;" class="grid_cell leftalign"><%= f.text_field :price %></div>
-    </div>
+    <%= grid_row("Category:", cycle("even", "odd")){select_tag("bread_bread_log[cat_id]", options_for_select(BREAD_LOG_CAT.sort{|a, b| a[1] <=> b[1]}.inject([]){|a, (k, v)| a << [v, k]; a}))} %>
+    <%= grid_row("Date: (DD/MM/YYYY)", cycle("even", "odd")){text_field_tag "log_date", (bread_log.event_date.strftime("%d/%m/%Y") rescue Date.today.strftime("%d/%m/%Y")), :style => "width: 90%;"} %>
+    <%= grid_row("Price: (00.00)", cycle("even", "odd")){f.text_field :price, :style => "width: 90%;"} %>
   </div>
 </div>

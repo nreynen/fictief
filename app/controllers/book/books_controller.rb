@@ -3,6 +3,14 @@ class Book::BooksController < ApplicationController
   before_filter lambda { |x| x.ensure_is_admin([RIGHTS[:admin], RIGHTS[:book_admin]])}
   
   def create
+    if params[:book_book][:author_name]
+      author = Book::Author.find_or_create_by_name(params[:book_book][:author_name])
+      params[:book_book][:author_id] = author.id
+    end
+    if params[:book_book][:publisher_name]
+      publisher = Book::Publisher.find_or_create_by_name(params[:book_book][:publisher_name])
+      params[:book_book][:publisher_id] = publisher.id
+    end
     @book = Book::Book.new(params[:book_book].permit(:title, :author_id, :publisher_id, :isbn, :pages, :genre_id, :print_nr, :print_year, :language_id, :original_language_id, :serie_id, :serie_nr, :comment))
     
     if @book.save
@@ -31,6 +39,14 @@ class Book::BooksController < ApplicationController
   def update
     @book = Book::Book.find(params[:id])
     
+    if params[:book_book][:author_name]
+      author = Book::Author.find_or_create_by_name(params[:book_book][:author_name])
+      params[:book_book][:author_id] = author.id
+    end
+    if params[:book_book][:publisher_name]
+      publisher = Book::Publisher.find_or_create_by_name(params[:book_book][:publisher_name])
+      params[:book_book][:publisher_id] = publisher.id
+    end
     if @book.update_attributes(params[:book_book].permit(:title, :author_id, :publisher_id, :isbn, :pages, :genre_id, :print_nr, :print_year, :language_id, :original_language_id, :serie_id, :serie_nr, :comment))
       redirect_to(book_books_path, :flash => { :success => "Book was successfully updated..." })
     else
